@@ -1,0 +1,17 @@
+/*版权样式*/
+.banquan{
+	width:100%;
+}
+/*首页版权*/
+.foot_banquan1{
+	position: relative;bottom:1.45rem;
+}
+
+/*带有底部导航的版权*/
+.foot_banquan2{
+	position: absolute;;bottom:0.9rem;
+}
+
+.foot_banquan3{
+	position: absolute;;bottom:0;
+}

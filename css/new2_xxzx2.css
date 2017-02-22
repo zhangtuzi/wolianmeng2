@@ -1,0 +1,65 @@
+.warp_All_xxzx2{
+  position: relative;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+  font-family: "微软雅黑";
+}
+.message_all{
+  margin:0 0.3rem;
+}
+.message_all li{
+  height:0.9rem;
+  padding:0.2rem 0;
+  border-bottom:1px solid #ededed;
+}
+.style_icon{
+  width:0.9rem;
+  height:0.9rem;
+  float: left;
+  position: relative;
+}
+.style_icon_img{
+  width:0.9rem;
+  height:0.9rem;
+}
+.new_message_ts{
+  width:0.15rem;
+  height:0.15rem;
+  position: absolute;
+  top:-0.05rem;
+  right:-0.05rem;
+}
+.message_content{
+  float:left;
+  width:4.7rem;
+  margin-left:0.2rem;
+}
+.message_content{
+  font-size: 0.22rem;
+}
+.message_tit_tz{
+  height:0.5rem;
+  line-height: 0.5rem;
+}
+.mess_tit{
+  font-size: 0.24rem;
+  color:#333333;
+}
+.message_time{
+  font-size: 0.2rem;
+  color:#a2a2a2;
+}
+.message_nr{
+  width: 100%;
+  clear: both;
+  font-size: 0.22rem;
+  color:#878787;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ui-loader{
+  display: none;
+}

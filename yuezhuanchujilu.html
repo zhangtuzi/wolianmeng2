@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Expires" content="0">
+  <title>余额转出记录</title>
+  
+	<link rel="stylesheet" type="text/css" href="css/mxhstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/zhuanchu.css">
+  <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+  <script type="text/javascript" src='js/top.js'></script>
+  <script type="text/javascript">
+    window.onload = function(){setTimeout(function(){$(window).scrollTop(0)},10);}
+  </script>
+</head>
+
+<body>
+
+  <!-- 主体内容之前的公共导航 -->
+  <div class="header">
+ <!--#include virtual="/wolianm2/include/headerinfo4.html"-->
+  </div>
+  <!-- 主体内容 -->
+  <div class="main">
+  	  <div class='changeHead' style="height:0;">
+				<ul>
+					<li>
+						<div class='shoppingSelect SelectContaner'>
+							<span  class='fl ShowTextSelect'>全部转出记录</span>
+							<div class='Slct_area'>
+								<img src="images/arrSlct_down.png" style="width:0.22rem;height:0.12rem;"/>
+							</div>
+						</div>
+								<select class='shopChange selectBtn'>
+									<option>商品类型1</option>
+									<option>商品类型2</option>
+									<option>商品类型3</option>
+								</select>
+						
+					</li>
+					<li>
+						<div class='MonthSelect SelectContaner'>
+							<span class='fl ShowTextSelect'>所有月份</span>
+							<div class='Slct_area'>
+								<img src="images/arrSlct_down.png" style="width:0.22rem;height:0.12rem;"/>
+							</div>
+						</div>
+						<select class='MonthChange selectBtn'>
+									<option>月份1</option>
+									<option>月份2</option>
+									<option>月份3</option>
+								</select>
+					</li>
+			
+					<li style="width:6.4rem;height:1.28rem;background:#ffffff;border-bottom:1px solid #e2e2e2;border-top:1px solid #e2e2e2;">
+						<div style="margin-top: -0.20rem;width:2.3rem;height:1.23rem;float:left;">
+							<span style="font-size:0.22rem;">
+								累计转出沃点</span>
+							<p style="font-size:0.26rem;color:#fa8f56;margin-top:-0.2rem;">
+							950.00	
+							</p>
+							
+						</div>
+						<div style="margin-top: -0.20rem;width:3.1rem;height:1.28rem;float:right;">
+							<div style="width:3.1rem;height:1.23rem;float:left;">
+							<span style="font-size:0.22rem;">
+								折合人民币(元)</span>
+							<p style="font-size:0.26rem;color:#fa8f56;margin-top:-0.2rem;">
+							950.00	
+							</p>
+							
+						</div>
+						</div>
+					</li>
+				</ul>
+			
+			</div>
+			
+    <div class="header_l">
+     
+      <div class="height_20">
+
+      </div>
+      <div class="main_lll">
+        <div class="detailed">
+          <div class="riqi">
+            <span>15<br>7月</span>
+          </div>
+          <div class="xinxi">
+            <p>
+              <span>张三2</span><span class="left_lll">中国农业银行</span><span class="left_lll">尾号：7118</span>
+            </p>
+            <p>
+              到账金额：100.00元
+            </p>
+          </div>
+
+          <div class="money">
+            <p>
+              提现<span><img src="images/xuebi1.png" alt="" /></span>
+              <p>
+                100.00
+              </p>
+          </div>
+        </div>
+        <div class="detailed detailed_no">
+          <div class="riqi">
+            <span>15<br>7月</span>
+          </div>
+          <!-- <div class="duojieguo"> -->
+            <div class="shuang shuang_bo">
+
+              <div class="xinxi">
+                <p>
+                  <span>张三</span><span class="left_lll">中国农业银行</span><span class="left_lll">尾号：7118</span>
+                </p>
+                <p>
+                  到账金额：100.00元
+                </p>
+              </div>
+
+              <div class="money">
+                <p>
+                  提现<span><img src="images/xuebi1.png" alt="" /></span>
+                  <p>
+                    100.00
+                  </p>
+              </div>
+            </div>
+            <div class="shuang">
+
+              <div class="xinxi">
+                <p>
+                  <span>张三</span><span class="left_lll">中国农业银行</span><span class="left_lll">尾号：7118</span>
+                </p>
+                <p>
+                  到账金额：100.00元
+                </p>
+                <p class="color_cw">
+                  失败原因：收款人姓名与卡号不符
+                </p>
+              </div>
+
+              <div class="money">
+                <p>
+                  提现<span><img src="images/xuebi2.png" alt="" /></span>
+                  <p id="a">
+                    100.00
+                  </p>
+              </div>
+            </div>
+          <!-- </div> -->
+
+
+        </div>
+        <div class="detailed">
+          <div class="riqi">
+            <span>15<br>7月</span>
+          </div>
+          <div class="xinxi">
+            <p>
+              <span>张三</span><span class="left_lll">中国农业银行</span><span class="left_lll">尾号：7118</span>
+            </p>
+            <p>
+              到账金额：100.00元
+            </p>
+          </div>
+
+          <div class="money">
+            <p>
+              提现<span><img src="images/xuebi3.png" alt="" /></span>
+              <p>
+                100.00
+              </p>
+          </div>
+        </div>
+        <div class="detailed">
+          <div class="riqi">
+            <span>15<br>7月</span>
+          </div>
+          <div class="xinxi">
+            <p>
+              <span>张三</span><span class="left_lll">中国农业银行</span><span class="left_lll">尾号：7118</span>
+            </p>
+            <p>
+              到账金额：100.00元
+            </p>
+          </div>
+
+          <div class="money">
+            <p>
+              提现<span><img src="images/xuebi1.png" alt="" /></span>
+              <p>
+                100.00
+              </p>
+          </div>
+        </div>
+        <div class="detailed">
+          <div class="riqi">
+            <span>15<br>7月</span>
+          </div>
+          <div class="xinxi">
+            <p>
+              <span>张三</span><span class="left_lll">中国农业银行</span><span class="left_lll">尾号：7118</span>
+            </p>
+            <p>
+              到账金额：100.00元
+            </p>
+          </div>
+
+          <div class="money">
+            <p>
+              提现<span><img src="images/xuebi3.png" alt="" /></span>
+              <p>
+                100.00
+              </p>
+          </div>
+        </div>
+        <div class="detailed">
+          <div class="riqi">
+            <span>15<br>7月</span>
+          </div>
+          <div class="xinxi">
+            <p>
+              <span>张三</span><span class="left_lll">中国农业银行</span><span class="left_lll">尾号：7118</span>
+            </p>
+            <p>
+              到账金额：100.00元
+            </p>
+          </div>
+
+          <div class="money">
+            <p>
+              提现<span><img src="images/xuebi1.png" alt="" /></span>
+              <p>
+                100.00
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <!--#include virtual="/wolianm2/include/footer_banquan3.html"-->
+  </div>
+
+</body>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".detailed:even").css("background", "#fff");
+    $(".title_lll").text('余额转出记录');
+  });
+
+$('.selectBtn').bind('change',function(){
+				var selectValue = $(this).find('option:selected').text();
+				$(this).siblings('.SelectContaner').children('.ShowTextSelect').text(selectValue);
+			});
+
+</script>
+
+</html>

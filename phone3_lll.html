@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>归属地有商品</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/phonenum_lll.css">
+    <script type="text/javascript" src='js/top.js'></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+</head>
+
+<body>
+    <div class="contaner_lll">
+        <!--#include virtual="/wolianm2/include/headerinfo5.html"-->
+        <div class="buy_successcon_lll">
+            <img src="images/wo_img_lll.png" class="wo_img_lll">
+        </div>
+        <div class="wo_numblll">
+            <span class="numspan_lll">联通手机号</span>
+        </div>
+        <div class="phonenum_lll clearfloat">
+            <input type="text" pattern="[0-9]*" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="请输入联通手机号" class="writenum_lll fl" id="N_wfn">
+            <span class="city_lll fl">河北  保定  联通</span>
+            <img src="images/chacha.png" alt="" class="chacha_wfn">
+            <img src="images/customgray_lll.png" class="customgray_lll fr">
+        </div>
+        <div class="bordergary_lll"></div>
+        <div class="wo_numblll">
+            <span class="numspan_lll">档位选择</span>
+        </div>
+        <ul class="litype_lll clearfloat litype_lll" style="display:none">
+            <li class="">
+                <span class="sp1_lll">20MB</span>
+                <span class="sp2_lll">3元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">50MB</span>
+                <span class="sp2_lll">6元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">100MB</span>
+                <span class="sp2_lll">10元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">200MB</span>
+                <span class="sp2_lll">15元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">200MB</span>
+                <span class="sp2_lll">15元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">500MB</span>
+                <span class="sp2_lll">30元</span>
+                <i></i>
+            </li>
+
+        </ul>
+        <ul class="litype_lll clearfloat litype_lll">
+            <li class="li1">
+                <span class="sp1_lll">20MB</span>
+                <span class="sp2_lll">3元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">50MB</span>
+                <span class="sp2_lll">6元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">100MB</span>
+                <span class="sp2_lll">10元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">200MB</span>
+                <span class="sp2_lll">15元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">200MB</span>
+                <span class="sp2_lll">15元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">500MB</span>
+                <span class="sp2_lll">30元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">200MB</span>
+                <span class="sp2_lll">15元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">200MB</span>
+                <span class="sp2_lll">15元</span>
+                <i></i>
+            </li>
+            <li>
+                <span class="sp1_lll">500MB</span>
+                <span class="sp2_lll">30元</span>
+                <i></i>
+            </li>
+        </ul>
+        <div class="cirtlecon_lll" style="display:none;">
+            <img src="images/cirtle_lll.png" class="cirtle_lll">
+        </div>
+        <p class="tip_lll margintop50" style="display:none;">
+            该省份无此款流量包
+        </p>
+        <p class="tip_lll margintop10" style="display:none;margin-bottom:30px;">
+            点击下边按钮，查看该省份其他款流量包产品
+        </p>
+        <div class="bordergary2_lll"></div>
+        <ul class="contab_lll clearfloat" id="contab_lll">
+            <li class="active_lll">商品描述</li>
+            <li>温馨提示</li>
+        </ul>
+        <div class="tabcontent_lll" id="tabcontent_lll">
+            <div class="tabdiv_lll">
+                <p>1、5元/月，含30MB国内流量，超出后0.29元/MB。</p>
+                <p>2、说明说明说明说明，说明说明说明说明，说明说明说明说明。</p>
+                <p>
+                    活动内容：2016年3月31日前，办理10元流量加油包可加
+                    <span class="oranges_lll">送20MB国内流量，</span> 加送流量仅限当月使用。
+                </p>
+            </div>
+            <div class="tabdiv_lll" style="display: none;">
+                <p>1、温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示。</p>
+                <p>温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示温馨提示。</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="btncons_lll">
+        <div class="successlll bu2_lll">
+            立即订购：<span id="money_lll">3 元</span>
+        </div>
+        <div class="successlll bu2_lll" style="display:none">
+            去看看其它款
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            $(".tit_lll").text("＊＊＊流量包");
+
+            $(".writenum_lll").on("input", function() {
+                numberL()
+            });
+            // document.getElementById("N_wfn").onchange = function() {
+            //   var text_len = this.value.length;
+            //   if (text_len == 3 || text_len == 8) {
+            //     this.value += " ";
+            //   }
+            // };
+
+            // 归属地、流量包选项等效果
+            function numberL() {
+                var Text = $(".writenum_lll").val()
+                var Length = $(".writenum_lll").val().length;
+
+                if (Length == "11") {
+                    liclickY();
+                    switch (Text) {
+                        case "11111111111":
+                            $(".city_lll").text("河北 保定 联通").show();
+                            $(".litype_lll").eq(0).show();
+                            $(".litype_lll").eq(1).hide();
+                            Main()
+
+                            break;
+                        case "22222222222":
+                            $(".city_lll").text("北京 北京 联通").show();
+                            $(".litype_lll").eq(1).show();
+                            $(".litype_lll").eq(0).hide();
+                            Main()
+                            break;
+                        default:
+                            $(".city_lll").text("河北 廊坊 联通").show();
+                            $(".litype_lll,#contab_lll,#tabcontent_lll,.bordergary2_lll").hide();
+                            $(".wo_numblll").eq(1).hide()
+                            $(".cirtlecon_lll,.tip_lll").show()
+                            $(".bu2_lll").eq(1).show();
+                            $(".bu2_lll").eq(0).hide();
+
+                    }
+                } else {
+                    $(".city_lll").hide();
+                    $(".litype_lll li").removeClass("activeli_lll");
+                    $(".litype_lll li").unbind();
+                };
+                if (Length > "0") {
+                    $(".writenum_lll").css({
+                      "font-size":"0.36rem",
+                      "padding-top":"0.05rem"
+                    });
+                    $(".chacha_wfn").fadeIn(200);
+                    // 删除号码
+                    $(".chacha_wfn").on("click", function(event) {
+                      $(".writenum_lll").val("");
+                      $(".writenum_lll").css({
+                      "font-size":"0.24rem",
+                      "padding-top":"0.1rem"
+                    });
+                      $(".city_lll").hide();
+                      $(this).fadeOut(200);
+                    })
+                } else {
+                    $(".writenum_lll").css({
+                      "font-size":"0.24rem",
+                      "padding-top":"0.1rem"
+                    });
+                    $(".chacha_wfn").fadeOut(200);
+                }
+            };
+
+            // 有商品切换效果
+            function Main(){
+              $(".bu2_lll").eq(0).show();
+              $(".bu2_lll").eq(1).hide();
+              $(".wo_numblll").eq(1).show();
+              $(".cirtlecon_lll,.tip_lll").hide();
+              $("#contab_lll,#tabcontent_lll,.bordergary2_lll").show();
+            }
+            // 11位数字效果
+            function liclickY() {
+                $(".litype_lll li").click(function() {
+                    $(this).addClass("activeli_lll").siblings().removeClass("activeli_lll");
+                    $("#money_lll").text($(".litype_lll li.activeli_lll .sp2_lll").text());
+                });
+            }
+            $(window).on("keypress", function(event) {
+              var code_num =  event.keyCode;
+              if (code_num>47 && code_num<58) {
+                  return true;
+              }else {
+                return false;
+              }
+
+            })
+          // 安卓和IOS调取键盘兼容
+          var pla = ismobile(1);
+					if (pla == "1") {
+						$("#N_wfn").prop("type","number");
+					}else{
+						$("#N_wfn").prop("type","text");
+					}
+
+					function ismobile(test) {
+						var u = navigator.userAgent,
+							app = navigator.appVersion;
+						if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+							if (window.location.href.indexOf("?mobile") < 0) {
+								try {
+									if (/iPhone|mac|iPod|iPad/i.test(navigator.userAgent)) {
+										return '0';
+									} else {
+										return '1';
+									}
+								} catch (e) {}
+							}
+						} else if (u.indexOf('iPad') > -1) {
+							return '0';
+						} else {
+							return '1';
+						}
+					};
+
+
+
+        }
+
+
+        $("#contab_lll li").click(function() {
+            $(this).addClass("active_lll").siblings().removeClass("active_lll");
+            $("#tabcontent_lll .tabdiv_lll").hide().eq($("#contab_lll li").index(this)).show();
+        });
+
+
+    </script>
+</body>
+
+</html>

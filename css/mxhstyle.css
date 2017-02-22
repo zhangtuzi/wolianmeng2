@@ -1,0 +1,427 @@
+/*麻雄辉 财富榜样式start*/
+#container_l{
+	min-width: 320px;
+	max-width: 640px;
+	font-family: "微软雅黑";
+	margin:0 auto;
+	position: relative;
+}
+.caifuimg{
+	position: relative;
+	font-size: 0.18rem;
+	color: #fff;
+}
+.caifuimg img{
+	width: 100%;
+}
+.caifuimg p{
+	position: absolute;
+	bottom: 0.1rem;
+	right: 0;
+}
+@media screen and ( width:320px){
+	.caifuimg p{
+		position: absolute;
+		bottom: 0rem;
+		right: 0;
+	}
+}
+.tablist{
+	height: 0.82rem;
+	line-height: 0.82rem;
+	background: #fff;
+	text-align: center;
+	border-bottom: 1px solid #dbdbdb;
+}
+.tablist ul {
+	overflow: hidden;
+	display: inline-block;
+}
+.yunb{
+	margin-left: 0.3rem;
+	margin-right: 0.3rem;
+}
+
+
+.tablist ul li{
+	padding-left: 0.1rem;
+	padding-right: 0.1rem;
+	font-size: 0.26rem;
+	height: 0.81rem;
+
+	color: #333333;
+	float: left;
+	line-height: 0.78rem;
+}
+.tablist .rub{
+	width: 1.77rem;
+}
+.tablist .yunb{
+	width: 1.7rem;
+}
+.tablist .zongb{
+	width: 1.7rem;
+}
+.onMe_M{
+	border-bottom: 3px solid #fc5f01;
+}
+.tablist ul li span{
+
+	font-size: 0.2rem;
+}
+.detail_list{
+	color: #333333;
+}
+.detail_list ul{
+	overflow: hidden;
+}
+.detail_list ul li{
+	height: 1.22rem;
+	line-height: 1.22rem;
+	border-bottom: 1px solid #dbdbdb;
+	background: #fff;
+}
+.partshow{
+	margin:0 0.26rem;
+}
+
+.partshow .nub{
+	margin-right: 0.6rem;
+	font-size: 0.26rem;
+}
+.partshow .myname{
+	margin-right: 0.6rem;
+	font-size: 0.26rem;
+}
+.partshow .wodian{
+	color: #fc5f01;
+	font-size: 0.32rem;
+}
+.partshow .wodianB{
+	color: #333333;
+	font-size: 0.32rem;
+}
+.partshow .Mywodian{
+	color: #4eba43;
+	font-size: 0.32rem;
+}
+.partshow .nextwodian{
+	color: #333333;
+	font-size: 0.32rem;
+}
+.partshow em{
+	color: #333;
+	font-size: 0.26rem;
+}
+.partshow .midimg{
+	display: table-cell;
+	font-size: 0.2rem;
+	vertical-align: middle;
+	float: left;
+	margin-right: 0.14rem;
+}
+.partshow .midimg img{
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.myrank{
+	background: #fff;
+	margin-bottom: 0.1rem;
+	margin-top: 0.1rem;
+}
+.linH{
+	height: 1.22rem;
+    line-height: 1.22rem;
+}
+.myrank .tiprank{
+	font-size: 0.22rem;
+	color: #a2a2a2;
+	text-align: center;
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+}
+.colOrange{
+	color: #fc5f01 !important;
+	height:0.3rem;
+}
+.btnshare_M{
+	border:none;
+	outline: none;
+	background: #fc5f01;
+	color: #fff;
+	font-size: 0.32rem;
+	text-align: center;
+	width: 100%;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	font-family: '微软雅黑';
+}
+.btnContaner{
+	line-height: 0;
+	margin-top: 0.5rem;
+	margin-bottom: 0.2rem;
+}
+/*麻雄辉 财富榜样式end*/
+
+/*麻雄辉 官方公告样式start*/
+	.adlistContaner{
+
+	}
+	.adlistContaner .adcontent{
+		font-size: 0.22rem;
+		color: #a2a2a2;
+		margin-top: 0.22rem;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.adlistContaner ul{
+		overflow: hidden;
+	}
+	.adlistContaner ul li{
+		padding-top: 0.3rem;
+		padding-bottom: 0.3rem;
+		border-bottom: 1px solid #dbdbdb;
+		background: #fff;
+	}
+	.infoarea{
+		margin:0 0.3rem;
+	}
+	.adlistContaner .topicallTime{
+		font-size: 0.26rem;
+		color: #333333;
+		overflow: hidden;
+	}
+	.topicallTime .time{
+		font-size: 0.22rem;
+		color: #a2a2a2;
+	}
+/*麻雄辉 官方公告样式end*/
+/*麻雄辉 消息中心样式start*/
+	.infoCenterContaner ul li{
+		overflow: hidden;
+
+	    background: #fff;
+	}
+	.infoCenterContaner .topicallTime{
+		font-size: 0.26rem;
+	    color: #333333;
+	    overflow: hidden;
+	}
+	.infoCenterContaner .adcontent {
+		font-size: 0.22rem;
+	    color: #a2a2a2;
+	    margin-top: 0.22rem;
+
+	}
+	.flagread{
+		width: 0.16rem;
+		height: 0.16rem;
+		border-radius: 50%;
+		background: #fc5f01;
+		float: left;
+		margin-top: 0.1rem;
+		margin-left: 0.18rem;
+		margin-right: 0.1rem;
+	}
+	.infoCenterarea{
+		margin-left: 0.18rem;
+	    margin-right: 0.3rem;
+
+	}
+	.dlinfoCenter dt{
+		float: left;
+	    overflow: hidden;
+	    padding-top: 0.24rem;
+	    padding-bottom: 0.24rem;
+	}
+	.dlinfoCenter{
+		overflow: hidden;
+	}
+	.dlinfoCenter dd{
+	    border-bottom: 1px solid #dbdbdb;
+	    padding-top: 0.24rem;
+	    padding-bottom: 0.24rem;
+	    float: right;
+	    width: 93%;
+	}
+	.infoCenterContaner{
+		border-top: 1px solid #dbdbdb;
+		margin-top: 0.3rem;
+	}
+
+
+	.theadhead{
+		width:4rem;
+		display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	}
+
+/*麻雄辉 消息中心样式end*/
+/*麻雄辉 预估中心样式start*/
+	.changeHead{
+		height: 0.8rem;
+		line-height: 0.8rem;
+
+		color: #333333;
+	}
+	.changeHead ul li{
+		overflow: hidden;
+		float: left;
+		width: 50%;
+		text-align: center;
+		position: relative;
+		background: #F2F2F2;
+	}
+	.selectContaner{
+		position: relative;
+	}
+	.selectBtn{
+		left: 0;
+	    height: 0.8rem;
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	    opacity: 0;
+	}
+	.changeHead .hideoption{
+		position: absolute;
+		background: red;
+		top: 0;
+		width: 100%;
+    	height: 0.8rem;
+    	opacity: 0;
+	}
+	.MonthSelect{
+		font-size: 0.26rem;
+		display: inline-block;
+
+	}
+	.MonthSelect span{
+		margin-right: 0.18rem;
+	}
+	.shoppingSelect span{
+		margin-right: 0.18rem;
+	}
+	.shoppingSelect{
+		font-size: 0.26rem;
+		display: inline-block;
+
+	}
+	.Slct_area{
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 0.26rem;
+	}
+	.Slct_area img{
+		height: 0.12rem;
+		vertical-align: middle;
+	}
+	.estimateWo{
+		height: 1.2rem;
+		line-height: 1.2rem;
+		background: #fff;
+		border-top: 1px solid #e9e9e9;
+		border-bottom: 1px solid #e9e9e9;
+		font-size: 0.26rem;
+		padding-left: 0.28rem;
+		padding-right: 0.28rem;
+	}
+
+	.estimateWo .est_Text{
+		color: #333;
+	}
+
+	.listPart_YU{
+		margin-top: 0.18rem;
+	}
+
+	.listPart_YU ul{
+		overflow: hidden;
+	}
+	.listPart_YU ul li{
+
+		background: #fff;
+		border-bottom: 1px solid #f2f2f2;
+	}
+
+	.infopartContainer{
+
+	}
+	.imgmiddle{
+		display: table-cell;
+		font-size: 12px;
+		vertical-align: middle;
+	}
+	.imgmiddle img{
+		vertical-align: middle;
+	}
+	.infopartContainer dl dt{
+		float: left;
+		font-size: 0.22rem;
+		width: 88%;
+		margin-top: 0.3rem;
+	}
+	.infopartContainer dl{
+		padding-right: 0.3rem;
+		padding-left: 0.3rem;
+		overflow: hidden;
+		padding-bottom: 0.3rem;
+	}
+	.headerTime{
+		line-height: 1;
+		overflow: hidden;
+	}
+	.headerTime .TimeCol{
+		color: #a2a2a2;
+	}
+	.infopartContainer dl dd{
+		float: right;
+		margin-top: 0.45rem;
+	}
+	.infopartContainer dl dd img{
+		height: 0.12rem;
+	}
+	.infopartContainer .Contents_Yu{
+		font-size: 0.22rem;
+		color: #a2a2a2;
+		line-height: 1;
+		margin-top: 0.2rem;
+	}
+	.showDetial_M{
+		background: #f2f2f2;
+		font-size: 0.22rem;
+		color: #a2a2a2;
+		padding-left: 0.3rem;
+		padding-right: 0.3rem;
+		/*padding-top: 0.23rem;
+		padding-bottom: 0.23rem;*/
+		overflow: hidden;
+
+	}
+	.showDetial_M ul li{
+		overflow: hidden;
+		background: #f2f2f2;
+		margin-bottom: 0.13rem;
+	}
+	.showDetial_M ul li:last-child{
+		margin-bottom: 0;
+		margin-bottom: 0.23rem;
+	}
+	.showDetial_M ul li:first-child{
+
+		margin-top: 0.23rem;
+	}
+	.rote180{
+		-webkit-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+	}
+
+
+/*麻雄辉 预估中心样式end*/

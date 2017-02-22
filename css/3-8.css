@@ -1,0 +1,182 @@
+/*逛店铺css*/
+body{
+    background: #f2f2f2;
+    font-family: "微软雅黑";
+    font-size: 0.26rem;
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    margin: auto;
+}
+/*public*/
+
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.cl {
+    zoom:1;
+}
+.cl:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/*public end*/
+
+
+
+#search{
+    /*width: 6.4rem;*/
+    /* width: 100%;*/
+    height: 0.88rem;
+    background: #fc5f01 url("../images/backicon.png") no-repeat 0.19rem 0.25rem/0.28rem 0.46rem;
+    line-height: 0.65rem;
+    position: relative;
+}
+#search input{
+    font-size:0.26rem ;
+    display: block;
+    width: 4.54rem;
+    height: 0.54rem;
+    border-radius: 0.04rem;
+    background: #febf99 url("../images/search_icon.png") no-repeat 0.1rem 0.12rem/0.29rem 0.32rem;
+    color: #ffffff;
+    text-indent: 0.46rem;
+    position: absolute;
+    top: 0.17rem;
+    left: 0.90rem;
+}
+#search span{
+    font-size: 0.26rem;
+    color: #ffffff;
+    position: absolute;
+    top: 0.06rem;
+    right: 0.30rem;
+}
+#search .arrow{
+    position: absolute;
+    width: 0;
+    height:0;
+    border-top: 0.08rem solid #ffffff;
+    overflow: hidden;
+    border-left:0.08rem solid transparent;
+    border-right:0.08rem solid transparent;
+    top: 0.58rem;
+    right: 0.46rem;
+}
+
+
+#nav{
+    /* width: 6.4rem;*/
+    height: 0.79rem;
+    font-size: 0.26rem;
+    background: #ffffff;
+    color: #333333;
+    border-bottom: 1px solid #dbdbdb;
+}
+#nav li{
+    text-align: center;
+    height: 0.77rem;
+    line-height: 0.77rem;
+    width: 1.3rem;
+    margin: 0 0.4rem;
+}
+#nav li:hover{
+    border-bottom: 0.04rem solid #fc5f01;
+}
+
+
+.shop_list .big_list{
+    /* width: 6.4rem;*/
+    /*height: 2.1rem;*/
+    background: #ffffff;
+    margin-top: 0.1rem;
+
+}
+.shop_list .big_list .img{
+    width: 2.02rem;
+    text-align: center;
+}
+.shop_list .text{
+    width: 4.38rem;
+    height: 2.1rem;
+    position: relative;
+}
+.user_pic{
+    margin-top: 0.44rem;
+    display: inline-block;
+    width: 1.22rem;
+    height: 1.22rem;
+    background: #f4f4f4 url("../images/girl.png") no-repeat 0.16rem 0.18rem/0.9rem 1.04rem;
+    border-radius: 50%;
+}
+.shop_list .text h3{
+    font-size: 0.26rem;
+    color:#333333 ;
+    margin-top: 0.5rem;
+}
+.shop_list .text p{
+    font-size: 0.22rem;
+    color: #a2a2a2;
+}
+.shop_list .text ul{
+    margin-top: 0.1rem;
+    font-size: 0.18rem;
+    color: #a2a2a2;
+}
+.shop_list .text ul img{
+    width: 0.26rem;
+    height: 0.26rem;
+    /*margin-top: 0.04rem;*/
+}
+.shop_list .text ul .second{
+    margin-left: 0.3rem;
+}
+
+.right_arrow{
+    width: 0.28rem;
+    position: absolute;
+    top:0.82rem;
+    right: 0.28rem;
+}
+
+
+.load{
+    /* width: 6.4rem;*/
+    height: 0.7rem;
+    text-align: center;
+    color: #666666;
+    position: relative;
+    padding-top: 0.86rem;
+}
+.load img{
+    position: absolute;
+    width: 0.4rem;
+    top:0.38rem;
+    left: 3.0rem;
+}
+.load p{
+    font-size: 0.18rem;
+}
+.load a img{
+    width: 0.9rem;
+    position: absolute;
+    top:0.26rem;
+    left: 5.0rem;
+}
+
+.footer_btn {
+    /*   width: 6.4rem;*/
+    height: 0.9rem;
+    background: #fc5f01;
+    color: #ffffff;
+    /*border: none;
+    margin: 0;
+    padding: 0;*/
+    font-size: 0.32rem;
+    text-align: center;
+    line-height: 0.9rem;
+}

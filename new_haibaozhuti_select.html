@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<title>联通产品旗舰店</title>
+		<link rel="stylesheet" type="text/css" href="css/haibao_select.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript" src="js/top.js" ></script>
+		<style media="screen">
+		.wrap_all{
+			position: relative;
+			margin: 0 auto;
+			min-width: 320px;
+			max-width: 640px;
+			background: #fff;
+		}
+		</style>
+	</head>
+
+	<body style="background:#fff;">
+		<div class="wrap_all">
+    		<!--#include virtual="/wolianm2/include/headerinfo11.html"-->
+				<div class="hb_select1">请选择海报主题<span style="font-size:0.22rem;color:#a2a2a2;
+					display:inline-block;margin-left:0.2rem;line-height:0.6rem;">绝版主题任性领！</span></div>
+
+				<ul class="hb_themes">
+					<li class="hb_theme_li">
+							<img src="images/hb_theme.jpg" class="hb_theme_pic hb_theme_select" alt="" />
+							<p class="hb_theme_name">某海报主题</p>
+					</li>
+					<li class="hb_theme_li">
+							<img src="images/hb_theme.jpg" class="hb_theme_pic" alt="" />
+							<p class="hb_theme_name">联通大讲堂联通大讲堂联通大讲堂联通大讲堂</p>
+					</li>
+					<li class="hb_theme_li">
+							<img src="images/hb_theme.jpg" class="hb_theme_pic" alt="" />
+							<p class="hb_theme_name">某海报主题</p>
+					</li>
+					<li class="hb_theme_li">
+							<img src="images/hb_theme.jpg" class="hb_theme_pic" alt="" />
+							<p class="hb_theme_name">某海报主题</p>
+					</li>
+					<li class="hb_theme_li">
+							<img src="images/hb_theme.jpg" class="hb_theme_pic" alt="" />
+							<p class="hb_theme_name">联通大讲堂</p>
+					</li>
+					<li class="hb_theme_li">
+							<img src="images/hb_theme.jpg" class="hb_theme_pic" alt="" />
+							<p class="hb_theme_name">某海报主题</p>
+					</li>
+
+					<li class="hb_theme_li">
+							<img src="images/hb_theme.jpg" class="hb_theme_pic" alt="" />
+							<p class="hb_theme_name">某海报主题</p>
+					</li>
+					<li class="hb_theme_li">
+							<img src="images/hb_theme.jpg" class="hb_theme_pic" alt="" />
+							<p class="hb_theme_name">某海报主题</p>
+					</li>
+					<li class="hb_theme_li">
+							<img src="images/hb_theme.jpg" class="hb_theme_pic" alt="" />
+							<p class="hb_theme_name">联通大讲堂</p>
+					</li>
+
+				</ul>
+
+				<!-- <div class="uc_db" style="width:1px;height:1rem;display:none;"></div> -->
+
+				<div class="hb_theme_next_btn">下一步</div>
+
+
+		</div>
+		<script type="text/javascript">
+		  window.onload = function(){
+		    $('.title_lll').text('联通产品旗舰店');
+		  }
+
+			$(function(){
+				for(var i=0;i<$(".hb_theme_name").length;){
+					var height1=$(".hb_theme_name").eq(i).height();
+					var height2=$(".hb_theme_name").eq(i+1).height();
+					var height3=$(".hb_theme_name").eq(i+2).height();
+					var height_m=max_h(height1,height2,height3);
+					$(".hb_theme_name").eq(i).height(height_m);
+					$(".hb_theme_name").eq(i+1).height(height_m);
+					$(".hb_theme_name").eq(i+2).height(height_m);
+					i=i+3;
+				}
+
+				$(".hb_theme_pic").click(function(){
+					$(".hb_theme_pic").removeClass("hb_theme_select");
+					$(this).addClass("hb_theme_select");
+				})
+				$(window).scroll(function(){
+					var scr_t=$(window).scrollTop();
+					if(scr_t>0){
+						$(".uc_db").show();
+					}else{
+						$(".uc_db").hide();
+					}
+				})
+			})
+
+			function max_h(h1,h2,h3){
+				h1=parseFloat(h1);
+				h2=parseFloat(h2);
+				h3=parseFloat(h3);
+				if(h1>h2){
+					if(h1>h3){
+						return h1;
+					}else{
+						return h3;
+					}
+				}else{
+					if(h2>h3){
+						return h2;
+					}else{
+						return h3;
+					}
+				}
+			}
+
+		</script>
+	</body>
+
+</html>

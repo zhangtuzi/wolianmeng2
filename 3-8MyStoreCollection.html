@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="0">
+    <title>3-8我的收藏店铺</title>
+    <script type="text/javascript" src='js/jquery-1.12.3.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/3-8.css">
+    <script type="text/javascript">
+        var _self = this;
+        _self.width = 640; // 璁剧疆榛樿鏈€澶у搴
+        _self.fontSize = 100; // 榛樿瀛椾綋澶у皬
+        _self.widthProportion = function() {
+            var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+            return p > 1 ? 1 : p < 0.5 ? 0.5 : p;
+        };
+        _self.changePage = function() {
+            document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+        }
+        _self.changePage();
+        window.addEventListener('resize', function() {
+            _self.changePage();
+        }, false);
+    </script>
+</head>
+<body>
+<!--#include virtual="/wolianm2/include/headerinfo.html"-->
+<div class="content">
+    <ul class="shop_list">
+        <li class="big_list cl">
+            <div class="img fl">
+                <a  href="javascript:;" class="user_pic"></a>
+            </div>
+            <div class="text fr">
+                <h3><a href="javascript:;">张洲的旗舰店</a></h3>
+                <p>联通号码 | 流量包 | 上网卡 | 手机</p>
+                <ul class="cl">
+                    <li class="fl">
+                        <em><img src="images/star_icon.png"/></em>
+                        <span>收藏： 888888</span>
+                    </li>
+                    <li class="fl second">
+                        <em><img src="images/qt_icon.png"/></em>
+                        <span>销量： 888888</span>
+                    </li>
+                </ul>
+                <a href="#"><img class="right_arrow" src="images/right_arrow_icon.png"/></a>
+            </div>
+        </li>
+        <li class="big_list cl">
+            <div class="img fl">
+                <a  href="javascript:;" class="user_pic"></a>
+            </div>
+            <div class="text fr">
+                <h3><a href="javascript:;">张洲的旗舰店</a></h3>
+                <p>联通号码 | 流量包 | 上网卡 | 手机</p>
+                <ul class="cl">
+                    <li class="fl">
+                        <em><img src="images/star_icon.png"/></em>
+                        <span>收藏： 888888</span>
+                    </li>
+                    <li class="fl second">
+                        <em><img src="images/qt_icon.png"/></em>
+                        <span>销量： 888888</span>
+                    </li>
+                </ul>
+                <a href="#"><img class="right_arrow" src="images/right_arrow_icon.png"/></a>
+            </div>
+        </li>
+        <li class="big_list cl">
+            <div class="img fl">
+                <a  href="javascript:;" class="user_pic"></a>
+            </div>
+            <div class="text fr">
+                <h3><a href="javascript:;">张洲的旗舰店</a></h3>
+                <p>联通号码 | 流量包 | 上网卡 | 手机</p>
+                <ul class="cl">
+                    <li class="fl">
+                        <em><img src="images/star_icon.png"/></em>
+                        <span>收藏： 888888</span>
+                    </li>
+                    <li class="fl second">
+                        <em><img src="images/qt_icon.png"/></em>
+                        <span>销量： 888888</span>
+                    </li>
+                </ul>
+                <a href="#"><img class="right_arrow" src="images/right_arrow_icon.png"/></a>
+            </div>
+        </li>
+    </ul>
+    <div class="load">
+        <img src="images/loading.png"/>
+        <p>玩命儿加载中</p>
+        <a href="#">
+            <img src="images/toTop.png"/>
+        </a>
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function() {
+        $(".topOn").text("广告");
+        $(".tabheaderTop").find('li').eq(1).text("店铺")
+    });
+</script>
+</html>

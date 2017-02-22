@@ -1,0 +1,98 @@
+.baokuan_banner,.baokuan_banner img{
+  width:100%;
+}
+.baokuan_ul{
+  width:100%;
+  padding:0.1rem 0 0.4rem;
+}
+.baokuan_ul li{
+  margin:0.2rem 0.3rem 0;
+  background:#fff;
+  border-radius:5px;
+}
+.baokuan_ul li:first-child{
+  margin-top:0;
+}
+.baokuan_pic{
+  width:2rem;
+  height:2rem;
+  margin-left:0.3rem;
+}
+
+.baokuan_mes_div{
+  width:2.7rem;
+  float:right;
+  margin-right:0.3rem;
+  line-height: 0.4rem;
+  margin-top:0.2rem;
+}
+
+.baokuan_sp_tit{
+  font-size:0.26rem;
+  color:#333;
+  font-weight: bold;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.baokuan_sp_price{
+  font-size:0.35rem;
+  color:#f02a2f;
+  font-weight: bold;
+}
+.baokuan_sp_ygm{
+  font-size:0.18rem;
+  color:#999;
+}
+.lidg_btn{
+  width:1.6rem;
+  height:0.5rem;
+  text-align: center;
+  line-height: 0.5rem;
+  color:#fff;
+  font-size: 0.26rem;
+  background:#fc2e40;
+  border-radius:3px;
+}
+.sy_div{
+  float:left;
+  margin-left:0.25rem;
+  height:0.5rem;
+  background:#ea5f40;
+  color:#fff;
+  line-height: 0.5rem;
+  font-size:0.26rem;
+  position:relative;
+  padding-left:0.3rem;
+  display: inline-block;
+}
+.sy_qj{
+  max-width: 2rem;
+  position: relative;
+  z-index: 3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sy_div_bj{
+  width:0.5rem;
+  height:0.5rem;
+  background:#ea5f40;
+  border-radius:50%;
+  display: inline-block;
+  position:absolute;
+  top:0;
+  right:-0.25rem;
+  z-index: 2;
+}
+.zuan_icon{
+  width:0.5rem;
+  height:0.5rem;
+  background:#fba80e;
+  border-radius:50%;
+  position:absolute;
+  top:0;
+  left:-0.25rem;
+  text-align: center;
+  line-height: 0.5rem;
+}

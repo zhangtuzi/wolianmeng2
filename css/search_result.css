@@ -1,0 +1,181 @@
+/*张豪亮 我的订单样式start*/
+#container_l{
+	min-width: 320px;
+	max-width: 640px;
+	font-family: "微软雅黑";
+	margin:0 auto;
+}
+
+	.selectContaner{
+		position: relative;
+	}
+	.selectBtn{
+		left: 0;
+	    height: 0.8rem;
+	    position: absolute;
+	    top: 0;
+	    width: 100%;
+	    opacity: 0;
+	}
+	.changeHead .hideoption{
+		position: absolute;
+		background: red;
+		top: 0;
+		width: 100%;
+    	height: 0.8rem;
+    	opacity: 0;
+	}
+	.StateSelect{
+		font-size: 0.26rem;
+		display: inline-block;
+
+	}
+	.StateSelect span{
+		margin-right: 0.18rem;
+	}
+	.shoppingSelect span{
+		margin-right: 0.18rem;
+	}
+	.shoppingSelect{
+		font-size: 0.26rem;
+		display: inline-block;
+
+	}
+	.Slct_area{
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 0.26rem;
+	}
+	.Slct_area img{
+		height: 0.16rem;
+		vertical-align: middle;
+	}
+
+	.estimateWo{
+		height: 1.27rem;
+		line-height: 1.27rem;
+		background: #fff;
+		border-top: 1px solid #e9e9e9;
+		border-bottom: 1px solid #e9e9e9;
+		font-size: 0.26rem;
+		padding-left: 0.28rem;
+		padding-right: 0.28rem;
+	}
+
+	.estimateWo .est_Text{
+		color: #333;
+	}
+
+	.listPart_YU{
+		margin-top: 0.18rem;
+	}
+
+	.listPart_YU ul{
+		overflow: hidden;
+	}
+	.listPart_YU ul li{
+
+		background: #fff;
+		border-bottom: 1px solid #f2f2f2;
+	}
+.bor_t{
+  border-top:1px solid #dbdbdb;
+}
+
+.xq_tit{
+  text-align: center;
+}
+
+.color1{
+  color: #fd5e02;
+}
+
+.color2{
+  color: #353535;
+}
+
+	.imgmiddle{
+		display: table-cell;
+		font-size: 12px;
+		vertical-align: middle;
+	}
+	.imgmiddle img{
+		vertical-align: middle;
+	}
+	.infopartContainer dl dt{
+		float: left;
+		font-size: 0.22rem;
+		width: 88%;
+		margin-top: 0.3rem;
+	}
+	.infopartContainer dl{
+		padding-right: 0.3rem;
+		padding-left: 0.3rem;
+		overflow: hidden;
+		padding-bottom: 0.3rem;
+	}
+	.headerTime{
+		line-height: 1;
+		overflow: hidden;
+	}
+	.headerTime .TimeCol{
+		color: #a2a2a2;
+	}
+  .djie_num,.djie,.yjie_num,.yjie{
+    font-size: 0.2rem;
+    color:#353535;
+  }
+  .yjie_num{
+    margin-right:0.3rem;
+    color:#ff5b05;
+  }
+  .djie_num{
+    color:#ff5b05;
+  }
+	.infopartContainer dl dd{
+		float: right;
+		margin-top: 0.45rem;
+	}
+	.infopartContainer dl dd img{
+		height: 0.1rem;
+		width:0.21rem;
+	}
+	.infopartContainer .Contents_Yu{
+		font-size: 0.22rem;
+		color: #a2a2a2;
+		line-height: 1;
+		margin-top: 0.2rem;
+	}
+	.showDetial_M{
+		background: #f2f2f2;
+		font-size: 0.18rem;
+		color: #a2a2a2;
+		padding-left: 0.3rem;
+		padding-right: 0.3rem;
+		/*padding-top: 0.23rem;
+		padding-bottom: 0.23rem;*/
+		overflow: hidden;
+
+	}
+
+	.showDetial_M{
+    padding-bottom: 0.23rem;
+  }
+	.showDetial_M ul li{
+		overflow: hidden;
+		background: #f2f2f2;
+    padding:0 0.05rem 0 0.05rem;
+		padding-bottom: 0.13rem;
+		line-height: 0.2rem;
+	}
+
+	.showDetial_M ul li:first-child{
+		margin-top: 0.3rem;
+	}
+  .showDetial_M ul li:last-child{
+		margin-bottom: 0.1rem;
+	}
+	.rote180{
+		-webkit-transform: rotate(-180deg);
+		transform: rotate(-180deg);
+	}

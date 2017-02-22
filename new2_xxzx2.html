@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>消息中心2</title>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.mobile.1.3.2.js"></script> -->
+    <script type="text/javascript" src="js/top.js"></script>
+    <link rel="stylesheet" href="css/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/new2_xxzx2.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="warp_All_xxzx2">
+      	<!--#include virtual="/wolianm2/include/headerinfo11.html"-->
+        <ul class="message_all">
+            <li>
+              <div class="style_icon">
+                <img src="images/message_style_1.png" class="style_icon_img" alt="" />
+                <img src="images/new_message_icon.png" class="new_message_ts" alt="" />
+              </div>
+              <div class="message_content">
+                  <p class="message_tit_tz">
+                    <span  class="fl mess_tit">消息通知</span>
+                    <span class="fr message_time">16-01-01</span>
+                  </p>
+                  <p class="message_nr">您的成长值在您的通讯录好友里排名第X，再接再</p>
+              </div>
+            </li>
+            <li>
+              <div class="style_icon">
+                <img src="images/message_style_2.png" class="style_icon_img" alt="" />
+                <img src="images/new_message_icon.png" class="new_message_ts dn" alt="" />
+              </div>
+              <div class="message_content">
+                  <p class="message_tit_tz">
+                    <span  class="fl mess_tit">精彩活动</span>
+                    <span class="fr message_time">16-01-01</span>
+                  </p>
+                  <p class="message_nr">您的成长值在您的通讯录好友里排名第X，再接再</p>
+              </div>
+            </li>
+            <li>
+              <div class="style_icon">
+                <img src="images/message_style_3.png" class="style_icon_img" alt="" />
+                <img src="images/new_message_icon.png" class="new_message_ts dn" alt="" />
+              </div>
+              <div class="message_content">
+                  <p class="message_tit_tz">
+                    <span  class="fl mess_tit">会员收益</span>
+                    <span class="fr message_time">16-01-01</span>
+                  </p>
+                  <p class="message_nr">您的成长值在您的通讯录好友里排名第X，再接再</p>
+              </div>
+            </li>
+            <li>
+              <div class="style_icon">
+                <img src="images/message_style_4.png" class="style_icon_img" alt="" />
+                <img src="images/new_message_icon.png" class="new_message_ts dn" alt="" />
+              </div>
+              <div class="message_content">
+                  <p class="message_tit_tz">
+                    <span  class="fl mess_tit">会员成长值</span>
+                    <span class="fr message_time">16-01-01</span>
+                  </p>
+                  <p class="message_nr">您的成长值在您的通讯录好友里排名第X，再接再</p>
+              </div>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+    window.onload = function(){
+      $('.title_lll').text('消息中心');
+    }
+    $(function(){
+            $('.editBtnTop1').click(function(){
+      		if($('.PopContaner').hasClass('dn')&&!$('.editBtnTop1').hasClass('nowdl')){
+      			$('.PopContaner').removeClass('dn');
+      			$('.tc_mc').removeClass('dn');
+      			Touchhide1();
+      		}else{
+      			$('.PopContaner').addClass('dn');
+      			$('.tc_mc').addClass('dn');
+      		}
+      	});
+
+      	function Touchhide1(){
+
+      		$('body').click(function(event){
+      			var logdown = $(event.target).hasClass('editBtnTop1') ? $(event.target):$(event.target).parent();
+      			var PopArea = false;
+      			if($(event.target).hasClass('PopContaner')||$(event.target).parents().hasClass('PopContaner')){
+      				 PopArea = true;
+      			}
+      			if(!logdown.hasClass('editBtnTop1') && !PopArea){//false
+      				$('.PopContaner').addClass('dn');
+      				$('.tc_mc').addClass('dn');
+      			}
+
+      		})
+      		$('.tc_mc').click(function(event){
+      			var logdown = $(event.target).hasClass('editBtnTop1') ? $(event.target):$(event.target).parent();
+      			var PopArea = false;
+      			if($(event.target).hasClass('PopContaner')||$(event.target).parents().hasClass('PopContaner')){
+      				 PopArea = true;
+      			}
+      			if(!logdown.hasClass('editBtnTop1') && !PopArea){//false
+      				$('.PopContaner').addClass('dn');
+      				$('.tc_mc').addClass('dn');
+      			}
+
+      		})
+      	}
+
+    })
+    </script>
+  </body>
+</html>

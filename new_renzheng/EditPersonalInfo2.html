@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="css/css.css" />
+		 <link rel="stylesheet" type="text/css" href="css/mobile-area-select.css">
+		 <!--<script type="text/javascript" src="js/jquery-1.11.2.min.js" ></script>-->
+	     <script type="text/javascript" src="js/zepto.min.js"></script>
+	     <script src="js/mobile-area-select.js" type="text/javascript" charset="utf-8"></script>
+
+
+		<script type="text/javascript" src="js/public.js" ></script>
+		<script>
+
+			function saveSuccess1(){
+				$('.tips').hide();
+				$('.saveSuccess').show();
+				setTimeout("window.location.href='PersonalInfo.html'",2000)
+			}
+
+$(document).ready(function(){
+	$("li:eq(4)").css("display","none");
+    $("li:eq(5)").css("display","none");
+   $(".sz_niu").keyup(function(){
+         var length = 10;
+         var content_len = $(".sz_niu").val().length;
+         var in_len = length-content_len;
+         if(in_len==0){
+            $("li:eq(4)").css("display","block");
+		    $("li:eq(5)").css("display","block");
+
+         }else{
+           $("li:eq(4)").css("display","none");
+           $("li:eq(5)").css("display","none");
+         }
+
+    });
+    $("#area").mobileAreaSelect();
+		$("#area").focus(function(){
+			$(this).blur();
+		})
+
+		$(".qd").click(function(){
+			$(".cityfk").css("display","none");
+			$(".mengceng").css("display","none");
+		})
+
+   });
+	</script>
+
+
+
+	</head>
+
+	<body>
+		<section class="mengceng"></section>
+
+		<Div class="saveSuccess">
+			<img src="img/saveSuccess.png">
+		</Div>
+		<section class="eidtmain">
+			 <header class="personalinfo">
+				 <a href="PersonalInfo.html" style="position:absolute;left:0.7rem;display:inline-block;"><img src="img/backicon.png" style="width:1rem;margin-top:0.7rem;" alt="" /></a>
+ 				个人资料
+			  <span class="save" onclick="saveSuccess1()">保存</span>
+			 </header>
+
+			 <section class="eidtList" style="background: #ffffff;height:220px;">
+			 	<ul >
+			 		<li>
+			 			<span class="eidtListLeft">头像</span>
+			 			<span class="eidtListRight"><img src="img/portrait.png"></span>
+			 		</li>
+			 		<li>
+			 			<span class="eidtListLeft"style="width: 20%;">昵称</span>
+			 			<span class="eidtListRight"style="width: 77%;"><input placeholder="10个字以内，不能以数字或下划线开头" class="nickname"></span>
+			 		</li>
+			 		<li>
+			 			<span class="eidtListLeft k_kuandu">省份地区</span>
+			 			<span class="eidtListRight  k_kuandu"style="color:#a9a9a9;font-size:14px;font-weight:100;">
+			 				<input type="text" id="area" placeholder="请选择省份、地市" data-value="" readonly="readonly" style="border: none;text-align: right;font-size: 14px;"/>
+			 			<!-- <input type="hidden" id="hd_area" value=""/></span> -->
+			 		</li>
+			 		<li>
+			 			<span class="eidtListLeft k_kuandu">发展人编码(选填)</span>
+			 			<span class="eidtListRight k_kuandu"><input  value="" placeholder="请输入发展人编码"  maxlength="10"  class="nickname sz_niu"style="font-size:14px;"></span>
+			 		</li>
+
+			 		<li>
+			 			<span class="eidtListLeft k_kuandu">发展人名称(不可编辑)</span>
+			 			<span class="eidtListRight k_kuandu" style="font-size:14px;font-weight:100;"style="width:50%;">张思奇</span>
+			 		</li>
+			 		<li>
+			 			<span class="eidtListLeft k_kuandu">发展人省份(不可编辑)</span>
+			 			<span class="eidtListRight k_kuandu" style="font-size:14px;font-weight:100;"style="width:50%;">河北</span>
+			 		</li>
+			 	</ul>
+			 </section>
+		</section>
+
+		<div class="cityfk">
+				<p class="ts">提示</p>
+				<p style="border-bottom:1px solid #c7c7c5;padding:10px;">抱歉，省份、地市均不能为空！</p>
+				<p class="qd">确定</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+	<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>商品搜索结果页面</title>
+	<link rel="stylesheet" type="text/css" href="css/dqqh1.css"/>
+	<link rel="stylesheet" type="text/css" href="css/qzq.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+	<script type="text/javascript">
+        var _self =  this ;
+        _self.width = 640;
+        _self.fontSize = 100;
+        _self.widthProportion =  function (){ var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.5?0.5:p;};
+        _self.changePage =  function (){
+        document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+        }
+        _self.changePage();
+        window.addEventListener('resize', function (){_self.changePage();}, false );
+    </script>
+</head>
+<body style="background:#f2f2f2;">
+<div class="wrap_all">
+
+  <!--#include virtual="/wolianm2/include/header_qzq_ss_result.html"-->
+
+	<!-- 搜索提示部分开始 -->
+
+	<div class="tishi" style="display:none;width:100%;position:absolute;top:0.9rem;height:90%;z-index:1;background:#f6f6f6;padding:0.3rem 0 0.3rem 0;">
+
+		<div class="zh_jian"style="padding-top:0.2rem;"id="sosuo">
+			<p class="zt_heise zt_daxiao2 zt_cuxi"style="margin:0 0 0.2rem 0.2rem;">搜索历史</p>
+			<ul class="uo_1" style="margin-left:0.2rem;margin-right:0.2rem;">
+			<li class="zt_daxiao1 li_1">号码</li>
+			<li class="zt_daxiao1 li_1">苹果6plus</li>
+			<li class="zt_daxiao1 li_1">4G流量包</li>
+			<li class="zt_daxiao1 li_1">苹果（APPLE） iPhone SE</li>
+			<li class="zt_daxiao1 li_1">小米4</li>
+			<li class="zt_daxiao1 li_1">手机</li>
+			</ul>
+			<div class="qc_ss" style="width:1.8rem;margin:0.5rem auto;text-align:center;font-size:0.22rem;color:#b1b1b1;border:1px solid #b1b1b1;padding:0.1rem;border-radius:3px;">清除搜索历史</div>
+
+		</div>
+			<div class="zh_jian"style="background:#f6f6f6;padding-top:0.3rem;" id="xiangguan">
+			<ul class="uo_2">
+			<li id="li_u" class="xiangguan_tit" style="margin-top:0;">相关商品</li>
+			<li class="zt_daxiao1">苹果（APPLE）iPone SE</li>
+			<li class="zt_daxiao1">联想（Lenovo）A3600GQ版 4G全国套餐合约机</li>
+			<li class="zt_daxiao1">中兴（ZTE）天机+防版 4G全国套餐合约机</li>
+			<li class="zt_daxiao1">iPhone6s/iPhone6s Plus</li>
+			</ul>
+		</div>
+
+	</div>
+
+		<!-- 搜索提示部分结束 -->
+
+
+
+	<!-- 有订单时显示部分开始 -->
+
+
+	<ul class="fenlei" style="display:block;">
+
+		<li class="li1 selected1">全部</li>
+
+		<li class="li1">号码</li>
+
+		<li class="li1">手机</li>
+
+		<li class="li1">上网卡</li>
+
+		<li class="li1">流量包</li>
+
+	</ul>
+
+	<div class="plsx" style="display:block;">
+
+			<div class="plsx1 time">上架时间</div>
+
+			<div class="plsx1 lqpm selected2">领取排名</div>
+
+			<div class="plsx1 sphot">商品热销</div>
+
+	</div>
+
+	<ul class="sxjg" style="padding-bottom:0;display:block;">
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+				<p class="mes1"><span class="lqr_num">2028</span>人已领取</p>
+
+				<p class="mes1">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+				<p class="pro_tit">小米Note 联通4G版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+			<div class="ling">
+					<img src="images/ling.png" alt="" />
+			</div>
+
+		</li>
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+				<p class="mes1"><span class="lqr_num">2028</span>人已领取</p>
+
+				<p class="mes1">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+				<p class="pro_tit">苹果6 Plus 六模全兼容版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+			<div class="ling">领</div>
+
+		</li>
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+				<p class="mes1"><span class="lqr_num">2028</span>人已领取</p>
+
+				<p class="mes1">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+				<p class="pro_tit">华为荣耀5X 联通4G版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+			<div class="ling">领</div>
+
+		</li>
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+				<p class="mes1"><span class="lqr_num">2028</span>人已领取</p>
+
+				<p class="mes1">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+				<p class="pro_tit">小米4 联通4G版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+			<div class="ling">领</div>
+
+		</li>
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+				<p class="mes1"><span class="lqr_num">2028</span>人已领取</p>
+
+				<p class="mes1">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+				<p class="pro_tit">华为荣耀7i 联通4G版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+			<div class="ling">领</div>
+
+		</li>
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+				<p class="mes1"><span class="lqr_num">2028</span>人已领取</p>
+
+				<p class="mes1">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+				<p class="pro_tit">苹果 6 Plus 六模全兼容版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+			<div class="ling">领</div>
+
+		</li>
+
+		<li class="li6" style="margin-top:0;">
+
+			<div class="pro_pic2"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes1">
+
+				<p class="pro_tit1">小米Note 联通4G版 4G全国套餐合约机 4G全国套餐合约机</p>
+
+				<p class="mes3">预收益：<span class="ysy1">12沃点12沃点12沃点12沃点12沃点12沃点12沃点12沃点</span></p>
+
+				<p class="mes4">领取量：<span class="lqr_num">2028</span>人</p>
+
+				<p class="mes4">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+			</div>
+
+			<div class="ling2">领</div>
+
+		</li>
+
+		<li class="li6">
+
+			<div class="pro_pic2"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes1">
+
+				<p class="pro_tit1">iPhone6s 联通4G版 4G全国套餐合约机 4G全国套餐合约机</p>
+
+				<p class="mes3">预收益：<span class="ysy1">12沃点12沃点12沃点12沃点12沃点12沃点12沃点12沃点</span></p>
+
+				<p class="mes4">领取量<span class="lqr_num">2028</span>人</p>
+
+				<p class="mes4">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+			</div>
+
+			<div class="ling2">领</div>
+
+		</li>
+
+		<li class="li6">
+
+			<div class="pro_pic2"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes1">
+
+				<p class="pro_tit1">华为荣耀5X 联通4G版 4G全国套餐合约机 4G全国套餐合约机</p>
+
+				<p class="mes3">预收益：<span class="ysy1">12沃点12沃点12沃点12沃点12沃点12沃点12沃点12沃点</span></p>
+
+				<p class="mes4">领取量<span class="lqr_num">2028</span>人</p>
+
+				<p class="mes4">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+			</div>
+
+			<div class="ling2">领</div>
+
+		</li>
+
+		<li class="li6">
+
+			<div class="pro_pic2"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes1">
+
+				<p class="pro_tit1">小米4 联通4G版 4G全国套餐合约机 4G全国套餐合约机</p>
+
+				<p class="mes3">预收益：<span class="ysy1">12沃点12沃点12沃点12沃点12沃点12沃点12沃点12沃点</span></p>
+
+				<p class="mes4">领取量<span class="lqr_num">2028</span>人</p>
+
+				<p class="mes4">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+			</div>
+
+			<div class="ling2">领</div>
+
+		</li>
+
+		<li class="li6">
+
+			<div class="pro_pic2"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes1">
+
+				<p class="pro_tit1">华为荣耀7i 联通4G版 4G全国套餐合约机 4G全国套餐合约机</p>
+
+				<p class="mes3">预收益：<span class="ysy1">12沃点12沃点12沃点12沃点12沃点12沃点12沃点12沃点</span></p>
+
+				<p class="mes4">领取量<span class="lqr_num">2028</span>人</p>
+
+				<p class="mes4">剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_mini">30</span>分</p>
+
+			</div>
+
+			<div class="ling2">领</div>
+
+		</li>
+ <!--#include virtual="/wolianm2/include/footer_banquan3.html"-->
+	</ul>
+     
+	<div class="jz" style="width:100%;height:0.5rem;position:absolute;bottom:0.3rem;display:none;font-size:0.15rem">
+
+		<div style="width:1.5rem;height:0.8rem;margin:0 auto;position:relative;">
+
+			<img src="images/img.gif" alt="" style="width:0.5rem;height:0.5rem;position:absolute;top:0;left:0.45rem;" />
+
+			<div style="width:1.5rem;position:absolute;bottom:0;left:0;text-align:center;">玩命加载中...</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- 详情弹层部分 -->
+
+	<div class="xq_tc">
+
+		<div class="close_xq">
+
+				<img src="images/close1.png" alt="" />
+
+		</div>
+
+		<div class="pro_pic1"><img src="images/spft.jpg" alt="" /></div>
+
+		<div class="ling1">领</div>
+
+		<div class="tc_mes">
+
+			<div class="tit">
+
+					<p class="tit1">4G全国套餐主副卡</p>
+
+					<p class="tit_mes">商品介绍商品介绍商品介绍商品介绍商品介绍</p>
+
+			</div>
+
+			<div class="sy_tc">
+
+				<div class="sy_left" style="display:inline-block;float:left;width:1rem;">预收益</div>
+
+				<div class="sy_right" style="display:inline-block;float:left;width:3.5rem;color:#fc5f01;">新用户－预存款50元－10元；预存款100元－20元；预存款200及以上－40元。</div>
+
+			</div>
+
+			<div class="lq_mes">
+
+				<p>领取量：<span class="lq_num">2028</span>人已领取</p>
+
+				<p>剩余时间：<span class="sy_day">10</span>天<span class="sy_hour">20</span>小时<span class="sy_min">30</span>分钟</p>
+
+			</div>
+
+
+		</div>
+
+
+ 
+	</div>
+
+
+	<!-- 详情弹层部分结束 -->
+
+
+	<!-- 有订单时显示部分结束 -->
+
+	<!-- 没有订单时显示部分开始 -->
+		<div class="no_result" style="display:none;width:2rem;margin:1rem auto 0;text-align:center;">
+
+			<img src="images/no_sp.png" style="width:0.5rem;" alt="" />
+
+			<p style="font-size:0.22rem;color:#bbbbbb;margin-top:-0.2rem;">目前没有找到商品</p>
+		</div>
+	<!-- 没有订单时显示部分结束 -->
+</div>
+<script>
+            window.onload = function(){  //页面加载的时候改变当前的footer的图片及样式
+                $('#footers').find('li').eq(1).find("p").addClass("orangeColor_lll");
+                $('#footers').find('li').eq(1).find("img").attr("src","images/iconFocus1.png");
+            }
+        </script>
+<script type="text/javascript">
+
+	$(function(){
+
+		$(".li1").click(function(){
+
+			$(".li1").removeClass("selected1");
+
+			$(this).addClass("selected1");
+
+		})
+
+		$(".plsx1").click(function(){
+
+			$(".plsx1").removeClass("selected2");
+
+			$(this).addClass("selected2");
+
+		})
+
+
+
+		$(".pro_pic,.pro_pic2").click(function (){
+
+			var height=document.body.scrollHeight;
+
+			$(".mc_bg").height(height);
+
+			var top=$(document).scrollTop()+50;
+
+			$(".xq_tc").css("top",top);
+
+			$(".mc_bg ,.xq_tc").css("display","block");
+
+			$("body").addClass("body_hidd");
+
+			$("body").bind("touchmove",function(e){
+				e.preventDefault();
+			});
+
+		})
+
+		$(".close_xq").click(function (){
+
+			$(".mc_bg ,.xq_tc").css("display","none");
+
+			$("body").removeClass("body_hidd");
+
+			$("body").unbind("touchmove");
+
+		})
+
+		$(".sousuo_tit").click(function(){
+			window.location.href="spss.html";
+		})
+
+		$(window).scroll(function() {
+    var scrollTop = $(this).scrollTop(),scrollHeight = $(document).height(),windowHeight = $(this).height();
+    var positionValue = (scrollTop + windowHeight) - scrollHeight;
+    if (positionValue ==0) {
+
+				$(".sxjg").css("padding-bottom","0.9rem");
+
+				$(".jz").css("display","block");
+
+				hide();
+
+			 }
+
+	});
+
+	function hide(){
+
+		var i=3;
+
+		var time=setInterval(function(){
+
+			i--;
+
+			if(i==0){
+
+				$(".jz").css("display","none");
+				$(".sxjg").css("padding-bottom","0");
+
+				i=3;
+
+				clearInterval(time);
+
+			}
+
+		},1000)
+
+	}
+
+
+
+
+
+
+
+	})
+
+
+</script>
+
+</body>
+
+</html>

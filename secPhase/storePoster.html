@@ -1,0 +1,52 @@
+<!--#include virtual="/include/head.html"-->
+<section class="headtitle" id="header">
+	<section class="Hmain">店铺海报</section>
+    <section class="Hleft">
+    	<section class="return"></section>
+    </section>
+    <section class="Hright">
+    	<section class="icon_listDown icon_listper">
+        <!--#include virtual="/include/hMenu_logged.html"-->	
+        </section>
+    </section>
+</section>
+
+<section id="content" data-role="content">
+    <h3 class="slctStoreH f14 pad0_15">请选择海报版面</h3>
+    <section class='pad0_15 storeList'>
+    	<dl  class='borderBd5  clearFix storeDl  padT10 padT10 padB15' onClick="url('selectTitle.html')">
+        	<dt class="fl padT2 f16">超大版（6个广告）</dt>
+            <dd class="fr padL15">
+            <span class="bank_to dib"></span>
+            </dd>
+        </dl>
+    	<dl  class='borderBd5  clearFix storeDl  padT10 padT10 padB15' onClick="url('selectTitle.html')">
+        	<dt class="fl padT2 f16"><span>适中版（4个广告）</span><span class="colorf60 padL20 f12"><img src="/images/right_orange.png" width="13" class="vm" />已选广告</span></dt>
+            <dd class="fr padL15">
+            <span class="bank_to dib"></span>
+            </dd>
+        </dl>
+    	<dl  class='borderBd5  clearFix storeDl  padT10 padT10 padB15' onClick="url('selectTitle.html')">
+        	<dt class="fl padT2 f16"><span>mini版（2个广告）</span><span class="colorf60 padL20 f12"><img src="/images/right_orange.png" width="13" class="vm" />已选广告</span></dt>
+            <dd class="fr padL15">
+            <span class="bank_to dib"></span>
+            </dd>
+        </dl>
+        <dl class="weatips_dl padT25 weatips_dl1" >
+        	<dt><img src="../images/tips_icon.png" width="12"></dt>
+            <dd>
+            	<p>可创建多个店铺</p>
+            </dd>
+        </dl>
+    </section>
+    <section class='pad0_15'>
+        <section class="sec_btn btn_addCard">
+            <input type="button" class="btn" value="生成海报" onclick='location.href="myshop.html"'/>
+        </section>
+        <section class="sec_btn padT15 btn_addCard">
+            <input type="button" class="btn" value="取 消" onclick='location.href="myStoreHome.html"'/>
+        </section>
+   </section>
+</section>
+
+<!--#include virtual="/include/footer.html"-->

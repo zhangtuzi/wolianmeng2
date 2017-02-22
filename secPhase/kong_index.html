@@ -1,0 +1,135 @@
+<!--#include virtual="/include/head.html"-->
+<!--wap页面正式版-->
+<section class="headtitle" id="header">
+	<section class="Hmain">空中入网专区</section>
+    <section class="Hleft" onclick='javascript:history.back(-1);'>
+    	<section class="return"></section>
+    </section>
+</section>
+<section class='main_container'>
+
+	<ul class='body_show'>
+		<li>
+			<p class='text_top'>
+				<a href='javascript:void(0);' class='fl'>什么是空中入网？</a>
+				<span class='iconhide'></span>
+			</p>
+			<section style='display:none;' class='nameque'>
+				<p class='text_introce'>空中入网，是中国联通提供的一种便利写卡技术。用户手持空中入网卡，可在网上选号码及套餐，通过数据短信完成激活，无需再去营业厅办理。</p>
+				<div style='margin-top:28px;position:relative;height:124px;'>
+					<img src="/images/circle4.png" width='293px' style='position:absolute;left:50%;margin-left:-147px;'/>
+					<img src="/images/telphone.png" width='81px' style='position:absolute;left:50%;margin-left:-35px;top:25px;' />
+				</div>
+			</section>
+		</li>
+		<li>
+			<p class='text_top'>
+				<a href='javascript:void(0);'>为什么推广空中入网卡？</a>
+				<span class='iconhide'></span>
+			</p>
+			<section style='display:none;' class='nameque'>
+				<div class='partlist'>
+					<p class='part1'>
+						<span class='iconpart'></span>
+						<span class='htext'>推广高效</span>
+					</p>
+					<p class='ptext'>寻找客源，面对面推广空中入网卡，现场开户，实时查收益。相比线上推广，面对面的线下推广更加精准高效！</p>
+				</div>
+				<div class='partlist'>
+					<p class='part1'>
+						<span class='iconpart'></span>
+						<span class='htext'>随时随地</span>
+					</p>
+					<p class='ptext'>手持空中入网卡，无论身在何方，想推广，就推广！</p>
+				</div>
+				<div class='partlist'>
+					<p class='part'>
+						<span class='iconpart'></span>
+						<span class='htext'>实时查收益</span>
+					</p>
+					<p class='ptext2'>现场开户，当场查收益！沃联盟将实时为您计算收益！</p>
+				</div>
+			</section>
+		</li>
+		<li>
+			<p class='text_top'>
+				<a href='javascript:void(0);'>如何推广空中入网？</a>
+				<span class='iconhide'></span>
+			</p>
+			<section style='display:none;' class='nameque'>
+				<div style='text-align:center;margin-top:10px;'>
+					<img src="/images/firststep.png" width='294px' height='120px' style=''/>
+					<p class='textimg'>一键订购空中入网卡，快递急速送达</p>
+					<br />
+
+					<img src="/images/stepthird.png" width='294px' height='120px'/>
+					<div class='textimg'><p>扫描空中入网卡条形码，完成推广人信息与空中如网卡绑定</p></div>
+					<br />
+					<img src="/images/thirdstep.png" width='294px' height='120px'/><br />
+					<div class='textimg'><p>面对面推广，现场交付，手把手指导用户激活空中入网卡</p></div>
+					<br />
+					<img src="/images/fourstep2.png" width='294px' height='120px'/>
+					<div class='textimg'><p>现场开户，当场查收益</p></div>
+					<br />
+				</div>
+				<div class='space-20'></div>
+				<p class='text_bottoom'>详细推广流程，请参阅“求指点”中的<br /><a href='javascript:void(0);'>“空中入网推广模式”</a></p>
+			</section>
+		</li>
+		<li>
+			<p class='text_top'>
+				<a href='javascript:void(0);'>售卡后如何帮助用户激活？</a>
+				<span class='iconhide'></span>
+			</p>
+			<section style='display:none;' class='nameque'>
+				<div style='text-align:center;margin-top:10px;'>
+					<img src="/images/activitionstep0.png" width='294px' height='182px' style='margin-bottom:10px;'/><br />
+					<img src="/images/activitionstep1.png" width='294px' height='221px' style='margin-bottom:10px;'/><br />
+					<img src="/images/activitionstep2.png" width='294px' height='221px' style='margin-bottom:10px;'/><br />
+					<img src="/images/activitionstep3.png" width='294px' height='172px' style='margin-bottom:10px;'/><br />
+					<img src="/images/activitionstep4.png" width='294px' height='200px' style='margin-bottom:10px;'/><br />
+					<img src="/images/activitionstep5.png" width='294px' height='231px' style='margin-bottom:10px;'/><br />
+				</div>
+				
+			</section>
+		</li>
+	</ul>
+	</section>
+	<section class='foot_btn'>
+		<a href="javascript:void(0);" class='btnbottom firstbtn'>购&nbsp; 卡</a>
+		<a href="scancode.html" class='btnbottom centerbtn'>扫&nbsp; 码</a>
+		<a href="myruwang.html" class='btnbottom rightbtn'>我的空中入网卡</a>
+	</section>
+<script>
+    	$('.main_container').css('min-height',$(window).height());
+    $(window).resize(function(){
+    	$('.main_container').css('min-height',$(window).height());
+    });
+    $(function(){
+    	$('.body_show').children('li').children('.text_top').each(function(){
+    			$(this).click(function(){
+    				var dowmicon= $(this).children('span').attr('class');
+	    			var flagshow = $(this).siblings('.nameque').css('display');
+	    			if(dowmicon == 'iconhide'){
+	    				$(this).children('span').attr('class','iconhide');
+	    				//$(this).parent('li').siblings('li').children('p').children('span').attr('class','icondown');
+	    			}else{
+	    				$(this).children('span').attr('class','icondown');
+	    				//$(this).parent('li').siblings('li').children('p').children('span').attr('class','iconhide');
+	    			}
+	    			if(flagshow == 'block'){
+	    				$(this).siblings('.nameque').hide();
+	    				$(this).children('span').attr('class','iconhide');
+
+	    				//$(this).children('.iconhide').attr('class','icondown');
+	    				//$(this).siblings('li').children('.nameque').show();
+	    			}else{
+	    				$(this).siblings('.nameque').show();
+	    				$(this).children('span').attr('class','icondown');
+	    				$(this).parent('li').siblings('li').children('.nameque').hide();
+	    				$(this).parent('li').siblings('li').children('p').children('span').attr('class','iconhide');
+	    			}
+	    		})
+    	})
+    })
+</script>

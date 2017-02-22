@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>身份验证</title>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/top.js"></script>
+    <link rel="stylesheet" href="css/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/new_mmsz.css" media="screen" title="no title" charset="utf-8">
+		<style media="screen">
+		header.personalinfo {
+			background: #fc5f01;
+			color: #fff;
+			height: 0.89rem;
+			text-align: center;
+			font-size: 0.3rem;
+			line-height: 0.89rem;
+			box-sizing: content-box;
+			background-position: 15px;
+			position: relative;
+		}
+		.header_title{
+			width:100%;
+			height:100%;
+			text-align: center;
+			line-height: 0.89rem;
+		}
+    .sc_ts {
+        width: 5rem;
+        height: 0.7rem;
+        line-height: 0.7rem;
+        font-size: 0.2rem;
+        color: #fff;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        left: 0.7rem;
+        bottom: 1rem;
+        border-radius: 5px;
+        display: none;
+        z-index: 999;
+    }
+		</style>
+  </head>
+  <body>
+    <div class="warp_All_zz">
+			<!-- <header class="personalinfo">
+				<div class="header_title">个人资料</div>
+				<a href="../my_wo.html" style="float:left;margin-left:0.2rem;display:inline-block;">
+					<img src="img/backicon.png" style="width:0.3rem;margin-top:-0.69rem;" alt="" /></a>
+
+			 <a href="EditPersonalInfo2.html"  class="edit" style="float:right;margin-right:0.2rem;">
+			 <img src="img/headerWoLog.png" style="width:0.6rem;margin-top:-0.63rem;" alt="" /></a>
+			</header> -->
+			<!--#include virtual="/wolianm2/include/headerinfo11.html"-->
+
+        <div class="message_all">
+            <p class="pt_mes_ts">请输入提现密码，完成身份验证</p>
+            <div class="mm" style="position:relative;">
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                  <input type="number" name="name" value="" id="mm_input" pattern="[0-9]*" maxlength="6">
+            </div>
+
+        </div>
+        <div class="sc_cx" style="width: 1rem;
+    font-size: 0.3rem;
+    margin: 1rem auto;border:1px solid red;">闪窗出现</div>
+        <div class="mc_zhuanz dn"></div>
+        <div class="mm_yz dn">
+            <img src="img/new_yanz_icon.gif" class="wo_icon" style="width:0.7rem;margin-top:0.26rem;" alt="" />
+            <p class="mr_t_1" style="margin-top:0.1rem;">验证中</p>
+            <ul class="zhuanz_lb">
+              <li><div class="lb_div zhuanz_lb_div_1 color_3"></div></li>
+              <li><div class="lb_div zhuanz_lb_div_2"></div></li>
+              <li><div class="lb_div zhuanz_lb_div_3"></div></li>
+            </ul>
+        </div>
+				<div class="mm_yzcg dn">
+            <img src="img/new_ktcg_icon.png" class="ktcg_icon" alt="" />
+            <p class="mr_t_1">开通成功</p>
+        </div>
+
+    </div>
+      <!-- 闪窗提示 -->
+    <div class="sc_ts"
+    style="bottom: 345.5px;">您输入的密码有误，还可输入2次～</div>
+
+
+    <script type="text/javascript">
+    window.onload = function(){
+      $('.title_lll').text('身份验证');
+    }
+
+    $(function(){
+        var win_height=$(window).height();
+        var sc_ts_height=$(".sc_ts").height();
+         $(".sc_ts").css("bottom",(win_height-sc_ts_height)/2);
+         $(".sc_cx").click(function(){
+           $(".sc_ts").show();
+           setTimeout(function(){
+             $(".sc_ts").hide();
+           },1000)
+         })
+        $("#mm_input").click(function(){
+          $(this).css("top","-10rem");
+        }).keyup(function(){
+
+          var this_val=$(this).val();
+          var t_v_lg=this_val.length;
+
+          if(t_v_lg>5){
+            $("#mm_input").blur();
+            $(".mc_zhuanz,.mm_yz").removeClass("dn");
+            setTimeout(tz,3000);
+          }
+        }).blur(function(){
+          $(this).css("top","0");
+        })
+
+        $("#mm_input").bind("input onpropertychange",function(){
+
+          var this_val=$(this).val();
+          var lg=this_val.length;
+          $(".password").html("");
+          for(var i=0;i<lg;i++){
+            $(".password").eq(i).html("<span class='password_d'></span>");
+          }
+        })
+        $(window).keypress(function(e){
+          var keyCod=e.keyCode;
+          if(keyCod>47&&keyCod<58||keyCod==8){
+            return true;
+          }else{
+            return false;
+          }
+
+        })
+
+        function tz(){
+          $(".mm_yz").addClass("dn");
+					$(".mm_yzcg").removeClass("dn");
+					setTimeout(function(){
+						$(".mc_zhuanz,.mm_yzcg").addClass("dn");
+					},1500);
+        }
+      // 转账中
+      var lb_index=0;
+      var lb_th=$(".lb_div").length;
+        function zhuanz_lb(){
+          if(lb_index<lb_th-1){
+            lb_index++;
+          }else{
+            lb_index=0
+          }
+          $(".lb_div").removeClass("color_3");
+          $(".lb_div").eq(lb_index).addClass("color_3");
+        }
+        setInterval(zhuanz_lb,500);
+    })
+
+    </script>
+  </body>
+</html>

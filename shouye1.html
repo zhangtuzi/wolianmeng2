@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="wap-font-scale" content="no">
+    <title>首页</title>
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/dqqh1.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/banquan.css" />
+    <!-- <script src="js/jquery-1.11.1.min.js"></script> -->
+    <script src="js/unslider.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+    <script type="text/javascript" src='js/top.js'></script>
+    <script type="text/javascript">
+
+         //			轮播图代码
+        $(document).ready(function() {
+
+            var lbt_bn_lg=$(".main_image ul li").length;
+            if(lbt_bn_lg>1){
+              $(".main_visual").hover(function() {
+                  $("#btn_prev,#btn_next").fadeIn()
+              }, function() {
+                  $("#btn_prev,#btn_next").fadeOut()
+              });
+              $dragBln = false;
+              $(".main_image").touchSlider({
+                  flexible: true,
+                  speed: 200,
+                  btn_prev: $("#btn_prev"),
+                  btn_next: $("#btn_next"),
+                  paging: $(".flicking_con a"),
+                  counter: function(e) {
+                      $(".flicking_con a").removeClass("on").eq(e.current - 1).addClass("on");
+                  }
+              });
+              $(".main_image").bind("mousedown", function() {
+                  $dragBln = false;
+              });
+              $(".main_image").bind("dragstart", function() {
+                  $dragBln = true;
+              });
+              $(".main_image a").click(function() {
+                  if ($dragBln) {
+                      return false;
+                  }
+              });
+              timer = setInterval(function() {
+                  $("#btn_next").click();
+              }, 2000);
+
+              $(".main_visual").hover(function() {
+                  clearInterval(timer);
+              }, function() {
+                  timer = setInterval(function() {
+                      $("#btn_next").click();
+                  }, 2000);
+              });
+              $(".main_image").bind("touchstart", function() {
+                  clearInterval(timer);
+              }).bind("touchend", function() {
+                  timer = setInterval(function() {
+                      $("#btn_next").click();
+                  }, 2000);
+              });
+            }
+
+
+        });
+    </script>
+    <style media="screen">
+        .a_d_1,.a_d_2,.a_d_3,.a_d_4,.a_d_5,.a_d_6{
+          display: block!important;
+        }
+        .a_d_1 img,.a_d_2 img,.a_d_3 img,.a_d_4 img,.a_d_5 img,.a_d_6 img{
+          width:100%;
+          height:100%;
+          display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="z_zhuti q_jvzhong wai_kuan">
+        <div class="z_zhuti1">
+            <div class="z_zhuti1  jd_dingwei" style="z-index:3;">
+                <ul class="k_kuan h_hangji">
+                    <li class="k_kuan zt_zyjz zt_daxiao  zt_bai zt_yangshi" style="font-size:0.24rem;">北京</li>
+                    <li class="k_kuan zt_zyjz zt_daxiao  xd_dingwei">
+                        <img src="images/images/shouyexiajiantou.png" style="width:0.18rem;height:0.11rem;" />
+                    </li>
+                </ul>
+                <div class="k_kuan1 h_hangji bj_toumingse b_yuanbk xd_dingwei">
+                    <!--<select  class="jd_dingwei b_kuangao3  bj_toumingse1">
+							<option value="shangpin"class="bj_toumingse">商品</option>
+							<option value="dianpu" class="bj_toumingse">店铺</option>
+						</select>-->
+                    <img src="images/sousuo1.png" class="jd_dingwei wb_shangbian wb_zuo" style="width:0.23rem;height:0.22rem;" />
+                    <div class="jd_dingwei  b_kuangao1 bj_toumingse1" id="inptk1">
+                      <a href="syss.html" style="color:#fff;">搜索沃联盟广告、店铺</a>
+                    </div>
+
+                </div>
+                <div class="h_hangji  w_xingk jd_dingwei">
+                    <!--<img src="images/images/erweima.png" class="jd_dingwei tu_img  ">-->
+                    <img src="images/qipao2.png" class="jd_dingwei tu_img " />
+                    <div class="ltxs qp1" style="display:none;">4</div>
+              			<div class="ltxss qp" style="display:block;">9+</div>
+                    	<span id="zt_yc" class="zt_daxiao2 zt_bai jd_dingwei wb_you" style="font-weight: 600;font-family:黑体;margin-top:0.16rem;right:0.15rem;">登录</span>
+                    <img id="img_yc" src="images/images/denglutou.png" class="jd_dingwei tu_img tu_img1">
+                </div>
+            </div>
+            <div class="QC"></div>
+            <div class="main_visual">
+                <div class="flicking_con">	<a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                </div>
+                <div class="main_image">
+                    <ul>
+                        <li><span class="img_3"></span>
+                        </li>
+                        <!-- <li><span class="img_41"></span>
+                        </li> -->
+                        <!-- <li><span class="img_1"></span>
+                        </li>
+                        <li><span class="img_2"></span>
+                        </li>
+                        <li><span class="img_5"></span>
+                        </li> -->
+                    </ul>
+                    <a href="javascript:;" id="btn_prev"></a>
+                    <a href="javascript:;" id="btn_next"></a>
+                </div>
+            </div>
+        </div>
+        <div class="t_toubu" style="border-bottom: 1px solid #e2e2e2;">
+            <ul class="ul_1 t_toubu">
+                <li>
+                    <a href="qzq.html">
+                        <p><img src="images/images/w1.png"></p>
+
+                        <p>去赚钱</p> </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/images/w2.png">
+
+                    <p>空中入网</p></a>
+                </li>
+                <li>
+                    <a href="GoShopping.html">
+                        <img src="images/images/w3.png">
+
+                    <p>逛店铺</p></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/images/w4.png">
+
+                    <p>邀好友赚钱</p></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/images/w5.png">
+
+                     <p>抢领</p> </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/images/w6.png">
+
+                     <p>摇一摇</p> </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/images/w7.png">
+
+                     <p>抽奖</p></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/images/w8.png">
+
+                     <p>签到</p></a>
+                </li>
+            </ul>
+        </div>
+        <div class="QC"></div>
+        <div class="hang_gao  d_div3">
+            <a href="adspread.html">
+                <img src="images/laba.png" class="xd_dingwei" style="top:-0.35rem;left:0.2rem;width:0.3rem;height:0.3rem;" />
+            </a>
+            <img src="images/sx.png" class="xd_dingwei" style="top:-0.35rem; left:0.07rem;width:0.06rem;height:0.32rem;" />
+            <img src="images/new.png" class="xd_dingwei" style="top:-0.4rem;width:0.54rem;height:0.22rem;" /> <span class="zt_daxiao4 xd_dingwei" style="top:-0.42rem;">
+                              关于《中国联通沃联盟用户使用协议》变更
+               </span>
+        </div>
+        <div class="QC"></div>
+        <div class="kuan_gao b_bkshang">
+            <div class="kuan_gao1">	<a href="2-ToMakeMoney.html"><span class="zt_daxiao2 wenzi zt_bai1">大家都在领&nbsp;&nbsp;&nbsp;</span>
+				<span class="zt_daxiao3 wenzi zt_bai2"style="margin-top:0.04rem;">更多热门&nbsp;</span>
+				<img src="images/images/xiaoyoujiantou.png"class="wenzi1" ></a>
+            </div>
+        </div>
+        <div class="QC"></div>
+        <!--<div class="k disan_div">
+            <div class=" disan_div1">
+                <div class=" zt_daxiao4">
+                    <p class="zi_gao">iphone 6s (64G)</p><span class="zt_yanse1 zi_gao">赚200沃点</span>
+                </div>
+                <div class=" fd_you">
+                    <img src="images/images/shoujitu.png" style="margin-top: -0.3rem;width:1.66rem;height:2.04rem;" />
+                </div>
+            </div>
+            <div class=" disan_div2">
+                <div class="shang">
+                    <div class="zuo zt_daxiao4">
+                        <p class="zi_gao">小米Note</p><span class="zt_yanse1 zi_gao">赚200沃点</span>
+                    </div>
+                    <div class="you">
+                        <img src="images/images/shoujitu1.png" style="width:1.09rem;height:1.33rem;" />
+                    </div>
+                </div>
+                <div class="xia">
+                    <div class="zuo zt_daxiao4">
+                        <p class="zi_gao">华为荣耀5X</p><span class="zt_yanse1 zi_gao">赚200沃点</span>
+                    </div>
+                    <div class="you1">
+                        <img src="images/images/shoujitu2.png" style="width:1.34rem;height:1.38rem;" />
+                    </div>
+                </div>
+            </div>
+            <div class="disan_div3">
+                <div class="zuo zt_daxiao4">
+                    <p class="zi_gao">四季组合套餐</p><span class="zt_yanse1 zi_gao">赚20沃点</span>
+                </div>
+                <div class="you2">
+                    <img src="images/images/kapian.png" style="width:1.10rem;height:0.67rem;margin-left: 0.3rem;" />
+                </div>
+            </div>
+            <div class="disan_div4">
+                <div class="zuo zt_daxiao4">
+                    <p class="zi_gao">四季组合套餐</p><span class="zt_yanse1 zi_gao">赚20沃点</span>
+                </div>
+                <div class="you2">
+                    <img src="images/images/kapian1.png" style="width:1.10rem;height:0.67rem;margin-left: 0.3rem;" />
+                </div>
+            </div>
+        </div>-->
+<div id="xt" class="mu"  style="width:6.4rem;height:3rem;display:none;">
+
+      <div class="mu_zuo" style="float:left;width:3.18rem;height:1.44rem;border-right:1px solid #e9e9e9;">
+
+        <div class="ad_1" style="position:relative;clear:both;float:left;width:3.18rem;height:1.44rem;border-bottom:1px solid #e9e9e9;">
+          <div class="zuo zt_daxiao4" style="width:1.5rem;height: 1.25rem;">
+            <p style="line-height: 0.16rem;!important;text-align:left;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow：ellipsis;height:0.2rem;width:1.5rem;margin-top: 0.2rem;
+    margin-left: 0.23rem;">小米小米小米小米</p>
+            <p class="zt_yanse1" style="line-height: 0.16rem!important;text-align:left;margin-top:0.1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.26rem;
+    margin-left: 0.23rem;">赚200沃点</p>
+          </div>
+          <div style="position:absolute;top:5px;right:0.02rem;width:1.09rem;height:1.33rem;">
+            <img src="images/images/shoujitu1.png" style="width:1.09rem;height:1.33rem;"/>
+          </div>
+        </div>
+        <div class="ad_3" style="position:relative;float:left;width:3.18rem;height:1.44rem;border-right:1px solid #e9e9e9;">
+          <div class="zuo zt_daxiao4" stylestyle="width:1.5rem;height: 1.25rem;">
+            <p style="line-height: 0.16rem!important;text-align:left;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:1.5rem;height:0.2rem;margin-top: 0.2rem;
+    margin-left: 0.23rem;">小米Note</p>
+            <p class="zt_yanse1" style="line-height: 0.16rem!important;text-align:left;margin-top:0.1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:1.5rem;height:0.26rem;
+    margin-left: 0.23rem;">赚200沃点</p>
+          </div>
+          <div style="position:absolute;top:5px;right:2px;width:1.09rem;height:1.33rem;">
+            <img src="images/images/shoujitu1.png" style="width:1.09rem;height:1.33rem;"/>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mu_you" style="float:left;width:3.18rem;height:1.44rem;">
+
+        <div class="ad_2" style="position:relative;clear:both;float:left;width:3.18rem;height:1.44rem;border-bottom:1px solid #e9e9e9;">
+          <div class="zuo zt_daxiao4" style="width:1.5rem;height: 1.25rem;">
+            <p style="line-height: 0.16rem!important;text-align:left;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.2rem;margin-top: 0.2rem;
+    margin-left: 0.23rem;">小米Note</p>
+            <p class="zt_yanse1" style="line-height: 0.16rem!important;text-align:left;margin-top:0.1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.26rem;
+    margin-left: 0.23rem;">赚200沃点</p>
+          </div>
+          <div style="position:absolute;top:5px;right:2px;width:1.09rem;height:1.33rem;">
+            <img src="images/images/shoujitu1.png" style="width:1.09rem;height:1.33rem;"/>
+          </div>
+        </div>
+        <div class="ad_4" style="position:relative;float:left;width:3.18rem;height:1.44rem;">
+          <div class="zuo zt_daxiao4" style="width:3.18rem;">
+            <p style="line-height: 0.16rem!important;text-align:left;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.2rem;margin-top: 0.2rem;
+    margin-left: 0.23rem;">小米Note</p>
+            <p class="zt_yanse1" style="line-height: 0.16rem!important;text-align:left;margin-top:0.1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.26rem;
+    margin-left: 0.23rem;">赚200沃点</p>
+          </div>
+          <div style="position:absolute;top:5px;right:2px;width:1.09rem;height:1.33rem;">
+            <img src="images/images/shoujitu1.png" style="width:1.09rem;height:1.33rem;"/>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div id="mu_1" class="mu" style="width:6.4rem;height:2.7rem;display:none;">
+
+      <div class="ad_1" style="clear:both;float:left;width:100%;height:50%;border-bottom:1px solid #e9e9e9;">
+
+      </div>
+      <div class="ad_2" style="float:left;width:49.5%;height:50%;border-right:1px solid #e9e9e9">
+
+      </div>
+      <div class="ad_3" style="float:left;width:49.5%;height:50%;">
+
+      </div>
+
+    </div>
+
+    <div id="mu_2" class="mu" style="width:6.4rem;height:2.7rem;display:none;">
+
+      <div class="ad_1" style="clear:both;float:left;width:49.5%;height:50%;border-right:1px solid #e9e9e9">
+
+      </div>
+      <div class="ad_2" style="float:left;width:49.5%;height:50%;">
+
+      </div>
+      <div class="ad_3" style="float:left;width:100%;height:50%;border-top:1px solid #e9e9e9;">
+
+      </div>
+
+    </div>
+
+    <div id="mu_3" class="mu" style="width:6.4rem;height:2.7rem;display:none;">
+
+      <div class="mu_zuo" style="clear:both;float:left;width:49.5%;height:100%;border-right:1px solid #e9e9e9;">
+
+        <div class="ad_1" style="clear:both;float:left;width:100%;height:50%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_2" style="float:left;width:100%;height:50%;">
+
+        </div>
+
+      </div>
+
+
+      <div class="ad_3" style="float:left;width:50%;height:50%;">
+
+      </div>
+
+    </div>
+
+    <div id="mu_4" class="mu" style="width:6.4rem;height:2.7rem;display:none;">
+
+      <div class="ad_1" style="clear:both;float:left;width:50%;height:100%;border-right:1px solid #e9e9e9;">
+
+      </div>
+
+      <div class="mu_zuo" style="float:left;width:49.5%;height:100%;">
+
+        <div class="ad_2" style="clear:both;float:left;width:100%;height:50%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_3" style="float:left;width:100%;height:50%;">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="mu_5" class="mu" style="width:6.4rem;height:4.05rem;display:none;">
+
+      <div class="ad_1" style="clear:both;float:left;width:50%;height:100%;border-right:1px solid #e9e9e9;">
+
+      </div>
+
+      <div class="mu_zuo" style="float:left;width:49.5%;height:100%;">
+
+        <div class="ad_2" style="clear:both;float:left;width:100%;height:33%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_2" style="float:left;width:100%;height:33%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_3" style="float:left;width:100%;height:33%;">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="mu_6" class="mu" style="width:6.4rem;height:4.05rem;display:none;">
+
+      <div class="mu_zuo" style="float:left;width:49.5%;height:100%;">
+
+        <div class="ad_2" style="clear:both;float:left;width:100%;height:33%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_2" style="float:left;width:100%;height:33%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_3" style="float:left;width:100%;height:33%;">
+
+        </div>
+
+      </div>
+
+      <div class="ad_1" style="float:left;width:50%;height:100%;border-left:1px solid #e9e9e9;">
+
+      </div>
+
+    </div>
+
+    <div id="mu_7" class="mu" style="width:6.4rem;height:2.7rem;display:none;">
+
+      <div class="mu_zuo" style="float:left;width:49.5%;height:100%;border-right:1px solid #e9e9e9;">
+
+        <div class="ad_1" style="clear:both;float:left;width:100%;height:50%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_3" style="float:left;width:100%;height:50%;">
+
+        </div>
+
+      </div>
+
+      <div class="mu_you" style="float:left;width:49.5%;height:100%;">
+
+        <div class="ad_2" style="clear:both;float:left;width:100%;height:50%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_4" style="float:left;width:100%;height:50%;">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="mu_8" class="mu" style="width:6.4rem;height:4.05rem;display:block;">
+
+      <div class="mu_zuo" style="float:left;width:49.5%;height:100%;border-right:1px solid #e9e9e9;">
+
+        <div class="a_d_2" style="clear:both;float:left;width:100%;height:66%;border-bottom:1px solid #e9e9e9;">
+            <img src="images/images/w4.png"  alt="" />
+        </div>
+        <div class="a_d_4" style="float:left;width:100%;height:33%;">
+          <img src="images/images/w2.png"  alt="" />
+        </div>
+
+      </div>
+
+      <div class="mu_you" style="float:left;width:49.5%;height:100%;">
+
+        <div class="a_d_2" style="clear:both;float:left;width:100%;height:33%;border-bottom:1px solid #e9e9e9;">
+          <img src="images/images/w3.png"  alt="" />
+        </div>
+        <div class="a_d_3" style="float:left;width:100%;height:33%;border-bottom:1px solid #e9e9e9;">
+          <img src="images/images/w6.png"  alt="" />
+        </div>
+        <div class="a_d_5" style="float:left;width:100%;height:33%;">
+          <img src="images/images/w7.png"  alt="" />
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="mu_9" class="mu" style="width:6.4rem;height:4.05rem;display:none;">
+
+      <div class="mu_zuo" style="float:left;width:49.5%;height:100%;border-right:1px solid #e9e9e9;">
+
+        <div class="ad_1" style="clear:both;float:left;width:100%;height:33%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_2" style="float:left;width:100%;height:33%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_4" style="float:left;width:100%;height:33%;">
+
+        </div>
+
+      </div>
+
+      <div class="mu_you" style="float:left;width:49.5%;height:100%;">
+
+        <div class="ad_3" style="clear:both;float:left;width:100%;height:66%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_5" style="float:left;width:100%;height:33%;">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="mu_10" class="mu" style="width:6.4rem;height:2.7rem;display:none;">
+
+        <div class="ad_1" style="clear:both;float:left;width:49.5%;height:50%;;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_2" style="float:left;width:50%;height:50%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_4" style="float:left;width:33%;height:50%;border-right:1px solid #e9e9e9;">
+
+        </div>
+
+        <div class="ad_3" style="float:left;width:33%;height:50%;border-right:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_5" style="float:left;width:33%;height:50%;">
+
+        </div>
+
+
+    </div>
+
+    <div id="mu_11" class="mu" style="width:6.4rem;height:4.05rem;display:none;">
+
+        <div class="ad_1" style="clear:both;float:left;width:49.5%;height:33%;;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_2" style="float:left;width:49.5%;height:33%;border-bottom:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_3" style="float:left;width:49.5%;height:33%;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+
+        <div class="ad_4" style="float:left;width:49.5%;height:33%;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_5" style="float:left;width:49.5%;height:33%;border-right:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_6" style="float:left;width:49.5%;height:33%;">
+
+        </div>
+
+    </div>
+
+    <div id="mu_12" class="mu" style="width:6.4rem;height:2.7rem;display:none;">
+
+        <div class="ad_1" style="clear:both;float:left;width:49.5%;height:50%;;border-right:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_2" style="float:left;width:50%;height:50%;border-bottom:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_3" style="float:left;width:24.5%;height:50%;border-right:1px solid #e9e9e9;">
+
+        </div>
+
+        <div class="ad_4" style="float:left;width:24.5%;height:50%;border-right:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_5" style="float:left;width:24.5%;height:50%;border-right:1px solid #e9e9e9;">
+
+        </div>
+        <div class="ad_6" style="float:left;width:24.5%;height:50%;">
+
+        </div>
+
+    </div>
+
+
+        <div class="QC"></div>
+        <div class="kuan_gao" style="margin-top:-0.02rem;">
+            <div class="kuan_gao1">	<a href="GoShopping.html"><span class="zt_daxiao2 wenzi zt_bai1">逛店铺&nbsp;&nbsp;&nbsp;</span>
+				<span class="zt_daxiao3 wenzi zt_bai2"style="margin-top:0.04rem;">更多热门&nbsp;</span>
+				<img src="images/images/xiaoyoujiantou.png"style="margin-top: 0.1rem;width:0.16rem;height:0.16rem;
+					float:right;position:absolute;"></a>
+            </div>
+        </div>
+        <div class="QC"></div>
+        <div class="disi_div">
+            <div class="disan_div3">
+                <div class="zuo zt_daxiao4">
+                    <a href="1-3OthersShopHome.html" style="color:#000000;">
+                        <p style="width:2rem" class="zi_gao">王海侯的旗舰店</p>
+                    </a><span class="zt_yanse1 zi_gao">成交100单</span>
+                </div>
+                <div style="width:3.14rem;background: #ffffff;">
+                    <a href="1-3OthersShopHome.html">
+                        <img src="images/images/nvhai1.png" class="img_daxiao" />
+                    </a>
+                </div>
+            </div>
+            <div class="disan_div4">
+                <div class="zuo zt_daxiao4">
+                    <a href="1-3OthersShopHome.html" style="color:#000000;">
+                        <p style="width:2rem;margin-left:0.2rem;">张洲的旗舰店</p>
+                    </a><span class="zt_yanse1 zi_gao">成交100单</span>
+                </div>
+                <div style="width:3.14rem;background: #ffffff;">
+                    <a href="1-3OthersShopHome.html">
+                        <img src="images/images/nvhai2.png" class="img_daxiao" />
+                    </a>
+                </div>
+            </div>
+            <div class="disan_div3">
+                <div class="zuo zt_daxiao4">
+                    <a href="1-3OthersShopHome.html" style="color:#000000;">
+                        <p style="width:2rem" class="zi_gao">莉莉安的旗舰店</p>
+                    </a><span class="zt_yanse1 zi_gao">成交100单</span>
+                </div>
+                <div style="width:3.14rem;background: #ffffff;">
+                    <a href="1-3OthersShopHome.html">
+                        <img src="images/images/nvhai3.png" class="img_daxiao" />
+                    </a>
+                </div>
+            </div>
+            <div class="disan_div4">
+                <div class="zuo zt_daxiao4">
+                    <a href="1-3OthersShopHome.html" style="color:#000000;">
+                        <p style="width:2rem" class="zi_gao">匆匆那年的旗舰店</p>
+                    </a><span class="zt_yanse1 zi_gao">成交100单</span>
+                </div>
+                <div style="width:3.14rem;background: #ffffff;">
+                    <a href="1-3OthersShopHome.html">
+                        <img src="images/images/nvhai4.png" class="img_daxiao" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="z_xiabian">
+            <div class="z_shang1">
+                <ul>
+                    <li class="dx_dixian1" id="caifu">财富广场</li>
+                    <li class="dx_dixian2" id="caifubang">财富榜</li>
+                </ul>
+            </div>
+            <div class="z_zhong1" id="cf_ye">
+                <div class="m_pao">
+                    <ul>
+                        <li>
+                            <div class="maop m_pao1"><span id="ch_bang" class="zt_bai zt_daxiao22">会飞的猪 16 02 02 123.00沃点</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="maop m_pao2"><span id="ch_bang" class="zt_bai zt_daxiao22">会飞的猪 16 02 02 123.00沃点</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="maop m_pao3"><span id="ch_bang" class="zt_bai zt_daxiao22">会飞的猪 16 02 02 123.00沃点</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="maop m_pao4"><span id="ch_bang" class="zt_bai zt_daxiao22">会飞的猪 16 02 02 123.00沃点</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="qprq" style="position:relative;width:6.4rem;height:1.7rem;overflow:hidden;">
+                    <div class="qpr" style="position:absolute;top:0px;">
+                        <ul style="clear: both;" id="#b04">
+                            <a href="WealthList.html">
+                                <li>
+                                    <img src="images/images/caihuotouxiang.png" style="width:0.8rem;height:0.8rem;" />
+                                </li>
+                            </a>
+                            <a href="WealthList.html">
+                                <li>
+                                    <img src="images/images/caihuotouxiang1.png" style="width:0.8rem;height:0.8rem;" />
+                                </li>
+                            </a>
+                            <a href="WealthList.html">
+                                <li>
+                                    <img src="images/images/caihuotouxiang2.png" style="width:0.8rem;height:0.8rem;" />
+                                </li>
+                            </a>
+                            <a href="WealthList.html">
+                                <li>
+                                    <img src="images/images/caihuotouxiang3.png" style="width:0.8rem;height:0.8rem;" />
+                                </li>
+                            </a>
+                        </ul>
+                        <ul id="#b04">
+                            <a href="WealthList.html">
+                                <li>
+                                    <img src="images/images/caihuotouxiang.png" style="width:0.8rem;height:0.8rem;" />
+                                </li>
+                            </a>
+                            <a href="WealthList.html">
+                                <li>
+                                    <img src="images/images/caihuotouxiang1.png" style="width:0.8rem;height:0.8rem;" />
+                                </li>
+                            </a>
+                            <a href="WealthList.html">
+                                <li>
+                                    <img src="images/images/caihuotouxiang2.png" style="width:0.8rem;height:0.8rem;" />
+                                </li>
+                            </a>
+                            <a href="WealthList.html">
+                                <li>
+                                    <img src="images/images/caihuotouxiang3.png" style="width:0.8rem;height:0.8rem;" />
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+   <div class="caihu_1">
+                <table border="0" cellspacing="" cellpadding="" class="caihu_2
+				  	 zt_daxiao3 zt_zyjz">
+                    <tr>
+                        <td class="td1">
+                            <img src="images/images/ribang.png" style="width:0.56rem;height:0.29rem;" class="ribang"/>
+                        </td>
+                        <td>
+                            <img src="images/images/1-1.png" style="width:0.25rem;height:0.25rem;" />
+                        </td>
+                        <td class="zt_zdq">	<span style="font-size:0.22rem;color:#333333;">会飞的猪1</span>
+                        </td>
+                        <td class="zt_zdq">52300.00沃点</td>
+                        <td>
+                            <img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td1">
+                            <img src="images/images/yuebang.png" style="width:0.56rem;height:0.29rem;" class="yuebang" />
+                        </td>
+                        <td>
+                            <img src="images/images/1-2.png" style="width:0.25rem;height:0.25rem;" />
+                        </td>
+                        <td class="zt_zdq">	<span style="font-size:0.22rem;color:#333333;">会飞的猪2</span>
+                        </td>
+                        <td class="zt_zdq">523.00沃点</td>
+                        <td>
+                            <img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td1">
+                            <img src="images/images/zongbang.png" style="width:0.56rem;height:0.29rem;" class="zongbang" />
+                        </td>
+                        <td>
+                            <img src="images/images/1-3.png" style="width:0.25rem;height:0.25rem;" />
+                        </td>
+                        <td class="zt_zdq">	<span style="font-size:0.22rem;color:#333333;">会飞的猪3</span>
+                        </td>
+                        <td class="zt_zdq">523.00沃点</td>
+                        <td>
+                            <img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="caihu_3">
+                <table border="0" cellspacing="" cellpadding="" class="caihu_2 zt_daxiao3 zt_zyjz caihu_3">
+                    <tr>
+                        <td class="td1">
+                            <img src="images/images/rb_h.png" style="width:0.56rem;height:0.29rem;" class="ribang"/>
+                        </td>
+                        <td>
+                            <img src="images/images/1-1.png" style="width:0.25rem;height:0.25rem;" />
+                        </td>
+                        <td class="zt_zdq">	<span style="font-size:0.22rem;color:#333333;">会飞的猪1</span>
+                        </td>
+                        <td class="zt_zdq">52300.00沃点</td>
+                        <td>
+                            <img src="images/images/ljt_x.png" style="width:0.18rem;height:0.18rem;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td1">
+                            <img src="images/images/yb_c.png" style="width:0.56rem;height:0.29rem;" class="yuebang"/>
+                        </td>
+                        <td>
+                            <img src="images/images/1-2.png" style="width:0.25rem;height:0.25rem;" />
+                        </td>
+                        <td class="zt_zdq">	<span style="font-size:0.22rem;color:#333333;">会飞的猪2</span>
+                        </td>
+                        <td class="zt_zdq">523.00沃点</td>
+                        <td>
+                            <img src="images/images/ljt_x.png" style="width:0.18rem;height:0.18rem;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td1">
+                            <img src="images/images/zongbang.png" style="width:0.56rem;height:0.29rem;" class="zongbang"/>
+                        </td>
+                        <td>
+                            <img src="images/images/1-3.png" style="width:0.25rem;height:0.25rem;" />
+                        </td>
+                        <td class="zt_zdq">	<span style="font-size:0.22rem;color:#333333;">会飞的猪3</span>
+                        </td>
+                        <td class="zt_zdq">523.00沃点</td>
+                        <td>
+                            <img src="images/images/jt_p.png" style="width:0.18rem;height:0.18rem;" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+
+            <div class="caihu_4">
+                <table border="0" cellspacing="" cellpadding="" class="caihu_2 caihu_4 zt_daxiao3 zt_zyjz">
+                    <tr>
+                        <td class="td1">
+                            <img src="images/images/rb_h.png" style="width:0.56rem;height:0.29rem;" class="ribang"/>
+                        </td>
+                        <td>
+                            <img src="images/images/1-1.png" style="width:0.25rem;height:0.25rem;" />
+                        </td>
+                        <td class="zt_zdq">	<span style="font-size:0.22rem;color:#333333;">会飞的猪1</span>
+                        </td>
+                        <td class="zt_zdq">52300.00沃点</td>
+                        <td>
+                            <img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td1">
+                            <img src="images/images/yuebang.png" style="width:0.56rem;height:0.29rem;"class="yuebang" />
+                        </td>
+                        <td>
+                            <img src="images/images/1-2.png" style="width:0.25rem;height:0.25rem;" />
+                        </td>
+                        <td class="zt_zdq">	<span style="font-size:0.22rem;color:#333333;">会飞的猪2</span>
+                        </td>
+                        <td class="zt_zdq">523.00沃点</td>
+                        <td>
+                            <img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td1">
+                            <img src="images/images/zb_c.png" style="width:0.56rem;height:0.29rem;" class="zongbang"/>
+                        </td>
+                        <td>
+                            <img src="images/images/1-3.png" style="width:0.25rem;height:0.25rem;" />
+                        </td>
+                        <td class="zt_zdq">	<span style="font-size:0.22rem;color:#333333;">会飞的猪3</span>
+                        </td>
+                        <td class="zt_zdq">523.00沃点</td>
+                        <td>
+                            <img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="sb">
+            <div class="ul_jiejv" style="width:4rem;height:1.9rem;margin:0 auto;">
+
+                <ul class="zt_daxiao14">
+                    <li>已有</li>
+                    <li class="bj"><span style="color:#FFFFFF;">6</span>
+                    </li>
+                    <li class="bj"><span style="color:#FFFFFF;">6</span>
+                    </li>
+                    <li class="bj"><span style="color:#FFFFFF;">3</span>
+                    </li>
+                    <li class="bj"><span style="color:#FFFFFF;">7</span>
+                    </li>
+                    <li class="bj"><span style="color:#FFFFFF;">1</span>
+                    </li>
+                    <li>人加盟沃联盟平台</li>
+                </ul>
+                <ul class="zt_daxiao14" style="margin-left:0.3rem;">
+                    <li>您是第</li>
+                    <li class="bj"><span style="color:#FFFFFF;">6</span>
+                    </li>
+                    <li class="bj"><span style="color:#FFFFFF;">6</span>
+                    </li>
+                    <li class="bj"><span style="color:#FFFFFF;">5</span>
+                    </li>
+                    <li class="bj"><span style="color:#FFFFFF;">1</span>
+                    </li>
+                    <li class="bj"><span style="color:#FFFFFF;">7</span>
+                    </li>
+                    <li>位加盟者</li>
+                </ul>
+
+            </div>
+
+
+            <!-- 下面是地区切换部分 -->
+            <div class="mc_bg" style="z-index:5;"></div>
+            <!-- 上面一行为地区切换背景蒙层    -->
+            <div class="dqqhxq" style="z-index:90;">
+                <div class="dq_tit">
+                    <img src="images/guanbi.png" alt="" class="dq_close" />	<span>地区切换</span>
+                </div>
+                <div class="dq_mes">
+                    <div class="dq_l">A<br/>|<br/>G</div>
+                    <ul class="dq_r">
+                        <li class="li5">北京</li>
+                        <li class="li5">安徽</li>
+                        <li class="li5">重庆</li>
+                        <li class="li5">福建</li>
+                        <li class="li5">广东</li>
+                        <li class="li5">甘肃</li>
+                        <li class="li5">广西</li>
+                        <li class="li5">贵州</li>
+                    </ul>
+                </div>
+                <div class="dq_mes">
+                    <div class="dq_l">H<br/>|<br/>J</div>
+                    <ul class="dq_r">
+                        <li class="li5">湖北</li>
+                        <li class="li5">湖南</li>
+                        <li class="li5">河北</li>
+                        <li class="li5">河南</li>
+                        <li class="li5">海南</li>
+                        <li class="li5">江苏</li>
+                        <li class="li5">吉林</li>
+                        <li class="li5">江西</li>
+                        <li class="li5">黑龙江</li>
+                    </ul>
+                </div>
+                <div class="dq_mes">
+                    <div class="dq_l">L<br/>|<br/>S</div>
+                    <ul class="dq_r">
+                        <li class="li5">辽宁</li>
+                        <li class="li5">宁夏</li>
+                        <li class="li5">青海</li>
+                        <li class="li5">山东</li>
+                        <li class="li5">上海</li>
+                        <li class="li5">山西</li>
+                        <li class="li5">陕西</li>
+                        <li class="li5">四川</li>
+                        <li class="li5">内蒙古</li>
+                    </ul>
+                </div>
+                <div class="dq_mes" style="margin-bottom:0.3rem;">
+                    <div class="dq_l">T<br/>|<br/>Z</div>
+                    <ul class="dq_r">
+                        <li class="li5">天津</li>
+                        <li class="li5">新疆</li>
+                        <li class="li5">西藏</li>
+                        <li class="li5">云南</li>
+                        <li class="li5">浙江</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+          <!--#include virtual="/wolianm2/include/footer_lll.html"-->
+
+          <div class="foot_banquan1 banquan">
+            <!--#include virtual="/wolianm2/include/banquan.html"-->
+          </div>
+
+        <script>
+            window.onload = function() { //页面加载的时候改变当前的footer的图片及样式
+                $('#footers').find('li').eq(0).find("p").addClass("orangeColor_lll");
+                $('#footers').find('li').eq(0).find("img").attr("src", "images/iconFocus0.png");
+            }
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                var height = document.body.scrollHeight;
+                $(".mc_bg").height(height);
+                $(".dq_close").click(function() {
+                    $(".mc_bg").css("display", "none");
+                    $(".dqqhxq").slideUp(200);
+                })
+                $(".k_kuan").click(function() {
+                    var dq = $(".k_kuan").children().first().text();
+                    $(".mc_bg").css("display", "block");
+                    $(".dqqhxq").slideDown(200);
+                    for (i = 0; i < $(".li5").length; i++) {
+                        var dqLi = $(".li5").eq(i).text();
+                        if (dq == dqLi) {
+                            $(".li5>.xzbj").remove();
+                            var bj = "<div class='xzbj'><img src='images/dizibenjing.png'></div>";
+                            $(".li5").eq(i).append(bj);
+                        }
+                    }
+                })
+                $(".li5").click(function() {
+                    var dq = $(this).text();
+                    $(".mc_bg").css("display", "none");
+                    $(".dqqhxq").slideUp(200);
+                    $(".k_kuan").children().first().html(dq);
+                })
+                $(".dx_dixian1").click(function() {
+                    $(".caihu_1").css("display", "none");
+                    $(".z_zhong1").css("display", "block");
+                })
+                $(".dx_dixian2").click(function() {
+                    $(".z_zhong1").css("display", "none");
+                    $(".caihu_1").css("display", "block");
+                })
+                $("#caifu").click(function() {
+                    $("#cf_ye").show();
+                    $(".caihu_1").hide();
+                    $(".dx_dixian1").css("border-bottom", "3px solid #fc5f02");
+                    $(".dx_dixian2").css("border-bottom", "none");
+                });
+                $("#zt_yc").click(function() {
+                    $("#img_yc").show();
+                    $("#zt_yc").hide();
+                });
+                $("#caifubang").click(function() {
+                    $(".caihu_1").show();
+                    $("#cf_ye").hide();
+                    $(".dx_dixian1").css("border-bottom", "none");
+                    $(".dx_dixian2").css("border-bottom", "3px solid #fc5f02");
+                });
+
+                $(".ribang").click(function() {
+                    $(".caihu_1").show();
+                    $(".caihu_3,.caihu_4").hide();
+                });
+                 $(".yuebang").click(function() {
+                    $(".caihu_3").show();
+                    $(".caihu_1,.caihu_4").hide();
+                });
+                $(".zongbang").click(function() {
+                    $(".caihu_4").show();
+                    $(".caihu_1,.caihu_3").hide();
+                });
+
+
+
+                var mp = 0;
+                var nums = [1, 3, 2, 4];
+
+                function maop() {
+                    if (mp < 4) {
+                        var num = nums[mp];
+                        mp++;
+                        $(".maop").css("display", "none");
+                        $(".m_pao" + num).css("display", "block");
+                        // alert(mp);
+                    } else {
+                        mp = 0;
+                        $(".maop").css("display", "none");
+                        clearInterval(mp1);
+                    }
+                }
+                var mp1 = setInterval(maop, 2000);
+                var qpr = 0;
+                var qpruh = $(".qpr ul").height();
+                $(".qpr").height(qpruh);
+                $(".qpr").append($(".qpr").html());
+                var qT = $(".qpr").position().top;
+
+                function qpr1() {
+                    if (qpr < 3) {
+                        qpr++;
+                        $(".qpr").animate({
+                            "top": -qpruh * qpr
+                        }, 1000);
+                    } else {
+                        $(".qpr").css("top", "0");
+                        qpr = 1;
+                        $(".qpr").animate({
+                            "top": -qpruh * qpr
+                        }, 1000);
+                    }
+                    mp1 = setInterval(maop, 2000);
+                }
+                var qpr1 = setInterval(qpr1, 10000);
+            })
+
+            $(function(){
+              function disss(){
+                $("#mu_8 .ad_4").css("display","block!important");
+                var _ad_dis=$("#mu_8 .ad_4").css("display");
+                var dis=$("#mu_8 .ad_4 img").css("display");
+                alert("第四区状态为"+_ad_dis+"，图片状态为"+dis);
+              }
+              // var disssss = setInterval(disss, 3000);
+              function _ad_4_ss(){
+                $(".ad_4").each(function(index){
+                    $(this).css("display","block");
+                    var diss=$(this).css("display");
+                  var _mu_ht=$("#mu_8").html();
+                  var _ad_dis=$("#mu_8 .ad_4").css("display");
+                    // alert("ad_4第"+index+"个状态为"+diss);
+                    // alert(_mu_ht);
+                    //   alert(_ad_dis);
+                })
+              }
+              setInterval(_ad_4_ss, 10000);
+
+            })
+        </script>
+    </div>
+    </div>
+</body>
+
+</html>

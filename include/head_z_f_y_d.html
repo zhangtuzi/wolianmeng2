@@ -1,0 +1,84 @@
+<style type="text/css">
+	.Htop{
+		background: #fc5f01;
+		height: 0.89rem;
+		line-height: 0.89rem;
+		position: relative;
+	}
+	.backContaner img{
+		width: auto!important;
+		height: 0.46rem!important;
+		vertical-align: middle;
+		margin-left: 0.2rem;
+		text-align: left;
+	}
+	.title_lll{
+		width: 100%;
+		text-align: center;
+		font-size: 0.32rem;
+		color: #fff;
+	}
+	.backContaner{
+		width: 0.8rem;
+		display: table-cell;
+		font-size: 12px;
+		vertical-align: middle;
+		float: left;
+		margin-top:-0.89rem;
+	}
+
+	.dq_div{
+		float: right;
+		display: table-cell;
+		vertical-align: middle;
+		font-size:0.26rem;
+		margin-right: 0.26rem;
+		margin-top:-0.89rem;
+		color:#fff;
+	}
+
+</style>
+<div class='Htop'>
+	<div class="title_lll">我的二维码</div>
+	<div class='backContaner'>
+		<img src="./images/backicon.png" />
+	</div>
+
+	<div class='dq_div'><span class="dq">北京</span></div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$(".dq_div").click(function(){
+			var dq=$(".dq").text();
+
+ 			var height=document.body.scrollHeight;
+
+		 $(".mc_bg").height(height);
+
+		 $(".mc_bg").css("display","block");
+
+		 $("body").addClass("body_hidd");
+
+		 $("body").bind("touchmove",function(e){
+			 e.preventDefault();
+		 });
+		 $(".dqqhxq").slideDown(200);
+
+	  for(i=0;i<$(".li5").length;i++){
+
+	    var dqLi=$(".li5").eq(i).text();
+
+	    if(dq==dqLi){
+
+	      $(".li5>.xzbj").remove();
+
+	      var bj="<div class='xzbj'><img src='images/dizibenjing.png'></div>";
+
+	      $(".li5").eq(i).append(bj);
+
+	    }
+	  }
+
+		})
+	})
+</script>

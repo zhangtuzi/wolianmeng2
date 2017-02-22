@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>信息确认</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/validate_infor.css">
+    <script type="text/javascript" src='js/top.js'></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+
+    <div class="contaner_lll">
+        <!--#include virtual="/wolianm2/include/headerinfo5.html"-->
+
+        <div class="custo_con_lll clearfloat">
+            <img src="images/customer_lll.png" class="customer_lll fl">
+            <span class="sure_inw fl">信息确认</span>
+        </div>
+        <p class="tel_lll">
+            手机号码：<span class="orange_lll"> 18503827634</span>
+        </p>
+        <div class="bu_conlll clearfloat">
+            <input type="number" pattern="[0-9]*" class="write_lll fl" placeholder="请输入验证码" id="yanzheng_w">
+            <button class="btn_lll fl Click" style="background-color:#fc5f01;">
+                获取验证码
+            </button>
+            <button class="btn_lll fl" style="display:none;">
+                <span>60</span>秒后<br> 重新获取
+            </button>
+        </div>
+        <div class="bor_lll"></div>
+        <p class="tip_lll">
+            尊敬的用户，您订购的<span class="orange_lll">10元＊＊流量包</span>，将于次月1日生效，请确认提交。
+        </p>
+        <p class="time_lll">
+            办理时间：2016年10月17日
+        </p>
+        <div class="btncon_lll clearfloat">
+            <div class="btnl back_lll fl">返回</div>
+            <div class="btnl sure_lll fl">确认</div>
+        </div>
+    </div>
+
+<script>
+    window.onload=function(){
+        $(".tit_lll").text("＊＊＊流量包");
+        $(".Click").on("click", function(event) {
+          $(this).hide()
+          $(this).siblings().show();
+          T=setInterval(TimeL,1000)
+        });
+       function TimeL() {
+         var number=parseInt($(".btn_lll").children("span").text());
+         if (number>0) {
+           var Nwfn=number-1
+         }else {
+           var Nwfn=60;
+           $(".Click").show();
+            $(".Click").siblings(".btn_lll").hide();
+            clearInterval(T);
+         }
+         $(".btn_lll").children("span").text(Nwfn)
+         ;
+
+       }
+
+       $(window).on("keypress", function(event) {
+         var code_num =  event.keyCode;
+         if (code_num>47 && code_num<58) {
+             return true;
+         }else {
+           return false;
+         }
+
+       })
+     // 安卓和IOS调取键盘兼容
+     var pla = ismobile(1);
+     if (pla == "1") {
+       $("#yanzheng_w").prop("type","number");
+     }else{
+       $("#yanzheng_w").prop("type","text");
+     }
+
+     function ismobile(test) {
+       var u = navigator.userAgent,
+         app = navigator.appVersion;
+       if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+         if (window.location.href.indexOf("?mobile") < 0) {
+           try {
+             if (/iPhone|mac|iPod|iPad/i.test(navigator.userAgent)) {
+               return '0';
+             } else {
+               return '1';
+             }
+           } catch (e) {}
+         }
+       } else if (u.indexOf('iPad') > -1) {
+         return '0';
+       } else {
+         return '1';
+       }
+     };
+
+
+
+
+
+    }
+</script>
+</body>
+</html>

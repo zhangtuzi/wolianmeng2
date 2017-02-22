@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+body{  font-family:'微软雅黑';background: #f2f2f2;}
+body,div,dl,dt,dd,del,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,menu{
+	 text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: "微软雅黑";
+    color: #333333;
+}
+/*字体样式*/
+.b_bk{border: 1px solid #000;}
+.zt_yanse{color:#a2a2a2;}
+.ztyanse1{color:#fc5f01;}
+.zt_daxiao22{font-size:0.22rem;color:#a2a2a2;}
+.zt_daxiao26{font-size:0.26rem;color:#333333;}
+.yc_nr{font-size:0.22rem;line-height: 1.01rem;}
+.nr_t{color:#333333;text-decoration: none;width:90%;height:100%;padding-left:0.1rem;padding-right:0.1rem;display: block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+/*主体区域*/
+.zt_wai{min-width: 320px;
+    max-width: 640px;
+    height:15rem;
+    font-family: "微软雅黑";
+    margin: 0 auto;}
+ .img_daxiao{width:0.45rem;height:0.45rem; top: -0.2rem; position:relative;}
+ .jd_dingwei{position:relative;}
+ .t_top{top:-0.9rem;}
+ .t_top1{top:-0.3rem;}
+.gd_gaodu{margin-top:0.30rem;}
+.div_1{width:6.4rem;height:2.03rem;background: #ffffff;text-align: center;}
+.div_zuo{width:1.6rem;height: 2.03rem;border-right:1px solid #f1f1f1;float:left;}
+.div_zhong1{width:2.38rem;height:1.01rem;border-right:1px solid #f1f1f1;border-bottom:1px solid #f1f1f1;float:left;}
+.div_zhong2{width:2.38rem;height:1.01rem;float:left;border-bottom:1px solid #f1f1f1;}
+.div_you1{width:2.38rem;height:1.01rem;float:left;border-right:1px solid #f1f1f1;}
+.div_you2{width:2.38rem;height:1.01rem;float:left;}

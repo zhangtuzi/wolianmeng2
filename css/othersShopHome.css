@@ -1,0 +1,182 @@
+/*1-3他人店铺css*/
+body{
+    background: #f2f2f2;
+    font-family: "微软雅黑";
+    font-size: 0.26rem;
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    margin: auto;
+}
+/*public*/
+
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.cl {
+    zoom:1;
+}
+.cl:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/*public end*/
+
+
+
+#header{
+    background:#fc5f01;
+    height: 2.0rem;
+}
+#header .img{
+    width: 2.02rem;
+    text-align: center;
+    margin-top: 0.14rem;
+}
+#header .text{
+    width: 4.38rem;
+    height: 2.0rem;
+}
+.user_pic{
+    margin-top: 0.44rem;
+    display: inline-block;
+    width: 1.22rem;
+    height: 1.22rem;
+    background: #f4f4f4 url("../images/girl.png") no-repeat 0.16rem 0.18rem/0.9rem 1.04rem;
+    border-radius: 50%;
+}
+#header .text h3{
+    font-size: 0.26rem;
+    color:#ffffff ;
+    margin-top: 0.7rem;
+}
+#header .text h3 a{
+    color:#ffffff ;
+}
+#header .text p{
+    font-size: 0.18rem;
+    color: #f4bfb1;
+    line-height: 0.32rem;
+}
+#header .text ul{
+    line-height: 0.24rem;
+    margin-top: 0.1rem;
+    font-size: 0.18rem;
+    color: #a2a2a2;
+}
+#header .text ul li{
+    margin-right: 0.16rem;
+    color: #ffffff;
+}
+#header .text ul img{
+    width: 0.26rem;
+    height: 0.26rem;
+    /*margin-top: 0.04rem;*/
+}
+#header .text ul .fr{
+    margin-right: 0.3rem;
+}
+
+
+#nav_list{
+    background: #ffffff;
+    color: #333333;
+    font-size: 0.26rem;
+    height: 0.79rem;
+    border-bottom: 1px solid #dbdbdb;
+}
+#nav_list ul{
+    margin: 0 0.4rem;
+    height: 0.77rem;
+}
+.normal{
+    padding: 0 0.24rem;
+    text-align: center;
+    line-height: 0.77rem;
+    height: 0.77rem;
+}
+.click_choice{
+    padding: 0 0.24rem;
+    text-align: center;
+    line-height: 0.77rem;
+    height: 0.77rem;
+    border-bottom: 2px solid #fc5f01;
+}
+
+.content{
+    width: 6.5rem;
+}
+.content .left_ul{
+    margin-left: 0.04rem;
+    width:3.16rem;
+}
+.content .right_ul{
+    margin-left: 0.04rem;
+    width:3.16rem;
+}
+.content li{
+    background: #ffffff;
+    margin-top: 0.04rem;
+    position: relative;
+}
+.content .top_img{
+    width: 3.12rem;
+    height: 2.08rem;
+}
+.content .top_img img{
+    width: 3.12rem;
+    height: 2.08rem;
+}
+.content .bottom_text{
+    width: 2.64rem;
+    height: 0.76rem;
+    padding: 0.28rem 0.24rem;
+}
+
+
+
+.content .bottom_text .p{
+    height: 0.28rem;
+    line-height: 0.28rem;
+}
+.content .bottom_text .p1{
+    font-size: 0.18rem;
+    color: #cbcbcb;
+}
+.content .bottom_text .cl .fr{
+    margin-right: 0.1rem;
+}
+.content .bottom_text .p2{
+    font-size: 0.22rem;
+    color: #333333;
+}
+.content .bottom_text .p3{
+    font-size: 0.22rem;
+    color: #fc5f01;
+}
+/*领*/
+.circle{
+    width: 0.70rem;
+    height: 0.70rem;
+    text-align: center;
+    line-height: 0.70rem;
+    border: 0.04rem solid #fecfb2;
+    background: #ea5a05;
+    color: #ffffff;
+    font-size: 0.24rem;
+    border-radius: 50%;
+
+}
+.a_ling{
+    width: 0.70rem;
+    height: 0.70rem;
+    display: block;
+    color: #ffffff;
+    position: absolute;
+    right: 0.14rem;
+    top: 0.08rem;
+}

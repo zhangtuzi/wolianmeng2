@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<title>填写店铺信息</title>
+		<link rel="stylesheet" type="text/css" href="css/addShop.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript" src="js/top.js" ></script>
+		<style media="screen">
+			.wrap_all{
+				position: relative;
+				margin: 0 auto;
+				min-width: 320px;
+				max-width: 640px;
+				background: #f2f2f2;
+			}
+		</style>
+	</head>
+
+	<body style="background:#f2f2f2;">
+		<div class="wrap_all">
+    		<!--#include virtual="/wolianm2/include/headerinfo11.html"-->
+				<ul class="shop_mess">
+					<li>
+						<span class="shop_mess_tit">店铺头像</span>
+						<img src="images/nvhai_zz.png" class="shop_pic" alt="" />
+					</li>
+					<li>
+						<span class="shop_mess_tit">店铺名称</span>
+						<input type="text" name="shop_name" placeholder="10个字以内" MaxLength="10" id="shop_name" value="">
+					</li>
+					<li>
+						<span class="shop_mess_tit">店铺简介</span>
+						<input type="text" name="shop_pro" placeholder="20个字以内" MaxLength="20" id="shop_intro" value="">
+					</li>
+				</ul>
+
+				<div class="next_btn">下一步</div>
+
+
+
+		</div>
+		<script type="text/javascript">
+		  window.onload = function(){
+		    $('.title_lll').text('填写店铺信息');
+		  }
+			$(function(){
+				$("#shop_name,#shop_intro").on("input",function(){
+					var shop_name=$("#shop_name").val();
+					var shop_intro=$("#shop_intro").val();
+					if(shop_name!=""&&shop_intro!=""){
+						$(".next_btn").addClass("next_btn_active");
+					}else{
+						$(".next_btn").removeClass("next_btn_active");
+					}
+				})
+
+			})
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<title>首页</title>
+		<link type="text/css" href="css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/dqqh1.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/banquan.css" />
+		<!-- <script src="js/jquery-1.11.1.min.js"></script> -->
+		<script src="js/unslider.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+		<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+		<script type="text/javascript" src='js/top.js'></script>
+		<script type="text/javascript">
+			//			轮播图代码
+			$(document).ready(function() {
+				$(".main_visual").hover(function() {
+					$("#btn_prev,#btn_next").fadeIn()
+				}, function() {
+					$("#btn_prev,#btn_next").fadeOut()
+				});
+				$dragBln = false;
+				$(".main_image").touchSlider({
+					flexible: true,
+					speed: 200,
+					btn_prev: $("#btn_prev"),
+					btn_next: $("#btn_next"),
+					paging: $(".flicking_con a"),
+					counter: function(e) {
+						$(".flicking_con a").removeClass("on").eq(e.current - 1).addClass("on");
+					}
+				});
+				$(".main_image").bind("mousedown", function() {
+					$dragBln = false;
+				});
+				$(".main_image").bind("dragstart", function() {
+					$dragBln = true;
+				});
+				$(".main_image a").click(function() {
+					if($dragBln) {
+						return false;
+					}
+				});
+				timer = setInterval(function() {
+					$("#btn_next").click();
+				}, 2000);
+				$(".main_visual").hover(function() {
+					clearInterval(timer);
+				}, function() {
+					timer = setInterval(function() {
+						$("#btn_next").click();
+					}, 2000);
+				});
+				$(".main_image").bind("touchstart", function() {
+					clearInterval(timer);
+				}).bind("touchend", function() {
+					timer = setInterval(function() {
+						$("#btn_next").click();
+					}, 2000);
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="z_zhuti q_jvzhong wai_kuan">
+			<div class="z_zhuti1">
+				<div class="z_zhuti1  jd_dingwei" style="z-index:3;">
+					<ul class="k_kuan h_hangji">
+						<li class="k_kuan zt_zyjz zt_daxiao  zt_bai zt_yangshi" style="font-size:0.24rem;">北京</li>
+						<li class="k_kuan zt_zyjz zt_daxiao  xd_dingwei">
+							<img src="images/images/shouyexiajiantou.png" style="width:0.18rem;height:0.11rem;" />
+						</li>
+					</ul>
+					<div class="k_kuan1 h_hangji bj_toumingse b_yuanbk xd_dingwei">
+						<!--<select  class="jd_dingwei b_kuangao3  bj_toumingse1">
+							<option value="shangpin"class="bj_toumingse">商品</option>
+							<option value="dianpu" class="bj_toumingse">店铺</option>
+						</select>-->
+						<img src="images/sousuo1.png" class="jd_dingwei wb_shangbian wb_zuo" style="width:0.23rem;height:0.22rem;" />
+						<div class="jd_dingwei  b_kuangao1 bj_toumingse1" id="inptk1">
+							<a href="syss.html" style="color:#fff;">搜索沃联盟广告、店铺</a>
+						</div>
+
+					</div>
+					<div class="h_hangji  w_xingk jd_dingwei">
+						<!--<img src="images/images/erweima.png" class="jd_dingwei tu_img  ">-->
+						<img src="images/qipao2.png" class="jd_dingwei tu_img " />
+						<div class="ltxs qp1" style="display:none;">4</div>
+						<div class="ltxss qp" style="display:block;">9+</div>
+						<span id="zt_yc" class="zt_daxiao2 zt_bai jd_dingwei wb_you" style="font-weight: 600;font-family:黑体;margin-top:0.16rem;right:0.15rem;">登录</span>
+						<img id="img_yc" src="images/images/denglutou.png" class="jd_dingwei tu_img tu_img1">
+					</div>
+				</div>
+				<div class="QC"></div>
+				<div class="main_visual">
+					<div class="flicking_con">
+						<a href="#">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+					</div>
+					<div class="main_image">
+						<ul>
+							<li><span class="img_3"></span>
+							</li>
+							<li><span class="img_41"></span>
+							</li>
+							<li><span class="img_1"></span>
+							</li>
+							<li><span class="img_2"></span>
+							</li>
+							<li><span class="img_5"></span>
+							</li>
+						</ul>
+						<a href="javascript:;" id="btn_prev"></a>
+						<a href="javascript:;" id="btn_next"></a>
+					</div>
+				</div>
+			</div>
+			<div class="t_toubu" style="border-bottom: 1px solid #e2e2e2;height: 3rem;">
+				<img src="images/mengceng2.png" class="ydmc2 ydmc" style="position:absolute;top:0.2rem;left:0;width:6.4rem;z-index:9999;display:block;" alt="" />
+				<ul class="ul_1 t_toubu">
+					<li>
+						<a href="qzq.html">
+							<p><img src="images/images/w1.png"></p>
+
+							<p>去赚钱</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/images/w2.png">
+
+							<p>空中入网</p>
+						</a>
+					</li>
+					<li>
+						<a href="GoShopping.html">
+							<img src="images/images/w3.png">
+
+							<p>逛店铺</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/images/w4.png">
+
+							<p>邀好友赚钱</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/images/w5.png">
+
+							<p>抢领</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/images/w6.png">
+
+							<p>摇一摇</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/images/w7.png">
+
+							<p>抽奖</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/images/w8.png">
+
+							<p>签到</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="QC"></div>
+			<div class="hang_gao  d_div3" style="border-bottom: 1px solid #CCCCCC;">
+				<a href="adspread.html">
+					<img src="images/laba.png" class="xd_dingwei" style="top:-0.65rem;left:0.2rem;width:0.3rem;height:0.3rem;" />
+				</a>
+				<img src="images/sx.png" class="xd_dingwei" style="top:-0.65rem; left:0.07rem;width:0.06rem;height:0.32rem;" />
+				<img src="images/new.png" class="xd_dingwei" style="top:-0.7rem;width:0.54rem;height:0.22rem;" />
+				<span class="zt_daxiao4 xd_dingwei" style="top:-0.72rem;">
+                              关于《中国联通沃联盟用户使用协议》变更
+               </span>
+			</div>
+			<div class="QC bk_baokuan">
+                 <a href="baokuan.html"><img src="images/baokuan_banner.jpg" style="height:auto;"/></a>
+			</div>
+
+			<div style="width:100%;text-align:center;line-height:0.6rem;height:0.6rem;background:#f2f2f2;font-size:0.25rem;">
+				<a href="GoShopping.html"><span class="zt_daxiao2 zt_bai1">大家都在领&nbsp;&nbsp;&nbsp;</span>
+					<span class="zt_daxiao3 zt_bai2">更多热门&nbsp;</span>
+					<img src="images/images/xiaoyoujiantou.png" style="margin-top: 0.22rem;width:0.16rem;height:0.16rem;
+      					float:right;position:absolute;"></a>
+			</div>
+
+			<!-- <div class="kuan_gao b_bkshang">
+            <div class="kuan_gao1">	<a href="2-ToMakeMoney.html"><span class="zt_daxiao2 wenzi zt_bai1">大家都在领&nbsp;&nbsp;&nbsp;</span>
+				<span class="zt_daxiao3 wenzi zt_bai2"style="margin-top:0.04rem;">更多热门&nbsp;</span>
+				<img src="images/images/xiaoyoujiantou.png"class="wenzi1" ></a>
+            </div>
+        </div> -->
+			<div class="QC"></div>
+			<div class="k disan_div" style="margin-top:0;">
+				<div id="xt" class="mu" style="width:6.4rem;height:3rem;display:block;">
+
+					<div class="mu_zuo" style="float:left;width:3.18rem;height:1.44rem;border-right:1px solid #e9e9e9;">
+
+						<div class="ad_1" style="position:relative;clear:both;float:left;width:3.18rem;height:1.44rem;border-bottom:1px solid #e9e9e9;">
+							<div class="zuo zt_daxiao4" style="width:1.5rem;height: 1.25rem;">
+								<p style="line-height: 0.16rem;!important;text-align:left;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow：ellipsis;height:0.2rem;width:1.5rem;margin-top: 0.2rem;
+              margin-left: 0.23rem;">小米小米小米小米</p>
+								<p class="zt_yanse1" style="line-height: 0.16rem!important;text-align:left;margin-top:0.1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.26rem;
+              margin-left: 0.23rem;">赚200沃点</p>
+							</div>
+							<div style="position:absolute;top:5px;right:0.02rem;width:1.09rem;height:1.33rem;">
+								<img src="images/images/shoujitu1.png" style="width:1.09rem;height:1.33rem;" />
+							</div>
+						</div>
+						<div class="ad_3" style="position:relative;float:left;width:3.18rem;height:1.44rem;border-right:1px solid #e9e9e9;">
+							<div class="zuo zt_daxiao4" stylestyle="width:1.5rem;height: 1.25rem;">
+								<p style="line-height: 0.16rem!important;text-align:left;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:1.5rem;height:0.2rem;margin-top: 0.2rem;
+              margin-left: 0.23rem;">小米Note</p>
+								<p class="zt_yanse1" style="line-height: 0.16rem!important;text-align:left;margin-top:0.1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:1.5rem;height:0.26rem;
+              margin-left: 0.23rem;">赚200沃点</p>
+							</div>
+							<div style="position:absolute;top:5px;right:2px;width:1.09rem;height:1.33rem;">
+								<img src="images/images/shoujitu1.png" style="width:1.09rem;height:1.33rem;" />
+							</div>
+						</div>
+
+					</div>
+
+					<div class="mu_you" style="float:left;width:3.18rem;height:1.44rem;">
+
+						<div class="ad_2" style="position:relative;clear:both;float:left;width:3.18rem;height:1.44rem;border-bottom:1px solid #e9e9e9;">
+							<div class="zuo zt_daxiao4" style="width:1.5rem;height: 1.25rem;">
+								<p style="line-height: 0.16rem!important;text-align:left;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.2rem;margin-top: 0.2rem;
+              margin-left: 0.23rem;">小米Note</p>
+								<p class="zt_yanse1" style="line-height: 0.16rem!important;text-align:left;margin-top:0.1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.26rem;
+              margin-left: 0.23rem;">赚200沃点</p>
+							</div>
+							<div style="position:absolute;top:5px;right:2px;width:1.09rem;height:1.33rem;">
+								<img src="images/images/shoujitu1.png" style="width:1.09rem;height:1.33rem;" />
+							</div>
+						</div>
+						<div class="ad_4" style="position:relative;float:left;width:3.18rem;height:1.44rem;">
+							<div class="zuo zt_daxiao4" style="width:3.18rem;">
+								<p style="line-height: 0.16rem!important;text-align:left;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.2rem;margin-top: 0.2rem;
+              margin-left: 0.23rem;">小米Note</p>
+								<p class="zt_yanse1" style="line-height: 0.16rem!important;text-align:left;margin-top:0.1rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:0.26rem;
+              margin-left: 0.23rem;">赚200沃点</p>
+							</div>
+							<div style="position:absolute;top:5px;right:2px;width:1.09rem;height:1.33rem;">
+								<img src="images/images/shoujitu1.png" style="width:1.09rem;height:1.33rem;" />
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="QC"></div>
+
+			<div style="width:100%;text-align:center;line-height:0.6rem;height:0.6rem;background:#f2f2f2;font-size:0.25rem;">
+				<a href="GoShopping.html"><span class="zt_daxiao2 zt_bai1">逛店铺&nbsp;&nbsp;&nbsp;</span>
+					<span class="zt_daxiao3 zt_bai2">更多热门&nbsp;</span>
+					<img src="images/images/xiaoyoujiantou.png" style="margin-top: 0.22rem;width:0.16rem;height:0.16rem;
+      					float:right;position:absolute;"></a>
+			</div>
+
+			<!-- <div style="width:100%;text-align:center;line-height:0.6rem;height:0.6rem;background:#f2f2f2;">
+              <a href="GoShopping.html">
+                <span class="zt_daxiao2 zt_bai1">逛店铺&nbsp;&nbsp;&nbsp;</span>
+      				<span class="zt_daxiao3 zt_bai2">更多热门&nbsp;</span>
+      				<img src="images/images/xiaoyoujiantou.png"style="margin-top: 0.1rem;width:0.16rem;height:0.16rem;
+      					float:right;position:absolute;">
+              </a>
+        </div> -->
+
+			<div class="QC"></div>
+			<div class="disi_div" style="margin-top:0;">
+				<div class="disan_div3">
+					<div class="zuo zt_daxiao4">
+						<a href="1-3OthersShopHome.html" style="color:#000000;">
+							<p style="width:2rem" class="zi_gao">王海侯的旗舰店</p>
+						</a><span class="zt_yanse1 zi_gao">成交100单</span>
+					</div>
+					<div style="width:3.14rem;background: #ffffff;">
+						<a href="1-3OthersShopHome.html">
+							<img src="images/images/nvhai1.png" class="img_daxiao" />
+						</a>
+					</div>
+				</div>
+				<div class="disan_div4">
+					<div class="zuo zt_daxiao4">
+						<a href="1-3OthersShopHome.html" style="color:#000000;">
+							<p style="width:2rem;margin-left:0.2rem;">张洲的旗舰店</p>
+						</a><span class="zt_yanse1 zi_gao">成交100单</span>
+					</div>
+					<div style="width:3.14rem;background: #ffffff;">
+						<a href="1-3OthersShopHome.html">
+							<img src="images/images/nvhai2.png" class="img_daxiao" />
+						</a>
+					</div>
+				</div>
+				<div class="disan_div3">
+					<div class="zuo zt_daxiao4">
+						<a href="1-3OthersShopHome.html" style="color:#000000;">
+							<p style="width:2rem" class="zi_gao">莉莉安的旗舰店</p>
+						</a><span class="zt_yanse1 zi_gao">成交100单</span>
+					</div>
+					<div style="width:3.14rem;background: #ffffff;">
+						<a href="1-3OthersShopHome.html">
+							<img src="images/images/nvhai3.png" class="img_daxiao" />
+						</a>
+					</div>
+				</div>
+				<div class="disan_div4">
+					<div class="zuo zt_daxiao4">
+						<a href="1-3OthersShopHome.html" style="color:#000000;">
+							<p style="width:2rem" class="zi_gao">匆匆那年的旗舰店</p>
+						</a><span class="zt_yanse1 zi_gao">成交100单</span>
+					</div>
+					<div style="width:3.14rem;background: #ffffff;">
+						<a href="1-3OthersShopHome.html">
+							<img src="images/images/nvhai4.png" class="img_daxiao" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="z_xiabian">
+				<div class="z_shang1">
+					<ul>
+						<li class="dx_dixian1" id="caifu">财富广场</li>
+						<li class="dx_dixian2" id="caifubang">财富榜</li>
+					</ul>
+				</div>
+				<div class="z_zhong1" id="cf_ye">
+					<div class="m_pao">
+						<ul>
+							<li>
+								<div class="maop m_pao1">
+									<div id="ch_bang" class="zt_bai zt_daxiao22"><span class="cfb_user">会飞的猪dsdd会飞的猪</span><span class="cfb_user_mes">16:02:02 123.00沃点</span></div>
+								</div>
+							</li>
+							<li>
+								<div class="maop m_pao2">
+									<div id="ch_bang" class="zt_bai zt_daxiao22"><span class="cfb_user">会飞的猪dsdd会飞的猪</span> 16:02:02 123.00沃点</div>
+								</div>
+							</li>
+							<li>
+								<div class="maop m_pao3">
+									<div id="ch_bang" class="zt_bai zt_daxiao22"><span class="cfb_user">会飞的猪dsdd会飞的猪</span> 16:02:02 123.00沃点</div>
+								</div>
+							</li>
+							<li>
+								<div class="maop m_pao4">
+									<div id="ch_bang" class="zt_bai zt_daxiao22"><span class="cfb_user">会飞的猪dsdd会飞的猪</span> 16:02:02 123.00沃点</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="qprq" style="position:relative;width:6.4rem;height:1.7rem;overflow:hidden;">
+						<div class="qpr" style="position:absolute;top:0px;">
+							<ul style="clear: both;" id="#b04">
+								<a href="WealthList.html">
+									<li>
+										<img src="images/images/caihuotouxiang.png" style="width:0.8rem;height:0.8rem;" />
+									</li>
+								</a>
+								<a href="WealthList.html">
+									<li>
+										<img src="images/images/caihuotouxiang1.png" style="width:0.8rem;height:0.8rem;" />
+									</li>
+								</a>
+								<a href="WealthList.html">
+									<li>
+										<img src="images/images/caihuotouxiang2.png" style="width:0.8rem;height:0.8rem;" />
+									</li>
+								</a>
+								<a href="WealthList.html">
+									<li>
+										<img src="images/images/caihuotouxiang3.png" style="width:0.8rem;height:0.8rem;" />
+									</li>
+								</a>
+							</ul>
+							<ul id="#b04">
+								<a href="WealthList.html">
+									<li>
+										<img src="images/images/caihuotouxiang.png" style="width:0.8rem;height:0.8rem;" />
+									</li>
+								</a>
+								<a href="WealthList.html">
+									<li>
+										<img src="images/images/caihuotouxiang1.png" style="width:0.8rem;height:0.8rem;" />
+									</li>
+								</a>
+								<a href="WealthList.html">
+									<li>
+										<img src="images/images/caihuotouxiang2.png" style="width:0.8rem;height:0.8rem;" />
+									</li>
+								</a>
+								<a href="WealthList.html">
+									<li>
+										<img src="images/images/caihuotouxiang3.png" style="width:0.8rem;height:0.8rem;" />
+									</li>
+								</a>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="caihu_1">
+					<table border="0" cellspacing="" cellpadding="" class="caihu_2
+				  	 zt_daxiao3 zt_zyjz">
+						<tr>
+							<td class="td1">
+								<img src="images/images/ribang.png" style="width:0.56rem;height:0.29rem;" class="ribang" />
+							</td>
+							<td>
+								<img src="images/images/1-1.png" style="width:0.25rem;height:0.25rem;" />
+							</td>
+							<td class="zt_zdq"> <span style="font-size:0.22rem;color:#333333;">会飞的猪1</span>
+							</td>
+							<td class="zt_zdq">52300.00沃点</td>
+							<td>
+								<img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<img src="images/images/yuebang.png" style="width:0.56rem;height:0.29rem;" class="yuebang" />
+							</td>
+							<td>
+								<img src="images/images/1-2.png" style="width:0.25rem;height:0.25rem;" />
+							</td>
+							<td class="zt_zdq"> <span style="font-size:0.22rem;color:#333333;">会飞的猪2</span>
+							</td>
+							<td class="zt_zdq">523.00沃点</td>
+							<td>
+								<img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<img src="images/images/zongbang.png" style="width:0.56rem;height:0.29rem;" class="zongbang" />
+							</td>
+							<td>
+								<img src="images/images/1-3.png" style="width:0.25rem;height:0.25rem;" />
+							</td>
+							<td class="zt_zdq"> <span style="font-size:0.22rem;color:#333333;">会飞的猪3</span>
+							</td>
+							<td class="zt_zdq">523.00沃点</td>
+							<td>
+								<img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="caihu_3">
+					<table border="0" cellspacing="" cellpadding="" class="caihu_2 zt_daxiao3 zt_zyjz caihu_3">
+						<tr>
+							<td class="td1">
+								<img src="images/images/rb_h.png" style="width:0.56rem;height:0.29rem;" class="ribang" />
+							</td>
+							<td>
+								<img src="images/images/1-1.png" style="width:0.25rem;height:0.25rem;" />
+							</td>
+							<td class="zt_zdq"> <span style="font-size:0.22rem;color:#333333;">会飞的猪1</span>
+							</td>
+							<td class="zt_zdq">52300.00沃点</td>
+							<td>
+								<img src="images/images/ljt_x.png" style="width:0.18rem;height:0.18rem;" />
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<img src="images/images/yb_c.png" style="width:0.56rem;height:0.29rem;" class="yuebang" />
+							</td>
+							<td>
+								<img src="images/images/1-2.png" style="width:0.25rem;height:0.25rem;" />
+							</td>
+							<td class="zt_zdq"> <span style="font-size:0.22rem;color:#333333;">会飞的猪2</span>
+							</td>
+							<td class="zt_zdq">523.00沃点</td>
+							<td>
+								<img src="images/images/ljt_x.png" style="width:0.18rem;height:0.18rem;" />
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<img src="images/images/zongbang.png" style="width:0.56rem;height:0.29rem;" class="zongbang" />
+							</td>
+							<td>
+								<img src="images/images/1-3.png" style="width:0.25rem;height:0.25rem;" />
+							</td>
+							<td class="zt_zdq"> <span style="font-size:0.22rem;color:#333333;">会飞的猪3</span>
+							</td>
+							<td class="zt_zdq">523.00沃点</td>
+							<td>
+								<img src="images/images/jt_p.png" style="width:0.18rem;height:0.18rem;" />
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="caihu_4">
+					<table border="0" cellspacing="" cellpadding="" class="caihu_2 caihu_4 zt_daxiao3 zt_zyjz">
+						<tr>
+							<td class="td1">
+								<img src="images/images/rb_h.png" style="width:0.56rem;height:0.29rem;" class="ribang" />
+							</td>
+							<td>
+								<img src="images/images/1-1.png" style="width:0.25rem;height:0.25rem;" />
+							</td>
+							<td class="zt_zdq"> <span style="font-size:0.22rem;color:#333333;">会飞的猪1</span>
+							</td>
+							<td class="zt_zdq">52300.00沃点</td>
+							<td>
+								<img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<img src="images/images/yuebang.png" style="width:0.56rem;height:0.29rem;" class="yuebang" />
+							</td>
+							<td>
+								<img src="images/images/1-2.png" style="width:0.25rem;height:0.25rem;" />
+							</td>
+							<td class="zt_zdq"> <span style="font-size:0.22rem;color:#333333;">会飞的猪2</span>
+							</td>
+							<td class="zt_zdq">523.00沃点</td>
+							<td>
+								<img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+							</td>
+						</tr>
+						<tr>
+							<td class="td1">
+								<img src="images/images/zb_c.png" style="width:0.56rem;height:0.29rem;" class="zongbang" />
+							</td>
+							<td>
+								<img src="images/images/1-3.png" style="width:0.25rem;height:0.25rem;" />
+							</td>
+							<td class="zt_zdq"> <span style="font-size:0.22rem;color:#333333;">会飞的猪3</span>
+							</td>
+							<td class="zt_zdq">523.00沃点</td>
+							<td>
+								<img src="images/images/hjt_s.png" style="width:0.18rem;height:0.18rem;" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="sb">
+
+					<div class="ul_jiejv" style="width:4rem;height:1.9rem;margin:0 auto;">
+
+						<ul class="zt_daxiao14">
+							<li>已有</li>
+							<li class="bj"><span style="color:#FFFFFF;">6</span>
+							</li>
+							<li class="bj"><span style="color:#FFFFFF;">6</span>
+							</li>
+							<li class="bj"><span style="color:#FFFFFF;">3</span>
+							</li>
+							<li class="bj"><span style="color:#FFFFFF;">7</span>
+							</li>
+							<li class="bj"><span style="color:#FFFFFF;">1</span>
+							</li>
+							<li>人加盟沃联盟平台</li>
+						</ul>
+						<ul class="zt_daxiao14" style="margin-left:0.3rem;">
+							<li>您是第</li>
+							<li class="bj"><span style="color:#FFFFFF;">6</span>
+							</li>
+							<li class="bj"><span style="color:#FFFFFF;">6</span>
+							</li>
+							<li class="bj"><span style="color:#FFFFFF;">5</span>
+							</li>
+							<li class="bj"><span style="color:#FFFFFF;">1</span>
+							</li>
+							<li class="bj"><span style="color:#FFFFFF;">7</span>
+							</li>
+							<li>位加盟者</li>
+						</ul>
+
+					</div>
+					<!--#include virtual="/wolianm2/include/footer_lll.html"-->
+
+					<!-- 引导蒙层部分开始 -->
+
+					<div class="mc_bg3" style="position:absolute;left:0;top:0;width:100%;z-index:9998;background:#000;opacity:0.8;display:none;"></div>
+					<div class="mc_bg4" style="position:fixed;left:0;bottom:0;width:100%;z-index:9998;background:#000;opacity:0.8;display:none;"></div>
+					<div class="mc_bg5" style="position:fixed;left:0;bottom:0;width:100%;z-index:9998;background:#000;opacity:0.8;display:none;"></div>
+					<img src="images/mengceng1.png" class="ydmc1 ydmc" style="position:fixed;bottom:0;left:0;width:6.4rem;z-index:9999;display:none;" alt="" />
+					<img src="images/mengceng3.png" class="ydmc3 ydmc" style="position:absolute;bottom:-6.7rem;left:0;width:6.4rem;z-index:9999;display:none;" alt="" />
+					<!-- 引导蒙层部分结束 -->
+
+					<!-- 下面是地区切换部分 -->
+					<div class="mc_bg" style="z-index:5;"></div>
+					<!-- 上面一行为地区切换背景蒙层    -->
+					<div class="dqqhxq" style="z-index:90;">
+						<div class="dq_tit">
+							<img src="images/guanbi.png" alt="" class="dq_close" /> <span>地区切换</span>
+						</div>
+						<div class="dq_mes">
+							<div class="dq_l">A<br/>|<br/>G</div>
+							<ul class="dq_r">
+								<li class="li5">北京</li>
+								<li class="li5">安徽</li>
+								<li class="li5">重庆</li>
+								<li class="li5">福建</li>
+								<li class="li5">广东</li>
+								<li class="li5">甘肃</li>
+								<li class="li5">广西</li>
+								<li class="li5">贵州</li>
+							</ul>
+						</div>
+						<div class="dq_mes">
+							<div class="dq_l">H<br/>|<br/>J</div>
+							<ul class="dq_r">
+								<li class="li5">湖北</li>
+								<li class="li5">湖南</li>
+								<li class="li5">河北</li>
+								<li class="li5">河南</li>
+								<li class="li5">海南</li>
+								<li class="li5">江苏</li>
+								<li class="li5">吉林</li>
+								<li class="li5">江西</li>
+								<li class="li5">黑龙江</li>
+							</ul>
+						</div>
+						<div class="dq_mes">
+							<div class="dq_l">L<br/>|<br/>S</div>
+							<ul class="dq_r">
+								<li class="li5">辽宁</li>
+								<li class="li5">宁夏</li>
+								<li class="li5">青海</li>
+								<li class="li5">山东</li>
+								<li class="li5">上海</li>
+								<li class="li5">山西</li>
+								<li class="li5">陕西</li>
+								<li class="li5">四川</li>
+								<li class="li5">内蒙古</li>
+							</ul>
+						</div>
+						<div class="dq_mes" style="margin-bottom:0.3rem;">
+							<div class="dq_l">T<br/>|<br/>Z</div>
+							<ul class="dq_r">
+								<li class="li5">天津</li>
+								<li class="li5">新疆</li>
+								<li class="li5">西藏</li>
+								<li class="li5">云南</li>
+								<li class="li5">浙江</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="foot_banquan1 banquan">
+					<!--#include virtual="/wolianm2/include/banquan.html"-->
+				</div>
+
+				<script>
+					window.onload = function() { //页面加载的时候改变当前的footer的图片及样式
+						$('#footers').find('li').eq(0).find("p").addClass("orangeColor_lll");
+						$('#footers').find('li').eq(0).find("img").attr("src", "images/iconFocus0.png");
+						// var height1=window.screen.availHeight;
+						// $(".ydmc").height(height1);
+						$(window).scrollTop(0);
+						$("body").bind("touchmove", function(e) {
+							e.preventDefault();
+						});
+						$(".mc_bg3").show();
+					}
+				</script>
+				<script type="text/javascript">
+					$(function() {
+						var height = document.body.scrollHeight;
+						$(".mc_bg,.mc_bg3,.mc_bg4,.mc_bg5").height(height);
+						$(".dq_close").click(function() {
+							$(".mc_bg").css("display", "none");
+							$(".dqqhxq").slideUp(200);
+						})
+						$(".k_kuan").click(function() {
+							var dq = $(".k_kuan").children().first().text();
+							$(".mc_bg").css("display", "block");
+							$(".dqqhxq").slideDown(200);
+							for(i = 0; i < $(".li5").length; i++) {
+								var dqLi = $(".li5").eq(i).text();
+								if(dq == dqLi) {
+									$(".li5>.xzbj").remove();
+									var bj = "<div class='xzbj'><img src='images/dizibenjing.png'></div>";
+									$(".li5").eq(i).append(bj);
+								}
+							}
+						})
+						$(".li5").click(function() {
+							var dq = $(this).text();
+							$(".mc_bg").css("display", "none");
+							$(".dqqhxq").slideUp(200);
+							$(".k_kuan").children().first().html(dq);
+						})
+
+						$(".dqqhxq,.mc_bg").click(function() {
+							$(".dqqhxq").slideUp(200);
+							$(".mc_bg").css("display", "none");
+						})
+						$(".dx_dixian1").click(function() {
+							$(".caihu_1").css("display", "none");
+							$(".z_zhong1").css("display", "block");
+						})
+						$(".dx_dixian2").click(function() {
+							$(".z_zhong1").css("display", "none");
+							$(".caihu_1").css("display", "block");
+						})
+						$("#caifu").click(function() {
+							$("#cf_ye").show();
+							$(".caihu_1").hide();
+							$(".dx_dixian1").css("border-bottom", "3px solid #fc5f02");
+							$(".dx_dixian2").css("border-bottom", "none");
+						});
+						$("#zt_yc").click(function() {
+							$("#img_yc").show();
+							$("#zt_yc").hide();
+						});
+						$("#caifubang").click(function() {
+							$(".caihu_1").show();
+							$("#cf_ye").hide();
+							$(".dx_dixian1").css("border-bottom", "none");
+							$(".dx_dixian2").css("border-bottom", "3px solid #fc5f02");
+						});
+
+						$(".ribang").click(function() {
+							$(".caihu_1").show();
+							$(".caihu_3,.caihu_4").hide();
+						});
+						$(".yuebang").click(function() {
+							$(".caihu_3").show();
+							$(".caihu_1,.caihu_4").hide();
+						});
+						$(".zongbang").click(function() {
+							$(".caihu_4").show();
+							$(".caihu_1,.caihu_3").hide();
+						});
+						$(".tu_img ").click(function() {
+							$(window).scrollTop(600);
+						})
+
+						var mp = 0;
+						var nums = [1, 3, 2, 4];
+
+						function maop() {
+							if(mp < 4) {
+								var num = nums[mp];
+								mp++;
+								$(".maop").css("display", "none");
+								$(".m_pao" + num).css("display", "block");
+								// alert(mp);
+							} else {
+								mp = 0;
+								$(".maop").css("display", "none");
+								clearInterval(mp1);
+							}
+						}
+						// var mp1 = setInterval(maop, 2000);
+						var qpr = 0;
+						var qpruh = $(".qpr ul").height();
+						$(".qpr").height(qpruh);
+						$(".qpr").append($(".qpr").html());
+						var qT = $(".qpr").position().top;
+
+						function qpr1() {
+							if(qpr < 3) {
+								qpr++;
+								$(".qpr").animate({
+									"top": -qpruh * qpr
+								}, 1000);
+							} else {
+								$(".qpr").css("top", "0");
+								qpr = 1;
+								$(".qpr").animate({
+									"top": -qpruh * qpr
+								}, 1000);
+							}
+							mp1 = setInterval(maop, 2000);
+						}
+						// var qpr1 = setInterval(qpr1, 10000);
+
+						// 引导蒙层切换
+
+						$(".ydmc2,.mc_bg3").click(function() {
+							$(window).scrollTop(540);
+							$(".ydmc2,.mc_bg3").css("display", "none");
+							$(".ydmc3,.mc_bg4").css("display", "block");
+						})
+						$(".ydmc3,.mc_bg4").click(function() {
+							$(".ydmc3,.mc_bg4").css("display", "none");
+							$(".ydmc1,.mc_bg5").css("display", "block");
+						})
+						$(".ydmc1,.mc_bg5").click(function() {
+							$(".ydmc1,.mc_bg5").css("display", "none");
+							$("body").unbind("touchmove");
+						})
+
+					})
+				</script>
+			</div>
+		</div>
+	</body>
+
+</html>

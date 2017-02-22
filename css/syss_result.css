@@ -1,0 +1,161 @@
+/*逛店铺css*/
+body{
+    background: #f2f2f2;
+    font-family: "微软雅黑";
+    font-size: 0.26rem;
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    margin: auto;
+}
+/*public*/
+
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.cl {
+    zoom:1;
+}
+.cl:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/*public end*/
+
+
+#nav{
+   /* width: 6.4rem;*/
+    height: 0.79rem;
+    font-size: 0.26rem;
+    background: #ffffff;
+    color: #333333;
+    border-bottom: 1px solid #dbdbdb;
+}
+#nav ul{
+    margin: auto;
+}
+.normal{
+    text-align: center;
+    height: 0.77rem;
+    line-height: 0.77rem;
+    width: 1.3rem;
+    margin: 0 0.4rem;
+}
+.click_choice{
+    text-align: center;
+    height: 0.74rem;
+    line-height: 0.74rem;
+    width: 1.3rem;
+    margin: 0 0.4rem;
+    border-bottom: 3px solid #fc5f01;
+}
+
+
+.shop_list .big_list{
+   /* width: 6.4rem;*/
+    /*height: 2.1rem;*/
+    background: #ffffff;
+    margin-top: 0.1rem;
+
+}
+.shop_list .big_list .img{
+    width: 2.02rem;
+    text-align: center;
+}
+.shop_list .text{
+    width: 4.38rem;
+    height: 2rem;
+    position: relative;
+    padding-top: 0.1rem;
+}
+.user_pic{
+    margin-top: 0.44rem;
+    display: inline-block;
+    width: 1.22rem;
+    height: 1.22rem;
+    background: #f4f4f4 url("../images/girl.png") no-repeat 0.16rem 0.18rem/0.9rem 1.04rem;
+    border-radius: 50%;
+}
+.shop_list .text h3{
+    font-size: 0.26rem;
+    color:#333333 ;
+    margin-top: 0.4rem;
+}
+.shop_list .text p{
+    margin-top: 0.04rem;
+    font-size: 0.22rem;
+    color: #a2a2a2;
+}
+.shop_list .text ul{
+    margin-top: 0.1rem;
+    font-size: 0.18rem;
+    color: #a2a2a2;
+}
+.shop_list .text ul img{
+    width: 0.24rem;
+    height: 0.24rem;
+    /*margin-top: 0.04rem;*/
+}
+.shop_list .text ul .second{
+    margin-left: 0.3rem;
+}
+.right_arrow{
+    width: 0.22rem;
+    position: absolute;
+    top:0.82rem;
+    right: 0.28rem;
+}
+
+
+
+/*.load_div{
+    height: 1.4rem;
+    width: 6.4rem;
+    text-align: center;
+    color: #666666;
+    padding-top: 0.7rem;
+}
+
+
+.load_div img{
+    width: 0.4rem;
+}
+.load_div p{
+    font-size: 0.18rem;
+}*/
+.toTop a{
+    width: 0.8rem;
+    height: 0.8rem;
+    position: fixed;
+    bottom:1.2rem;
+    left: 5.0rem;
+    background: url("../images/to_top.png") no-repeat 0 0/0.8rem 0.8rem;
+}
+.pull_loading{
+    margin-bottom: 0.9rem;
+    height: 0.4rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.22rem;
+    color: #666666;
+    padding-top: 1rem;
+    background: url("../images/load_icon.gif") no-repeat 2.96rem 0.4rem/0.48rem 0.48rem;
+}
+.footer_btn {
+    width: 100%;
+    height: 0.9rem;
+    background: #fc5f01;
+    color: #ffffff;
+    /*border: none;
+    margin: 0;
+    padding: 0;*/
+    font-size: 0.32rem;
+    text-align: center;
+    line-height: 0.9rem;
+    position: fixed;
+    bottom: 0;
+}

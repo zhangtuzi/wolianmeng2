@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta content="telephone=no" name="format-detection">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>我的订单</title>
+	<script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/user_order.css">
+	<link rel="stylesheet" type="text/css" href="css/banquan.css" />
+		<style type="text/css">
+	/*.titleShowT{
+		font-size: 0.32rem;
+		color: #fff;
+		text-align: center;
+		float: left;
+	}
+
+	.Htop{
+		background: #fc5f01;
+		height: 0.86rem;
+		line-height:0.86rem;
+		position: relative;
+		font-size: 0.32rem;
+		color: #fff;
+		text-align: center;
+	}
+	.backContaner img{
+		height: 0.3rem;
+		vertical-align: middle;
+		margin-left: 0.2rem;
+		text-align: left;
+	}
+	.backContaner{
+		width: 0.8rem;
+		display: table-cell;
+		font-size: 12px;
+		vertical-align: middle;
+		float: left;
+		text-align: left;
+	}
+
+	.headTitleT{
+		margin-left:0.6rem;
+	}
+
+	.WoIconArea img{
+		height: 0.23rem;
+		vertical-align: middle;
+	}
+	.WoIconArea{
+		float: right;
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 12px;
+		margin-right: 0.26rem;
+	}
+	.search{
+		float: right;
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 12px;
+		margin-right: 0.26rem;
+	}
+	.search img{
+		height: 0.3rem;
+		vertical-align: middle;
+	}*/
+
+
+</style>
+    <script type="text/javascript">
+        var _self =  this ;
+        _self.width = 640; // 璁剧疆榛樿鏈€澶у搴�
+        _self.fontSize = 100; // 榛樿瀛椾綋澶у皬
+        _self.widthProportion =  function (){ var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.5?0.5:p;};
+        _self.changePage =  function (){
+        document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+        }
+        _self.changePage();
+        window.addEventListener('resize', function (){_self.changePage();}, false );
+    </script>
+</head>
+	<body style='background:#f2f2f2;'>
+		<div class='Htop'>
+
+	<!--#include virtual="/wolianm2/include/headerinfo6.html"-->
+</div>
+<div class="ydmc" style="position: fixed;width: 6.4rem;height:11rem;left: 0px;top: 0px;z-index: 1;background:rgba(0,0,0,0.7);">
+	<!-- <img src="images/img/qzq_1.png"style="width: 0.64rem;
+    height: 0.54rem;
+    position: absolute;
+    right: 1rem;
+    top: 0.2rem;"/>
+	<img src="images/img/wodedingdan1.png"style="width: 5.85rem;
+    height: 3.76rem;
+    position: absolute;
+    right: 0.5rem;
+    top: -0.3rem;
+    z-index: 2;"/> -->
+
+		<img src="images/ordermengceng1.png" style="width: 5.85rem;height: 3.76rem;position: absolute;right: 0.2rem;top: -0.3rem;z-index: 2;"/>
+
+
+</div>
+		<div id='container_l'>
+
+
+
+
+			<div class='changeHead'>
+				<ul>
+					<li>
+						<div class='StateSelect SelectContaner'>
+							<span class='fl ShowTextSelect'>全部状态</span>
+							<div class='Slct_area'>
+								<img src="images/arrSlct_down.png" />
+							</div>
+						</div>
+						<select class='StateChange selectBtn'>
+									<option>全部状态</option>
+									<option>状态1</option>
+									<option>状态2</option>
+									<option>状态3</option>
+								</select>
+
+					</li>
+					<li>
+						<div class='shoppingSelect SelectContaner'>
+							<span class='fl ShowTextSelect'>全部商品类型</span>
+							<div class='Slct_area'>
+								<img src="images/arrSlct_down.png" />
+							</div>
+						</div>
+								<select class='shopChange selectBtn'>
+									<option>全部商品类型</option>
+									<option>商品类型1</option>
+									<option>商品类型2</option>
+									<option>商品类型3</option>
+								</select>
+					</li>
+
+				</ul>
+			</div>
+			<div class='estimateWo'>
+				<div class="order fl">
+
+					<p>
+						订单笔数
+					</p>
+					<p class="order_num">
+						95
+					</p>
+
+				</div>
+				<div class="wodian fl">
+					<p>
+						沃点合计
+					</p>
+					<p class="wodian_num">
+						2000.00
+					</p>
+				</div>
+			</div>
+			<div class='listPart_YU'>
+				<ul>
+					<li>
+						<div class='infopartContainer'>
+							<dl>
+								<dt>
+									<div class='headerTime'>
+										<span class='TimeCol fl'>2016-01-26</span>
+										<span class="djie_num fr">005.00</span>
+										<span class="djie fr">待结算沃点：</span>
+										<span class="yjie_num fr">028.00</span>
+										<span class="yjie fr">已结算沃点：</span>
+									</div>
+									<div class='Contents_Yu'>4G全国套餐主副卡一份套餐多人共享 本地互拨免费</div>
+								</dt>
+								<dd>
+									<div class='imgmiddle'>
+										<img src="images/arrSlct_down.png" />
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<!--详单隐藏部分 start-->
+						<div class='showDetial_M dn'>
+							<ul>
+								<li>
+									<span class='fl'>商品名称</span>
+									<span class='fr rightFlag pro_name'>46元套餐A/B/C</span>
+								</li>
+								<li>
+									<span class='fl'>订单金额</span>
+									<span class="fr">元</span>
+									<span class='fr price'>22/90.00</span>
+								</li>
+								<li>
+									<span class='fl'>套餐月费</span>
+									<span class="fr">元</span>
+									<span class='fr month_pri'>56</span>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<span class='fl'>商品类型</span>
+									<span class='fr rightFlag pro_style'>号码</span>
+								</li>
+								<li>
+									<span class='fl'>订单业务类型</span>
+									<span class='fr order_price'>空中入网订单</span>
+								</li>
+								<li>
+									<span class='fl'>ICCID号</span>
+									<span class='fr iccid5' style="font-size:0.18rem;color:#a2a2a2!important;">001G</span>
+									<span class='fr iccid4' style="font-size:0.18rem;color:#a2a2a2!important;margin-right: 0.1rem;">9000</span>
+									<span class='fr iccid3' style="font-size:0.18rem;color:#a2a2a2!important;margin-right: 0.1rem;">3043</span>
+									<span class='fr iccid2' style="font-size:0.18rem;color:#a2a2a2!important;margin-right: 0.1rem;">0156</span>
+									<span class='fr iccid1' style="font-size:0.18rem;color:#a2a2a2!important;margin-right: 0.1rem;">8966</span>
+								</li>
+								<li>
+									<span class='fl'>用户类型</span>
+									<span class='fr user_sty'>新用户</span>
+								</li>
+								<li>
+									<span class='fl'>商品归属地</span>
+									<span class='fr pro_add'>河北 石家庄</span>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<span class='fl'>订单编号</span>
+									<span class='fr rightFlag order_bh'>1234</span>
+								</li>
+								<li>
+									<span class='fl'>订单时间</span>
+									<span class='fr order_time'>2016-01-26  18:59:23</span>
+								</li>
+								<li>
+									<span class='fl'>订单状态</span>
+									<span class='fr order_state'>已关闭</span>
+								</li>
+								<li>
+									<span class='fl'>入网时间</span>
+									<span class='fr rw_time'>2016-01-26  18:59:23</span>
+								</li>
+							</ul>
+							<ul class="bor_t">
+								<li class="xq_tit color1">
+									<span>主卡</span>
+								</li>
+								<li>
+									<span class='fl color2'>已结算沃点</span>
+									<span class='fr yjs_wd color1'>23点</span>
+								</li>
+								<li>
+									<span class='fl'>主卡号码</span>
+									<span class='fr zk_num'>18501387263</span>
+								</li>
+								<li>
+									<span class='fl'>稽核次数</span>
+									<span class='fr jh_num'>1</span>
+								</li>
+								<li>
+									<span class='fl'>发展渠道</span>
+									<span class='fr fz_qd'>沃联盟</span>
+								</li>
+								<li>
+									<span class='fl'>是否联网</span>
+									<span class='fr lw_state'>否</span>
+								</li>
+								<li>
+									<span class='fl'>是否逾期欠费</span>
+									<span class='fr qf_state'>否</span>
+								</li>
+							</ul>
+							<ul class="bor_t">
+								<li class="xq_tit color1">
+									<span>副卡1</span>
+								</li>
+								<li>
+									<span class='fl color2'>已结算沃点</span>
+									<span class='fr djs_wd color1'>5点</span>
+								</li>
+								<li>
+									<span class='fl'>主卡号码</span>
+									<span class='fr zk_num'>18501387263</span>
+								</li>
+								<li>
+									<span class='fl'>稽核次数</span>
+									<span class='fr jh_num'>1</span>
+								</li>
+								<li>
+									<span class='fl'>发展渠道</span>
+									<span class='fr fz_qd'>沃联盟</span>
+								</li>
+								<li>
+									<span class='fl'>是否联网</span>
+									<span class='fr lw_state'>否</span>
+								</li>
+								<li>
+									<span class='fl'>是否逾期欠费</span>
+									<span class='fr qf_state'>否</span>
+								</li>
+							</ul>
+						</div>
+						<!--详单隐藏部分 end-->
+					</li>
+					<li>
+						<div class='infopartContainer'>
+							<dl>
+								<dt>
+									<div class='headerTime'>
+										<span class='TimeCol fl'>2016-01-26</span>
+										<span class="fr color1">10</span>
+										<span class="fr color2">无效沃点：</span>
+									</div>
+									<div class='Contents_Yu'>三星 S6 dege(64GB)4G全国套餐合约机</div>
+								</dt>
+								<dd>
+									<div class='imgmiddle'>
+										<img src="images/arrSlct_down.png" />
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<!--详单隐藏部分 start-->
+						<div class='showDetial_M dn'>
+
+						</div>
+						<!--详单隐藏部分 end-->
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="foot_banquan3 banquan">
+			<!--#include virtual="/wolianm2/include/banquan.html"-->
+		</div>
+		<script type="text/javascript">
+		window.onload = function(){
+			$('.title_lll').text('我的订单');
+			$("body").bind("touchmove",function(e){
+				e.preventDefault();
+			});
+		}
+			$('.listPart_YU').bind('click',function(event){
+				var thisLi = $(event.target).parents('li');
+
+				if(thisLi.children('.showDetial_M').hasClass('dn')){
+					thisLi.children('.showDetial_M').removeClass('dn');
+					thisLi.find('.imgmiddle').addClass('rote180');
+					thisLi.siblings('li').find('.imgmiddle').removeClass('rote180');
+					thisLi.siblings('li').children('.showDetial_M').addClass('dn');
+
+				}else{
+					thisLi.children('.showDetial_M').addClass('dn');
+					thisLi.find('.imgmiddle').removeClass('rote180');
+				}
+			});
+			$('.selectBtn').bind('change',function(){
+				var selectValue = $(this).find('option:selected').text();
+				$(this).siblings('.SelectContaner').children('.ShowTextSelect').text(selectValue);
+			})
+
+			$(".ydmc").click(function(){
+				$(".ydmc").hide();
+				$("body").unbind("touchmove");
+			})
+		</script>
+
+	</body>
+</html>

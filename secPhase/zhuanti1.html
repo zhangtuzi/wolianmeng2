@@ -1,0 +1,44 @@
+<!--#include virtual="/include/head_greyBg.html"-->
+<style>
+body{position:relative;}
+</style>
+
+<section id="content" data-role="content" class='greyBg'>
+	<div class="wid320 marA">
+    	<img src="/images/zhuanti1.jpg" width='320' />
+    	<img src="/images/zhuanti2.jpg" width='320' />
+    </div>
+</section>
+<div class="space-10"></div>
+
+
+<!--#include virtual="/include/footer_noEnd.html"-->
+
+<!--推广店铺-->
+<section class="maskPop"></section>
+<div class="tr zhuanti_wrp " style="position:absolute;left:50%;margin-left:-120px;top:50px;z-index:1001;">
+	<div class="tip" style="background:url(/images/zhuantiPop1.png);width:177px;height:131px;color:#d24a51;background-repeat:no-repeat;padding:20px 0 0 5px;font-size:20px;line-height:30px;font-weight:bold;text-align:left;">
+				<span>啊哦，您访问的页面已过期~！</span>
+	</div>
+    <img src="/images/womei_sad.png" width="90" style="position:absolute;left:150px;top:120px;"/>
+</div>
+<script>
+$(function(){
+	//$('.maskPop').height($('body,html').height());
+		var browser = navigator.userAgent.toLowerCase();
+		if (!/ucbrowser/.test(browser) && $('.maskPop').is(':visible')) {
+			$(document).bind('touchmove', fn = function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$(window).scrollTop(0);
+			});
+		}
+		/*$('.maskPop,#promotionPop2').click(function() {
+			$('.maskPop,#promotionPop2').hide();
+			$(document).unbind('touchmove', fn);
+		});*/
+})
+</script>
+
+</body>
+</html>

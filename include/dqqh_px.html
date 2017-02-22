@@ -1,0 +1,381 @@
+<style media="screen">
+
+.mc_bg{
+
+  display: none;
+
+  position: absolute;
+
+  top: 0;
+
+  width:100%;
+
+  height: 5rem;
+
+  background: gray;
+
+  opacity: 0.3;
+
+  z-index: 2;
+
+}
+
+.dqqhxq{
+
+  display: none;
+
+  position: absolute;
+
+  top:0;
+
+  width: 100%;
+
+  background: #fff;
+
+  z-index: 99;
+
+}
+.dq_tit{
+
+  height: 25px;
+
+  text-align: center;
+
+  line-height:25px;
+
+  font-size:15px;
+
+  color:#fa5f03;
+
+}
+.dq_close{
+
+  float: left;
+
+  width: 13px;
+
+  height:13px;
+
+  margin-top:13px;
+
+  margin-left:15px;
+
+}
+
+.dq_mes{
+
+  width: 100%;
+
+  margin-top:10px;
+
+  height:60px;
+
+}
+
+.dq_l{
+
+  clear: both;
+
+  width:10px;
+
+  height:45px;
+
+  margin-top:15px;
+
+  float: left;
+
+  font-size: 12px;
+
+  text-align: center;
+
+  margin-left: 17.5px;
+
+  color: #d3d3d3;
+
+}
+
+.dq_r{
+
+    float: left;
+
+    width:80%;
+
+    height:60px;
+
+    margin-left: 20px;
+
+    font-size: 12px;
+
+    line-height: 60px;
+
+    text-align: center;
+
+    color: #666;
+}
+
+.li5{
+
+  float: left;
+
+  position: relative;
+
+  margin-left: 12.5px;
+
+  margin-right:12.5px;
+
+  line-height:30px;
+
+}
+
+.xzbj{
+
+  position: absolute;
+
+  top: 0;
+
+  width:30px;
+
+  height:27.5px;
+}
+.xzbj img{
+  width: 36px;
+  margin-top: 2px;
+  margin-left: -5px;
+}
+
+</style>
+
+
+
+<!-- 下面是地区切换部分 -->
+
+<div class="mc_bg"></div>
+
+<!-- 上面一行为地区切换背景蒙层    -->
+
+<div class="dqqhxq">
+
+  <div class="dq_tit">
+
+    <img src="images/guanbi.png" alt="" class="dq_close" />
+
+    <span>地区切换</span>
+
+  </div>
+
+  <div class="dq_mes">
+
+    <div class="dq_l">
+
+        A</br>|</br>G
+
+    </div>
+
+    <ul class="dq_r">
+
+      <li class="li5">北京</li>
+
+      <li class="li5">安徽</li>
+
+      <li class="li5">重庆</li>
+
+      <li class="li5">福建</li>
+
+      <li class="li5">广东</li>
+
+      <li class="li5">甘肃</li>
+
+      <li class="li5">广西</li>
+
+      <li class="li5">贵州</li>
+
+    </ul>
+
+  </div>
+
+  <div class="dq_mes">
+
+    <div class="dq_l">
+
+        H</br>|</br>J
+
+    </div>
+
+    <ul class="dq_r">
+
+      <li class="li5">湖北</li>
+
+      <li class="li5">湖南</li>
+
+      <li class="li5">河北</li>
+
+      <li class="li5">河南</li>
+
+      <li class="li5">海南</li>
+
+      <li class="li5">江苏</li>
+
+      <li class="li5">吉林</li>
+
+      <li class="li5">江西</li>
+
+      <li class="li5">黑龙江</li>
+
+    </ul>
+
+  </div>
+
+  <div class="dq_mes">
+
+    <div class="dq_l">
+
+        L</br>|</br>S
+
+    </div>
+
+    <ul class="dq_r">
+
+      <li class="li5">辽宁</li>
+
+      <li class="li5">宁夏</li>
+
+      <li class="li5">青海</li>
+
+      <li class="li5">山东</li>
+
+      <li class="li5">上海</li>
+
+      <li class="li5">山西</li>
+
+      <li class="li5">陕西</li>
+
+      <li class="li5">四川</li>
+
+      <li class="li5">内蒙古</li>
+
+    </ul>
+
+  </div>
+
+  <div class="dq_mes" style="margin-bottom:0.3rem;">
+
+    <div class="dq_l">
+
+        T</br>|</br>Z
+
+    </div>
+
+    <ul class="dq_r">
+
+      <li class="li5">天津</li>
+
+      <li class="li5">新疆</li>
+
+      <li class="li5">西藏</li>
+
+      <li class="li5">云南</li>
+
+      <li class="li5">浙江</li>
+
+    </ul>
+
+  </div>
+
+
+
+</div>
+
+<!-- 地区切换部分结束 -->
+
+<script type="text/javascript">
+
+$(".dq_close").click(function (){
+
+  $(".mc_bg").css("display","none");
+
+  $(".dqqhxq").slideUp(200);
+
+  $("body").removeClass("body_hidd");
+
+  $("body").unbind("touchmove");
+
+})
+
+$(".dq_dingwei").click(function (){
+
+  var dq=$(".dq").text();
+
+  var height=document.body.scrollHeight;
+
+  $(".mc_bg").height(height);
+
+  $(".mc_bg").css("display","block");
+
+  $("body").addClass("body_hidd");
+
+  $("body").bind("touchmove",function(e){
+    e.preventDefault();
+  });
+
+  $(".dqqhxq").slideDown(200);
+
+  for(i=0;i<$(".li5").length;i++){
+
+    var dqLi=$(".li5").eq(i).text();
+
+    if(dq==dqLi){
+
+      $(".li5>.xzbj").remove();
+
+      var bj="<div class='xzbj'><img src='images/dizibenjing.png'></div>";
+
+      $(".li5").eq(i).append(bj);
+
+    }
+  }
+
+})
+
+$(".li5").click(function (){
+
+  var dq=$(this).text();
+
+  $(".mc_bg").css("display","none");
+
+  $("body").removeClass("body_hidd");
+
+  $("body").unbind("touchmove");
+
+  $(".dqqhxq").slideUp(200);
+
+  $(".dq").html(dq);
+
+})
+
+$(".styleqh").click(function(){
+
+  if($(this).hasClass("styleqh1")){
+
+    $(this).removeClass("styleqh1");
+
+    $(this).children("img").attr("src","images/style1.png");
+
+    $(".li6").css("display","block");
+
+    $(".li3").css("display","none");
+
+  }else{
+
+    $(this).addClass("styleqh1");
+
+    $(this).children("img").attr("src","images/style2.png");
+
+    $(".li6").css("display","none");
+
+    $(".li3").css("display","block");
+
+  }
+
+})
+
+</script>

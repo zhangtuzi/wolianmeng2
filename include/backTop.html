@@ -1,0 +1,31 @@
+<style media="screen">
+  .backTop{
+    display:none;
+    width: 0.8rem;
+    height: 0.8rem;
+    position: fixed;
+    bottom: 1.2rem;
+    right:0.1rem;
+    z-index: 999;
+  }
+</style>
+
+<div class="backTop">
+  <img src="images/to_top.png" style="width:100%;height:100%;" alt="" />
+</div>
+
+<script type="text/javascript">
+  $(function(){
+    $(window).scroll(function(){
+      var top=$(window).scrollTop();
+      if(top>0){
+        $(".backTop").css("display","block");
+      }else{
+        $(".backTop").css("display","none");
+      }
+    })
+    $(".backTop").click(function(){
+      $(window).scrollTop(0);
+    })
+  })
+</script>

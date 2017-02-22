@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>财富</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/two_lll.css">
+    <link rel="stylesheet" type="text/css" href="css/banquan.css" />
+    <script type="text/javascript" src='js/top.js'></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+  <div class="mc_bg" style="position:absolute;left:0;top:0;width:100%;z-index:9998;background:#000;opacity:0.8;display:block;"></div>
+   <img class="ydmc" src="images/caifumengceng1.png" style="position:absolute;width:95%;height:6rem;top:1.68rem;left: 0;z-index:9999;"/>
+    <div id="container_caifu" class="contaner_lll">
+        <div class="header_lll">
+            <div class="header1_lll">
+                <img src="images/back_lll.png" class="back_lll">
+                <span class="myCaiFu_lll">我的财富</span>
+            </div>
+            <div class="woDian_lll">
+                <div class="pad10_lll">沃点余额</div>
+                <div class="woDianNum_lll pad10_lll">12,367.<span class="dot_lll">00</span>
+                </div>
+                <div class="functions_lll">
+                    <a href="#" class="tixian_lll">提现</a>
+                    <a href="#" class="zuanq_lll">
+                        去赚钱
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content_lll">
+            <div class="con1_lll">
+                <div class="fl flBlock_lll">
+                    <div>当前预估沃点</div>
+                    <div class="num_lll">1000.55</div>
+                </div>
+                <div class="fr frBlock_lll">
+                    <div>累计结算沃点</div>
+                    <div class="num_lll">1000.55</div>
+                </div>
+                <div class="cb"></div>
+            </div>
+            <div class="con2_lll">
+                <div class="mingXi_lll">
+                    <div class="fl">订单明细</div>
+                    <a href="#" class="fr"><img src="images/go_lll.png" class="go_lll"></a>
+                    <div class="cb"></div>
+                </div>
+                <div class="days_lll">
+                    <div class="dayslLeft_lll">
+                        <div class="today_lll oran_lll">今日</div>
+                        <div class="tuiGuang_lll">推广订单</div>
+                        <div class="dingDanNum_lll">5笔</div>
+                    </div>
+                    <div class="dayslRight_lll">
+                        <div class="yesday_lll">昨日</div>
+                        <div class="tuiGuang_lll">获取预估沃点</div>
+                        <div class="dingDanNum_lll">50.00</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="con3_lll">
+                <p class="first_lll">1、当前预估沃点，即截止当前时间未结算订单带来的预估值。</p>
+                <p class="second_lll">2、每日计算预估沃点，每月20日结算沃点。</p>
+            </div>
+
+        </div>
+        <!--#include virtual="/wolianm2/include/footer_lll.html"-->
+        <div class="foot_banquan2 banquan">
+          <!--#include virtual="/wolianm2/include/banquan.html"-->
+        </div>
+        <script>
+            window.onload = function(){  //页面加载的时候改变当前的footer的图片及样式
+                $('#footers').find('li').eq(3).find("p").addClass("orangeColor_lll");
+                $('#footers').find('li').eq(3).find("img").attr("src","images/iconFocus3.png");
+                var height1=window.screen.availHeight;
+                $(".mc_bg").height(height1);
+								$(window).scrollTop(0);
+                $("body").bind("touchmove",function(e){
+          				e.preventDefault();
+          			});
+            }
+            $(".today_lll").bind("click",function(){
+                $(this).addClass("oran_lll");
+                if($(".yesday_lll").hasClass("oran_lll")){
+                    $(".yesday_lll").removeClass("oran_lll");
+                }
+
+            });
+            $(".yesday_lll").bind("click",function() {
+                $(this).addClass("oran_lll");
+                if($(".today_lll").hasClass("oran_lll")){
+                $(".today_lll").removeClass("oran_lll");
+                }
+            });
+
+            $(".mc_bg,.ydmc").click(function(){
+      				$(".mc_bg,.ydmc").hide();
+      				$("body").unbind("touchmove");
+      			})
+        </script>
+</body>
+</html>

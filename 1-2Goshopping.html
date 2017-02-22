@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="0">
+    <title>1-2逛店铺</title>
+    <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/1-2.css">
+    <link rel="stylesheet" type="text/css" href="css/dqqh.css">
+    <script type="text/javascript">
+        var _self = this;
+        _self.width = 640; // 璁剧疆榛樿鏈€澶у搴
+        _self.fontSize = 100; // 榛樿瀛椾綋澶у皬
+        _self.widthProportion = function() {
+            var p = (document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth) / _self.width;
+            return p > 1 ? 1 : p < 0.5 ? 0.5 : p;
+        };
+        _self.changePage = function() {
+            document.getElementsByTagName("html")[0].setAttribute("style", "font-size:" + _self.widthProportion() * _self.fontSize + "px !important");
+        }
+        _self.changePage();
+        window.addEventListener('resize', function() {
+            _self.changePage();
+        }, false);
+    </script>
+</head>
+<body>
+    <div id="search">
+        <a href="dingdansousuo.html"><input type="form" value="搜索沃联盟店铺" id="ss_dp"/></a>
+        <span class="dq1">北京</span>
+        <a href="javascript:;" class="arrow"></a>
+    </div>
+    <div id="nav">
+        <ul class="nav_list cl">
+            <li class="fl click_choice">商品销量</li>
+            <li class="fl normal">广告数量</li>
+            <li class="fl normal">创建时间</li>
+        </ul>
+    </div>
+    <div class="content">
+        <ul class="shop_list">
+            <li class="big_list cl">
+                <div class="img fl">
+                    <a  href="1-3OthersShopHome.html" class="user_pic"></a>
+                </div>
+                <div class="text fr">
+                    <h3><a href="1-3OthersShopHome.html">张洲的旗舰店</a></h3>
+                    <p>联通号码 | 流量包 | 上网卡 | 手机</p>
+                    <ul class="cl">
+                        <li class="fl">
+                            <em><img src="images/star_icon.png"/></em>
+                            <span>收藏： 888888</span>
+                        </li>
+                        <li class="fr">
+                            <em><img src="images/qt_icon.png"/></em>
+                            <span>销量： 888888</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="big_list cl">
+                <div class="img fl">
+                    <a  href="1-3OthersShopHome.html" class="user_pic"></a>
+                </div>
+                <div class="text fr">
+                    <h3><a href="1-3OthersShopHome.html">张洲的旗舰店</a></h3>
+                    <p>联通号码 | 流量包 | 上网卡 | 手机</p>
+                    <ul class="cl">
+                        <li class="fl">
+                            <em><img src="images/star_icon.png"/></em>
+                            <span>收藏： 888888</span>
+                        </li>
+                        <li class="fr">
+                            <em><img src="images/qt_icon.png"/></em>
+                            <span>销量： 888888</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="big_list cl">
+                <div class="img fl">
+                    <a  href="1-3OthersShopHome.html" class="user_pic"></a>
+                </div>
+                <div class="text fr">
+                    <h3><a href="1-3OthersShopHome.html">张洲的旗舰店</a></h3>
+                    <p>联通号码 | 流量包 | 上网卡 | 手机</p>
+                    <ul class="cl">
+                        <li class="fl">
+                            <em><img src="images/star_icon.png"/></em>
+                            <span>收藏： 888888</span>
+                        </li>
+                        <li class="fr">
+                            <em><img src="images/qt_icon.png"/></em>
+                            <span>销量： 888888</span>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="load">
+            玩命儿加载中加载中
+        </div>
+    </div>
+    <div class="footer_btn">
+        <span>我也要开店</span>
+    </div>
+
+
+    	<!-- 下面是地区切换部分 -->
+
+    	<div class="mc_bg"></div>
+
+    	<!-- 上面一行为地区切换背景蒙层    -->
+
+    	<div class="dqqhxq">
+
+    		<div class="dq_tit">
+
+    			<img src="images/guanbi.png" alt="" class="dq_close" />
+
+    			<span>地区切换</span>
+
+    		</div>
+
+    		<div class="dq_mes">
+
+    			<div class="dq_l">
+
+    					A</br>|</br>G
+
+    			</div>
+
+    			<ul class="dq_r">
+
+    				<li class="li5">北京</li>
+
+    				<li class="li5">安徽</li>
+
+    				<li class="li5">重庆</li>
+
+    				<li class="li5">福建</li>
+
+    				<li class="li5">广东</li>
+
+    				<li class="li5">甘肃</li>
+
+    				<li class="li5">广西</li>
+
+    				<li class="li5">贵州</li>
+
+    			</ul>
+
+    		</div>
+
+    		<div class="dq_mes">
+
+    			<div class="dq_l">
+
+    					H</br>|</br>J
+
+    			</div>
+
+    			<ul class="dq_r">
+
+    				<li class="li5">湖北</li>
+
+    				<li class="li5">湖南</li>
+
+    				<li class="li5">河北</li>
+
+    				<li class="li5">河南</li>
+
+    				<li class="li5">海南</li>
+
+    				<li class="li5">江苏</li>
+
+    				<li class="li5">吉林</li>
+
+    				<li class="li5">江西</li>
+
+    				<li class="li5">黑龙江</li>
+
+    			</ul>
+
+    		</div>
+
+    		<div class="dq_mes">
+
+    			<div class="dq_l">
+
+    					L</br>|</br>S
+
+    			</div>
+
+    			<ul class="dq_r">
+
+    				<li class="li5">辽宁</li>
+
+    				<li class="li5">宁夏</li>
+
+    				<li class="li5">青海</li>
+
+    				<li class="li5">山东</li>
+
+    				<li class="li5">上海</li>
+
+    				<li class="li5">山西</li>
+
+    				<li class="li5">陕西</li>
+
+    				<li class="li5">四川</li>
+
+    				<li class="li5">内蒙古</li>
+
+    			</ul>
+
+    		</div>
+
+    		<div class="dq_mes" style="margin-bottom:0.3rem;">
+
+    			<div class="dq_l">
+
+    					T</br>|</br>Z
+
+    			</div>
+
+    			<ul class="dq_r">
+
+    				<li class="li5">天津</li>
+
+    				<li class="li5">新疆</li>
+
+    				<li class="li5">西藏</li>
+
+    				<li class="li5">云南</li>
+
+    				<li class="li5">浙江</li>
+
+    			</ul>
+
+    		</div>
+
+
+
+    	</div>
+
+    	<!-- 地区切换部分结束 -->
+
+</body>
+<script>
+    $(document).ready(function() {
+        $("#nav ul li").click(function(){
+            $("#nav ul li").each(function(index, el) {
+                $(this).removeClass('click_choice').addClass("normal");
+            });
+            $(this).removeClass("normal").addClass("click_choice");
+        })
+
+        $(".dq_close").click(function (){
+
+    			$(".mc_bg,.dqqhxq").css("display","none");
+
+    		})
+
+    		$(".dq1,.arrow").click(function (){
+
+    			var dq=$(".dq1").text();
+
+    			$(".mc_bg,.dqqhxq").css("display","block");
+
+    			for(i=0;i<$(".li5").length;i++){
+
+    				var dqLi=$(".li5").eq(i).text();
+
+    				if(dq==dqLi){
+
+    					$(".li5>.xzbj").remove();
+
+    					var bj="<div class='xzbj'><img src='images/dizibenjing.png'></div>";
+
+    					$(".li5").eq(i).append(bj);
+
+    				}
+    			}
+
+    		})
+
+    		$(".li5").click(function (){
+
+    			var dq=$(this).text();
+
+    			$(".mc_bg,.dqqhxq").css("display","none");
+
+    			$(".dq1").html(dq);
+
+    		})
+
+    });
+</script>ss_dp
+</html>

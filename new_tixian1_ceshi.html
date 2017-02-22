@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<title>提现</title>
+		<link rel="stylesheet" type="text/css" href="css/new_tixian.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript" src="js/top.js" ></script>
+		<script type="text/javascript" src="js/jquery.mobile.1.3.2.js" ></script>
+
+		<style media="screen">
+			.wrap_all{
+				position: relative;
+				margin: 0 auto;
+				min-width: 320px;
+				max-width: 640px;
+				background: #f2f2f2;
+			}
+		</style>
+	</head>
+
+	<body style="background:#f2f2f2;">
+		<div class="wrap_all">
+    		<!--#include virtual="/wolianm2/include/headerinfo11.html"-->
+
+				<!-- 银行卡部分 -->
+				<div class="tx_card">
+						<img src="images/ms_bank_icon.jpg" class="bank_icon" alt="" />
+						<div class="bank_mes">
+								<p class="bank_tit">中国民生银行</p>
+								<p class="card_mes">
+									<span class="card_num">尾号8121</span>
+									<span class="user_name">王海芳</span>
+								</p>
+						</div>
+						<img src="images/right_arrow_icon.png" class="right_go" alt="" />
+				</div>
+				<div class="tx_jg">
+						<img src="images/new_js_icon.png" class="jg_icon" alt="" />
+						<span>该银行卡不支持提现，请重新选择或添加其他银行卡 。</span>
+				</div>
+
+				<!-- 提现沃点部分 -->
+				<div class="tx_div">
+						<p class="tx_tit">提现沃点</p>
+						<img src="images/money_icon.png" class="money_icon" alt="" />
+						<!-- <input type="number" name="name" class="number_input"
+						placeholder=""
+						 style="float:left;width: 5rem;
+										    height: 0.5rem;
+										    font-size: 0.4rem;
+										    line-height: 0.5rem;
+										    margin-top: 0.3rem;
+										    margin-left: 0.1rem;
+										    color: #333;" value=""> -->
+						<input type="number" name="name" placeholder=""
+						id="tx_wd" style="display:block;" value="">
+				</div>
+				<div class="txje_ts">
+					<span class="wdye_ts">可用余额<span class="wdye">100.00</span>沃点。</span>
+					<span class="je_cc">金额已超过沃点余额。</span>
+					<span>1沃点＝1元人民币</span>
+					<span class="tx_sm">提现说明 >></span>
+				</div>
+
+				<div class="qrtx_btn">5天内到账，确认提现</div>
+
+
+
+
+				<div class="zwyz_tc1">指纹验证1</div>
+				<div class="zwyz_tc2">指纹验证2</div>
+				<div class="sc_ts_btn">闪窗提示</div>
+				<!-- 提现蒙层 -->
+				<div class="tx_mc"></div>
+					<!-- 输入提现密码 -->
+				<div class="srmm_div">
+
+					<p class="srmm_tit">输入密码</p>
+						<img src="images/new_close1.png" class="close1" alt="" />
+					<p class="srmm_tx_je">提现金额<span class="tx_num_qr">10.00</span>元</p>
+
+					<div class="mm" style="position:relative;">
+							<div class="fl password"></div>
+							<div class="fl password"></div>
+							<div class="fl password"></div>
+							<div class="fl password"></div>
+							<div class="fl password"></div>
+							<div class="fl password" style="border-right:1px solid #dbdbdb;"></div>
+								<input type="number" name="name" value="" id="mm_input" pattern="[0-9]*" Maxlength="6">
+					</div>
+					  <p class="wjmm">忘记密码？</p>
+				</div>
+
+				<div class="srmm_yz">
+						<img src="images/new_mm_yzz.gif" class="srmm_yzz_icon" alt="" />
+						<img src="images/mmyz_success_icon1.gif" class="mmyz_success_icon" alt="" />
+						<img src="images/new_fail_icon.png" class="mmyz_fail_icon" alt="" />
+				</div>
+
+				<!-- 指纹验证1 -->
+				<div class="zwyz1">
+						<img src="images/zhiwen_icon.png" class="zw_icon" alt="" />
+						<p class="zwyz_tis1">“沃联盟”的 Touch ID</p>
+						<p>请验证已有指纹</p>
+						<div class="zw_qx_btn1">取消</div>
+				</div>
+
+				<!-- 指纹验证2 -->
+				<div class="zwyz2">
+						<img src="images/zhiwen_icon.png" class="zw_icon" alt="" />
+						<p class="zwyz_tis1">再试一次</p>
+						<p>请验证已有指纹</p>
+						<div class="zw_btn2">
+								<div class="zw_qx_btn2 fl">取消</div>
+								<div class="srmm_btn2 fl">输入密码</div>
+						</div>
+				</div>
+
+				<!-- 闪窗提示 -->
+				<div class="sc_ts">您输入的密码有误，还可输入2次～</div>
+
+
+		</div>
+		<script type="text/javascript">
+		  window.onload = function(){
+		    $('.title_lll').text('提现');
+		  }
+
+
+
+			$(function(){
+				var win_height=$(window).height();
+				var zwyz_height1=$(".zwyz1").height();
+				var sc_ts_height=$(".sc_ts").height();
+				// alert(sc_ts_height);
+				$(".zwyz1,.zwyz2").css("bottom",(win_height-zwyz_height1)/2);
+				 $(".sc_ts").css("bottom",(win_height-sc_ts_height)/2);
+
+				//确认转账按钮
+				$(".qrtx_btn").on("touchend",function(){
+					$(".tx_mc").height(win_height);
+					var srmm_top=$(".srmm_div").css("top");
+					srmm_top=srmm_top.substring(0,srmm_top.length-2);
+					srmm_top=parseFloat(srmm_top);
+					$(".srmm_div").height(win_height-srmm_top);
+					sss();
+					$("body").bind("touchmove",function(e){
+				    e.preventDefault();
+				  });
+				})
+
+
+
+
+				// 密码输入弹层
+				$(".close1").click(function(){
+					$(".tx_mc,.srmm_div,.srmm_yz").hide();
+					$("#mm_input").val("").blur();
+					$(".password").html("");
+					$("body").unbind("touchmove");
+				})
+				$("#mm_input").on("input",function(){
+          var this_val=$(this).val();
+					var t_v_lg=this_val.length;
+					if(t_v_lg>6){
+						this_val=this_val.slice(0,6);
+						$(this).val(this_val);
+					}
+          mmxx(t_v_lg);
+          if(t_v_lg>5){
+						$("#mm_input").blur();
+						var mmyz_top=$(".srmm_yz").css("top");
+						mmyz_top=mmyz_top.substring(0,mmyz_top.length-2);
+						mmyz_top=parseFloat(mmyz_top);
+						$(".srmm_yz").height(win_height-mmyz_top);
+            $(".srmm_yz,.srmm_yzz_icon").show();
+						setTimeout(function(){
+							$(".mmyz_success_icon").show();
+							$(".srmm_yzz_icon").hide();
+							setTimeout(function(){
+								$(".mmyz_success_icon").hide();
+								window.location.href="new_tixian2.html";
+							},1000)
+						},3000)
+
+          }
+        })
+        function mmxx(lg){
+          $(".password").html("");
+          for(var i=0;i<lg;i++){
+            $(".password").eq(i).html("<span class='password_d'></span>");
+          }
+        }
+
+				// 提现沃点是否超过沃点余额
+
+				$("#tx_wd").on("input",function(){
+					$("#tx_wd").prop("type","number");
+					var tx_wd=$("#tx_wd").val();//获取输入的数字
+					var wd_ye=parseFloat($(".wdye").text());//这句和判断无关
+					$(".number_input").val(tx_wd);
+					if(tx_wd>wd_ye){
+						$(".wdye_ts").hide();
+						$(".je_cc").show();
+						$(".qrtx_btn").removeClass("qrtx_active");
+					}else{
+						$(".je_cc").hide();
+						$(".wdye_ts").show();
+						$(".qrtx_btn").addClass("qrtx_active");
+					}
+					if(tx_wd==""){
+						$(".qrtx_btn").removeClass("qrtx_active");
+					}
+				})
+
+			$("#tx_wd").focus(function(){
+				$(window).bind("keypress",function(e){
+					var keyCod=e.keyCode;
+					var tx_wd_val=$("#tx_wd").val().toString();
+					var nm=tx_wd_val.indexOf(".");
+					console.log(nm)
+					console.log(tx_wd_val.length)
+					if(!tx_wd_val==""){
+						if(nm>-1){
+							if(tx_wd_val.length>nm+2){
+								if(keyCod==8){
+									return true;
+								}else{
+									return false;
+								}
+							}
+							if(keyCod==46){
+								return false;
+							}
+						}
+					}
+					if(keyCod>47&&keyCod<58||keyCod==8||keyCod==46){
+						return true;
+					}else{
+						return false;
+					}
+				})
+			}).blur(function(){
+				$(window).unbind("keypress");
+			})
+
+
+
+				// 指纹验证
+				$(".zw_qx_btn1").click(function(){
+					$(".tx_mc,.zwyz1").hide();
+					$("body").unbind("touchmove");
+				})
+				$(".zw_qx_btn2").click(function(){
+					$(".tx_mc,.zwyz2").hide();
+					$("body").unbind("touchmove");
+				})
+
+				$(".srmm_btn2").click(function(){
+					$(".zwyz1,.zwyz2").hide();
+					$(".tx_mc").height(win_height);
+					$(".tx_mc,.srmm_div").show();
+					$("#mm_input").focus();
+					$("body").bind("touchmove",function(e){
+				    e.preventDefault();
+				  });
+				})
+
+
+				$(".zwyz_tc1").click(function(){
+					$(".tx_mc,.zwyz1").show();
+					$("body").bind("touchmove",function(e){
+				    e.preventDefault();
+				  });
+				})
+				$(".zwyz_tc2").click(function(){
+					$(".tx_mc,.zwyz2").show();
+					$("body").bind("touchmove",function(e){
+				    e.preventDefault();
+				  });
+				})
+
+				$(".sc_ts_btn").click(function(){
+					$(".sc_ts").show();
+					setTimeout(function(){
+							$(".sc_ts").hide();
+					},2000)
+				})
+
+				$(window).on("touchend",function(){
+					var sr_dis=$(".srmm_div").css("display");
+					if(sr_dis=="block"){
+						$("#mm_input").focus();
+						return false;
+					}
+				})
+
+
+			})
+			function sss(){
+				setTimeout(function(){
+					$(".tx_mc,.srmm_div").show();
+						var as=$(".srmm_div").css("display");
+						if(as=="block"){
+							$(".tx_mc").click();
+						}
+				},3000)
+
+			}
+			$(".tx_mc").click(function(){
+				$("#mm_input").focus();
+			})
+		</script>
+
+	</body>
+
+</html>

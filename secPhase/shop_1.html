@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>沃联盟-逛别人的店铺</title>
+    <link rel="stylesheet" href="css/jquery.mobile.min.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile.min.js"></script>
+ <script type="text/javascript">
+$(function(){ 								    
+		var $category = $('.shop_select2 ul li:gt(4)');     	    //  获得索引值大于4的对象
+		$category.hide();							    
+		var $toggleBtn = $('.iconSpan');             
+			$toggleBtn.click(function(){
+		      if($category.is(":visible")){
+					$category.slideUp();                   		 //  隐藏$category
+					$(this).removeClass('iconLess');
+					
+			  }else{
+					$category.slideDown();                   		 //  显示$category
+					$(this).addClass('iconLess');               
+					
+			  }
+		
+		})
+		
+		$(".shop_select2 ul li").click(function(){
+			$(this).addClass("active_factor").siblings().removeClass("active_factor");
+		})
+})
+</script>
+    	
+    </script>
+</head>
+
+<body>
+<section id="page" data-role="page">
+	<header  id="header" class="backgroundF shop_head" data-role="header">
+    	<section class="shop1_bg_icon arrow_left"></section>
+       莫某某的店铺
+        <section class="fr loged">
+        	<div class="shop1_bg_icon head1"></div>
+            <p>会飞的...</p>
+            <p style="border:none"><a href="###">退出</a></p>
+        </section>
+        
+    </header>
+    <section id="wrapper">
+        <section class="shop_banner">
+            <div class="banner_head"><img src="images/head.png"/></div>
+            <p class="shop_name">王海猴的店铺</p>
+            <p class="shop_sc">☆ 收藏（10）</p>
+        </section>
+        
+        <section class="dh_bar">
+            <ul>
+                <li><a href="###">通号卡</a></li>
+                <li><a href="###">流量包</a></li>
+                <li><a href="###">上网卡</a></li>
+                <li><a href="###">合约机</a></li>
+                <li style="border:none"><a href="###">合约机</a></li>
+            </ul>
+           <!-- <em class="shop1_bg_icon"></em>-->
+        </section>
+        
+        <section class="shop_select">
+        	<!--<section class="shop_select1">
+            	<ul>
+                	<li class="shop1_bg_icon2 sel1">添加广告</li>
+                    <li class="shop1_bg_icon2 sel2">生成海报</li>
+                    <li class="shop1_bg_icon2 sel3">推广店铺</li>
+                </ul>
+            </section>-->
+            
+            <section class="shop_select2">
+            	<ul>
+                	<li class="active_factor">全部</li>
+                    <li>单号卡</li>
+                    <li>合约</li>
+                    <li>宽带</li>
+                    <li>流量包</li>
+                    <li>11111</li>
+                    <li>11111</li>
+                    <li>11111</li>
+                    <li>11111</li>
+                </ul>
+                <section class="iconWrp"><span class="iconSpan iconMore"></span></section>
+            </section>
+          
+        </section>
+    
+    
+    
+    <section class="getRange getRange_index">
+                
+                <section class="content" onClick="###" style="padding-top:0;">
+                    <section class='cardType_wrp clearFix'>
+                        <section class='fl cardInfo ap'>
+                            <section class='cardInfoWrp disBox_center'>
+                                <section  class='cardInfoMain' >
+                                    <div class=" cardInfo_img disBox cardInfo_img0">
+                                        
+                                           <img src="images/pic1.gif" width="130" height="78">
+                                        
+                                    </div>
+                               </section>
+                            </section>
+                           
+                            <section class='downtimeCardWrp clearFix'>
+                                <span class="fl">自由组合套餐</span><span class="fr">北京</span>
+                            </section>
+                        </section>
+                        <section class='fl woPointWrp shop_w'>
+                                <section class='woPoint borderBeb' >
+                                    <dl>
+                                        <dt>预收益</dt>
+                                        <dd class="bold"><span>126</span>沃点</dd>
+                                    </dl>
+            
+                                </section>
+                            <section class='getWoPoint' >
+                                <p>10000人已领取</p>
+                                <p>10000人已购买</p>
+                                <div><input type="button" value="立即领取"  class="btn_getWopoint"/></div>
+                            </section>
+                        </section>            
+                    </section>
+                    
+                    
+                    <section class='space-10 backgrounde'></section>
+                    
+                    <section class='cardType_wrp clearFix' style="border-bottom:none">
+                        <section class='fl cardInfo ap'>
+                            <section class='cardInfoWrp disBox_center'>
+                                <section  class='cardInfoMain' >
+                                    <div class=" cardInfo_img cardInfo_img0 disBox">
+                                        
+                                            <img src="images/pic2.gif" width="130" height="78"/>
+                                        
+                                    </div>
+                               </section>
+                            </section>
+                           
+                            <section class='downtimeCardWrp clearFix'>
+                                <span class="fl">4G/3G一体化套餐</span><span class="fr">北京</span>
+                            </section>
+                        </section>
+                        <section class='fl woPointWrp shop_w'>
+                                <section class='woPoint borderBeb' >
+                                    <dl>
+                                        <dt>预收益</dt>
+                                        <dd class="bold"><span>126</span>沃点</dd>
+                                    </dl>
+            
+                                </section>
+                            <section class='getWoPoint' >
+                                <p>10000人已领取</p>
+                                <p>10000人已购买</p>
+                                <div><input type="button" value="立即领取"  class="btn_getWopoint"/></div>
+                            </section>
+                        </section>            
+                    </section>
+                    
+                    <section class='space-10 backgrounde'></section>
+                    
+                </section>
+            </section>
+    
+    
+   
+    
+    </section>
+    
+     
+    <section style="display: block;" class="dragMore ab">
+           <img src="images/loading.png" class="loadingImg loadingImg_going" width="25">
+        	<h3>玩命加载中...</h3>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</section>
+<footer id="footer" class="foot_index" data-role="footer" >Copyright © 1999-2014 中国联通 版权所有</footer>
+</body>
+</html>

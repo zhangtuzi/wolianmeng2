@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>去赚钱详情页</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/two_lll.css">
+    <script type="text/javascript" src='js/top.js'></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+
+    <div id="contaner_detail_lll" class="contaner_lll">
+        <!--#include virtual="/wolianm2/include/headerinfo4.html"-->
+        <div class="img_con_lll">
+            <div class="blocks_lll block1_lll">
+                <a href="#"></a>
+            </div>
+            <div class="blocks_lll block2_lll">
+                <a href="#"></a>
+            </div>
+            <div class="blocks_lll block3_lll">
+                <a href="#"></a>
+            </div>
+            <img src="images/detail_lll.png" class="detail_lll">
+        </div>
+        <div class="detail_footer_lll">
+            <div class="foo_lll foo1_lll">
+                <img src="images/add_to_lll.png" class="foobg_lll foobg1_lll">
+                <p class="word_black_lll">添加到店铺</p>
+            </div>
+            <div class="foo_lll foo2_lll">
+                <img src="images/collect_lll.png" class="foobg_lll foobg3_lll">
+                <p class="word_black_lll collect_p_lll">收藏</p>
+            </div>
+            <div class="foo_lll foo3_lll">
+                <img src="images/download_lll.png" class="foobg_lll foobg2_lll">
+                <p class="word_black_lll">下载海报</p>
+            </div>
+            <div class="detailBtn_lll">
+                <a href="#">代客下单</a>
+            </div>
+            <div class="detailBtn_lll detailBtn2_lll">
+                <a href="#" id="tuiuang_lll">立即推广</a>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </div>
+    <div class="mengceng_share_lll">
+        <img src="images/mengceng_lll.png" class="share_img_lll">
+    </div>
+<script>
+    window.onload=function(){
+        $(".title_lll").html("46元套餐A/B/C");
+    };
+    $("#tuiuang_lll").bind("click",function(){
+        $(".mengceng_share_lll").fadeIn(100,function(){
+            $("body").bind("touchstart",function(){
+                $(".mengceng_share_lll").fadeOut();
+            })
+        });
+
+    });
+    $(".foo2_lll").bind("click",function(){
+        $(this).toggleClass("on");
+        if($(this).hasClass("on")){
+            $(".foobg3_lll").attr("src","images/collect_focus_lll.png");
+            $(".collect_p_lll").addClass("orangeColor");
+        }
+        else{
+            $(".foobg3_lll").attr("src","images/collect_lll.png");
+            $(".collect_p_lll").removeClass("orangeColor");
+        }
+
+    })
+
+</script>
+</body>
+</html>

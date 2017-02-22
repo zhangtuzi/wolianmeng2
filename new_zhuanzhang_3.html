@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>验证提现密码</title>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery.mobile.1.3.2.js"></script> -->
+    <script type="text/javascript" src="js/top.js"></script>
+    <link rel="stylesheet" href="css/reset.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/new_zhuanzhang.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="warp_All_zz">
+      	<!--#include virtual="/wolianm2/include/headerinfo11.html"-->
+
+        <div class="message_all">
+            <p class="pt_mes_ts">请输入提现密码以转账</p>
+            <p class="zhuanz_ts color_2">
+              <span>向</span>
+              <span class="user_name color_1">会飞的猪</span>
+              <span>转账</span>
+              <span class="wd_je color_1">808.50</span>
+              <span>沃点</span>
+            </p>
+
+            <div class="mm" style="position:relative;">
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                <div class="fl password"></div>
+                  <input type="number" name="name" value="" id="mm_input" pattern="[0-9]*" maxlength="6">
+            </div>
+
+
+        </div>
+
+        <div class="mc_zhuanz dn"></div>
+        <div class="zhuanz_jingx dn">
+            <img src="./images/headerWoLog.png" class="wo_icon" alt="" />
+            <p class="mr_t_1">转账中</p>
+            <ul class="zhuanz_lb">
+              <li><div class="lb_div zhuanz_lb_div_1 color_3"></div></li>
+              <li><div class="lb_div zhuanz_lb_div_2"></div></li>
+              <li><div class="lb_div zhuanz_lb_div_3"></div></li>
+            </ul>
+        </div>
+        <!-- <ul id="szjp">
+          <li id="1" class="szjp_li bor_no_1">1</li>
+          <li id="2" class="szjp_li bor_no_2">2</li>
+          <li id="3" class="szjp_li bor_no_1">3</li>
+          <li id="4" class="szjp_li bor_no_3">4</li>
+          <li id="5" class="szjp_li">5</li>
+          <li id="6" class="szjp_li bor_no_3">6</li>
+          <li id="7" class="szjp_li bor_no_1">7</li>
+          <li id="8" class="szjp_li bor_no_2">8</li>
+          <li id="9" class="szjp_li bor_no_1">9</li>
+          <li id="none" class="szjp_li bor_no_3 bor_no_4 bg_2"></li>
+          <li id="0" class="szjp_li bor_no_4">0</li>
+          <li id="del" class="szjp_li bor_no_3 bor_no_4">x</li>
+        </ul> -->
+
+    </div>
+    <script type="text/javascript">
+    window.onload = function(){
+      $('.title_lll').text('验证提现密码');
+    }
+
+    $(function(){
+        // var w_h=window.screen.availHeight;
+        // var jz_h=$("#szjp").height();
+        // $(".warp_All_zz").height(w_h);
+        // var pwmm="";
+        // $(".szjp_li").click(function(){
+        //     var this_id=$(this).attr("id");
+        //     if(this_id=="none"){
+        //         pwmm=pwmm;
+        //     }else if (this_id=="del") {
+        //       var pw_lg1=pwmm.length;
+        //       if(pw_lg1>0){
+        //         pwmm=pwmm.substring(0,pw_lg1-1);
+        //         mmxx(pw_lg1-1);
+        //       }
+        //     }else{
+        //       pwmm=pwmm+this_id;
+        //       var pw_lg2=pwmm.length;
+        //       mmxx(pw_lg2);
+        //       if(pw_lg2=="6"){
+        //         $(".mc_zhuanz,.zhuanz_jingx").removeClass("dn");
+        //         setTimeout(tz,3000);
+        //       }
+        //     }
+        // })
+
+        $("#mm_input").click(function(){
+          $(this).css("top","-10rem");
+        }).keyup(function(){
+          var this_val=$(this).val();
+          var t_v_lg=this_val.length;
+          mmxx(t_v_lg);
+          if(t_v_lg>5){
+            $(".mc_zhuanz,.zhuanz_jingx").removeClass("dn");
+            setTimeout(tz,3000);
+          }
+        }).blur(function(){
+          $(this).css("top","0");
+        })
+        function mmxx(lg){
+          $(".password").html("");
+          for(var i=0;i<lg;i++){
+
+            $(".password").eq(i).html("<span class='password_d'></span>");
+          }
+        }
+        function tz(){
+          $(".mc_zhuanz,.zhuanz_jingx").addClass("dn");
+          window.location.href="new_zhuanzhang_41.html";
+        }
+      // 转账中
+      var lb_index=0;
+      var lb_th=$(".lb_div").length;
+        function zhuanz_lb(){
+          if(lb_index<lb_th-1){
+            lb_index++;
+          }else{
+            lb_index=0
+          }
+          $(".lb_div").removeClass("color_3");
+          $(".lb_div").eq(lb_index).addClass("color_3");
+        }
+        setInterval(zhuanz_lb,500);
+    })
+
+    </script>
+  </body>
+</html>

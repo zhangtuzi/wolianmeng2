@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" style="height:32px;width:120px;" value="点击发送验证码" onclick="sendCode(this)" />
+<script type="text/javascript">
+ var clock = '';
+ var nums = 300;
+ var btn;
+ var daojishi,seond;
+ function sendCode(thisBtn)
+ { 
+ btn = thisBtn;
+ btn.disabled = true; //将按钮置为不可点击
+ clock = setInterval(doLoop, 1000); //一秒执行一次
+ }
+ function doLoop()
+ {
+ nums--;
+ daojishi=parseInt(nums/60);
+ seond=nums%60;
+ if(nums > 0){
+  btn.value = daojishi+'分'+seond;
+ }else{
+  clearInterval(clock); //清除js定时器
+  btn.disabled = false;
+  btn.value = '点击发送验证码';
+  nums = 300; //重置时间
+ }
+ }
+</script>
+	</body>
+</html>

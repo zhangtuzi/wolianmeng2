@@ -1,0 +1,165 @@
+<style type="text/css">
+	.Htop{
+		background: #fc5f01;
+		height: 0.86rem;
+		line-height: 0.86rem;
+		position: relative;
+	}
+	.backContaner img{
+		height: 0.46rem;
+		vertical-align: middle;
+		margin-left: 0.2rem;
+		text-align: left;
+	}
+	.backContaner{
+		width: 0.8rem;
+		display: table-cell;
+		font-size: 12px;
+		vertical-align: middle;
+		float: left;
+	}
+
+	.tabheaderTop{
+		border:1px solid #fff;
+		border-radius: 5px;
+		font-size: 0.26rem;
+		overflow: hidden;
+		float: left;
+		color: #fff;
+		position: absolute;
+		left: 50%;
+		margin-left: -1.2rem;
+		top: 50%;
+		margin-top: -0.23rem;
+	}
+	.tabheaderTop li{
+		width: 1.2rem;
+		height: 0.46rem;
+		line-height: 0.46rem;
+		text-align: center;
+	}
+	.topOn{
+		background: #fff;
+		color: #fc5f01;
+	}
+	.editBtnTop{
+		color: #fff;
+		font-size: 0.26rem;
+		float: right;
+		padding-right: 0.27rem;
+	}
+	.SSanjiao{
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		line-height: 0px;/*为了防止ie下出现题型*/
+		border-bottom: 0.2rem solid #797979;
+		border-left: 0.2rem solid transparent;
+		border-right: 0.2rem solid transparent;
+		left: 1.5rem;
+		top: -9px;
+	}
+	.PopContaner{
+		position: absolute;
+		background: #797979;
+		border-radius: 5px;
+		right: 0.14rem;
+		top: 0.9rem;
+		width: 2.07rem;
+		z-index: 200;
+	}
+	.PopEdit{
+		position: relative;
+	}
+	.listOption{
+		margin-left: 0.15rem;
+		margin-right: 0.15rem;
+		font-size: 0.24rem;
+
+		color: #fff;
+	}
+	.listOption ul li{
+		height: 0.57rem;
+		line-height: 0.57rem;
+		border-bottom: 1px solid #fff;
+		text-align: center;
+	}
+	.listOption ul li:last-child{
+		border-bottom: none;
+	}
+	.listOption_ON{
+		color: #fc5f01;
+	}
+</style>
+<div class='Htop'>
+	<div class='backContaner'>
+		<img src="./images/backicon.png" />
+	</div>
+		<ul class='tabheaderTop'>
+			<li class='topOn fl'>消息</li>
+			<li class='fl'>广播</li>
+		</ul>
+	<p class='editBtnTop'>编辑</p>
+	<div class='PopContaner dn'>
+		<div class='PopEdit'>
+			<div class='SSanjiao'></div>
+			<div class='listOption'>
+				<ul>
+					<li class='checkallN'>查看全部未读</li>
+					<li class='allreaded'>标记为全部已读</li>
+					<li class='allremove'>全部删除</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$('.tabheaderTop').bind('click',function(event){
+		var liTopTab = (event.target.nodeName == 'LI')?$(event.target):$(event.target).parents('li');
+		liTopTab.addClass('topOn');
+		liTopTab.siblings('li').removeClass('topOn');
+	});
+	$('.listOption').children('ul').children('li').each(function(){
+		$(this).bind('touchstart',function(event){
+			$(this).addClass('listOption_ON');
+			event.stopPropagation();
+		});
+		$(this).bind('touchend',function(event){
+			$(this).removeClass('listOption_ON');
+			var gongN = $(this).attr('class');
+			if(gongN == 'checkallN'){
+				$('.flagread').removeClass('dn');
+			}else if(gongN == 'allreaded'){
+				$('.flagread').addClass('dn');
+			}else if(gongN == 'allremove'){
+				$('.infoCenterContaner').addClass('dn');
+			}
+			event.stopPropagation();
+		});
+	});
+
+	$('.editBtnTop').bind('click',function(){
+		if($('.PopContaner').hasClass('dn')){
+			$('.PopContaner').removeClass('dn');
+			Touchhide();
+		}else{
+			$('.PopContaner').addClass('dn');
+		}
+
+	});
+
+	function Touchhide(){
+		$('body').bind('touchstart',function(event){
+			var logdown = $(event.target).hasClass('editBtnTop') ? $(event.target):$(event.target).parent();
+			var PopArea = false;
+			if($(event.target).hasClass('PopContaner')||$(event.target).parents().hasClass('PopContaner')){
+				 PopArea = true;
+			}
+			if(!logdown.hasClass('editBtnTop') && !PopArea){//false
+				$('.PopContaner').addClass('dn');
+			}
+
+		})
+	}
+
+</script>

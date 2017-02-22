@@ -1,0 +1,358 @@
+<!--#include virtual="/include/head_new.html"-->
+<!--wap页面正式版-->
+ <link href="//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+.padd{padding-left:10px;padding-right:10px}
+.snap_content{background:#ebebeb; height:100%;position:relative;max-width:640px;margin:0px auto}
+.snap_headright{position:absolute;
+right:10px;top:0px}
+.snap_headright section{float:left; margin-left:5px;}
+.districtList {
+width: 34px;
+height: 25px;
+background: url(../images/districtBg.png) no-repeat 0 0;
+background-size: cover;
+padding-top: 15px;
+
+}.snap_title{line-height:40px;width: 80%;}
+.ffffff{background:#ffffff}
+.time{color:#ff741c; font-size:15px;line-height:40px;margin-bottom: 3px;}.time i{color:#ccc}
+.snap_part1{padding-top:10px;overflow: hidden;
+padding-bottom: 15px;	}
+.snap_part1 dt img{border:1px solid #ebebeb}
+.snap_part1 h1{font-size:18px; padding-bottom:10px}
+ .snap_part1 dl{border-bottom:1px solid #d5d5d5; padding-bottom:10px;overflow:hidden}
+.snap_part1 dt {float:left;width:38%} 
+ .snap_part1 dd{float:left}
+.snap_part1 dd{font-size:14px; margin-left:10px;line-height:30px;color:#999999;}
+.wyq input{
+padding: 5px;
+border-radius: 5px;
+background: url(/images/btnBg_orange.jpg) repeat-x 0 0;
+background-size: 72px 31px;
+border: none;
+color: #fff;
+float: right;
+width: 72px;
+font-size: 16px;
+}
+.loading{ text-align:center;font-size:16px; color:#999999; margin-top:20px;display:none}
+.loading i{font-size:28px;}
+.hdgz1{position: fixed;top: 82px;right: 0px;z-index: 10; width:80px}
+@media screen and (min-width:375px) and (max-width:413px) {
+.snap_part1 dd{font-size:16px; margin-left:15px;line-height:50px;color:#999999;}
+.snap_title{line-height:45px;width: 90%;font-size:16px}
+}
+@media screen and (min-width:414px) {
+ .snap_part1 dd{font-size:18px; margin-left:15px;line-height:50px;color:#999999;}
+.snap_title{line-height:45px;width: 90%;font-size:16px}
+.hdgz1{position: absolute;top: 25px;right: 0px;z-index: 10; width:100px}
+}
+
+.mengceng{background: #000;
+position: absolute;
+z-index: 999998;
+height: 100%;
+width: 100%;
+opacity: 0.8;display:none}
+
+.hdgz {display:none;top:13%;position: fixed;
+z-index: 999999;
+height: 100%;
+width: 100%;
+}
+</style>
+<script>
+$(document).ready(function() {
+
+		var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+
+		$('.collecbtn').toggle(function(){
+		$(this).children('em').text('已收藏');
+		$(this).children('i').css('color','#ff6600');
+		
+		if($(this).hasClass('skewwuba')){
+			$(this).removeClass('skewwuba').addClass('skewwu');
+		}else{
+			$(this).addClass('skewwu');
+		}
+		
+	},function(){
+		$(this).children('em').text('收藏');
+		$(this).children('i').css('color','#c2c2c2');
+		$(this).removeClass('skewwu').addClass('skewwuba');
+	})
+
+	
+		//我要赚钱产品详情弹出层
+		var winTop=0;
+		$(window).scroll(function(){
+			if($('.guide_Pro').is(':hidden')){
+				winTop=$(window).scrollTop();
+			}
+		})
+		$('.flexBox').click(function(){
+	 
+			$('.guide_Pro').css({'height':'100%','visibility': 'visible'});
+			  	//$('.mask_pro').height($('body,html').height());
+			$('.mask_pro,.guide_Pro,.guide_Pro_wrp').show();
+			//$('.guide_Pro_wrp').height($('.guide_Pro div').height()+30);
+			$('body,html').css({height:'100%',overflow:'hidden'});
+			$('.guide_Pro_wrp,.mask_pro').height('100%');
+			$('.guide_Pro').scrollTop(0);
+			//$('.guide_Pro').css({top:winTop});
+			
+			
+			//产品详细弹层中文字对齐
+			if($('.guide_Pro p').height()>30){
+				$('.guide_Pro p').css({textAlign:'left'})
+			}else{
+				$('.guide_Pro p').css({textAlign:'center'})
+			}
+		})
+		$('.mask_pro,.guide_Pro').click(function() {
+			$('.mask_pro,.guide_Pro,.guide_Pro_wrp').hide();
+			$('body,html').css({height:'auto',overflow:'auto'});
+			$(window).scrollTop(winTop);
+		});
+
+  msg_list_loading = false;
+	
+	$(window).bind('scroll', function(){
+		if ( ! msg_list_loading ){
+			load_more_msg();
+		}
+	})
+	
+	//加载更多函数
+	function load_more_msg(){
+		
+		var msg_list = $('body');
+				//alert("scrolltop:"+msg_list.scrollTop()+"\n"+"htight"+msg_list.height()+"\n"+"windowheight"+$(window).height())
+			
+		if ( msg_list.scrollTop() >= msg_list.height() - $(window).height()-50 ) { 
+			msg_list_loading = true;
+			$('.loading').show();
+			setTimeout(ajaxdata,5000)
+			//模拟加载ajax数据
+			function ajaxdata(){
+				$.get('ajax_data.html').done(function( data ){ 
+					$(".loading").hide();
+					$('.ajax_con').append( data );
+					msg_list_loading = false;
+				}); 
+			}
+			
+		} 
+	} 
+
+	//活动规则+蒙层
+	$(".hdgz1").click(function(){
+			$('.mengceng,.hdgz').show()	
+	});
+	//删除蒙层
+	$('.hdgz').click(function(){
+		$(this).hide();
+		$('.mengceng').hide();
+	})
+});
+</script>
+<!--蒙层-->
+<div class="mengceng">
+	 
+</div>
+<div class="hdgz">
+		<img src="../images/hdgz.png" width="100%">
+</div>
+
+<section class="headtitle" id="header">
+	 <section class="Hleft">
+    	<section class="return"></section>
+    </section>
+	<section class='snap_title'>高收益广告限时领,手快有手慢无</section>
+	<section class="snap_headright">
+		<section class="districtList fl color-white tc">北京</section>
+		<section ><img src="../images/wo.png" width="35px" style="margin-top: 15px;"></section>
+	</section>
+</section>
+
+<div class="snap_content">
+<img src="../images/hdgz1.png" class="hdgz1">
+	<div class="ajax_con">
+		<div class="time ffffff padd">活动时间：<i class="fa fa-clock-o"></i>2015.07.28-2015.07.31</div>
+		<Div class="snap_part1  ffffff padd" style='position:relative'>
+			<h1 style="margin-left:2%;">iphone 5s （A1530） 联通4G版4G全国套餐合约机</h1>
+			<dl>
+				<dt class="flexBox"><img src="../images/snap_img1.jpg" width='100%'></dt>
+				<dd><i class="fa fa-database"></i>&nbsp;&nbsp;预收益：<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='colorange'>套餐月费的50%</span></dd>
+				<br>
+				<dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;原收益：<s>20沃点</s></dd>
+				<dd><i class="fa fa-signal"></i>&nbsp;&nbsp;参与次数：2028次&nbsp;&nbsp;北京</dd>
+			</dl>
+			<br>
+			<div style="color:#c2c2c2;font-size:16px;">
+			   <div style="float:left;margin-top:5px">
+				<img src="../images/tjsc.png" width='25'>&nbsp;&nbsp;添加到店铺 &nbsp;&nbsp;&nbsp;
+			   </div>
+				<div  style="float:left;" class='collecbtn'>
+					<i class="fa fa-star" style="font-size:28px"></i>&nbsp;<em>收藏</em>&nbsp;&nbsp;&nbsp;
+				</div>
+				<div class="wyq" data-role='none'>
+					<input type='button' value='我要抢' onclick='window.location.href="http://124.192.56.213:180/wocard/woCard6.html"'  data-role='none' >
+				</div>
+			</div>
+		</div>
+
+
+		<Div style="clear:both"></div>
+		<div class="space-15"></div>
+			<div class="time ffffff padd">活动时间：<i class="fa fa-clock-o"></i>   2015.07.28-2015.07.31</div>
+		
+
+		<!--第二部分-->
+		<div class="snap_part1  ffffff padd">
+			<h1 style="margin-left:2%;">iphone 5s （A1530） 联通4G版4G全国套餐合约机</h1>
+			<dl >
+				<dt class="flexBox"><img src="../images/snap_img1.jpg" width='100%'></dt>
+				<dd><i class="fa fa-database"></i>&nbsp;&nbsp;预收益：<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='colorange'>套餐月费的50%</span></dd>
+				<br>
+				<dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;原收益：<s>20沃点</s></dd>
+				<dd><i class="fa fa-signal"></i>&nbsp;&nbsp;参与次数：2028次&nbsp;&nbsp;北京</dd>
+			</dl>
+			<br>
+			<div style="color:#c2c2c2;font-size:16px;">
+			   <div style="float:left;margin-top:5px">
+				<img src="../images/tjsc.png" width='25'>&nbsp;&nbsp;添加到店铺 &nbsp;&nbsp;&nbsp;
+			   </div>
+				<div  style="float:left;" class='collecbtn'>
+					<i class="fa fa-star" style="font-size:28px"></i>&nbsp;<em>收藏</em>&nbsp;&nbsp;&nbsp;
+				</div>
+				<div class="wyq">
+					<input type='button' value='我要抢' onclick='window.location.href="http://124.192.56.213:180/wocard/woCard6.html"'  data-role='none' >
+				</div>
+			</div>
+		</div>
+
+
+		<div style="clear:both"></div>
+		<div class="space-15"></div>
+			<div class="time ffffff padd">活动时间：<i class="fa fa-clock-o"></i>   2015.07.28-2015.07.31</div>
+
+		<!--第3部分-->
+		<div class="snap_part1  ffffff padd">
+			<h1 style="margin-left:2%;">iphone 5s （A1530） 联通4G版4G全国套餐合约机</h1>
+			<dl >
+				<dt class="flexBox"><img src="../images/snap_img1.jpg" width='100%'></dt>
+				<dd><i class="fa fa-database"></i>&nbsp;&nbsp;预收益：<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='colorange'>套餐月费的50%</span></dd>
+				<br>
+				<dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;原收益：<s>20沃点</s></dd>
+				<dd><i class="fa fa-signal"></i>&nbsp;&nbsp;参与次数：2028次&nbsp;&nbsp;北京</dd>
+			</dl>
+			<br>
+			<div style="color:#c2c2c2;font-size:16px;">
+			   <div style="float:left;margin-top:5px">
+				<img src="../images/tjsc.png" width='25'>&nbsp;&nbsp;添加到店铺 &nbsp;&nbsp;&nbsp;
+			   </div>
+				<div  style="float:left;" class='collecbtn'>
+					<i class="fa fa-star" style="font-size:28px"></i>&nbsp;<em>收藏</em>&nbsp;&nbsp;&nbsp;
+				</div>
+				<div class="wyq">
+					<input type='button' value='我要抢' onclick='window.location.href="http://124.192.56.213:180/wocard/woCard6.html"'  data-role='none' >
+				</div>
+			</div>
+		</div>
+
+
+		<div style="clear:both"></div>
+	</div>
+	 <div class="loading" ><i class="fa fa-spinner fa-pulse"></i><br>玩命加载中...</div>
+</div>
+ 
+	<section class='mask_pro dn'></section>
+<div class="guide_Pro_wrp" style="overflow-x:hidden;width:300px;position:absolute;top:0;left:50%;margin-left:-150px;z-index:1000;" >
+<div class="guide_Pro  borderBox ap" style="top:0;height:0px; visibility: hidden;" >
+<div class="ap">
+        <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+.swiper-slide img { max-width:155px;margin-bottom:0px; display:inline;vertical-align:baseline;margin:0px}
+    </style>
+
+    <!-- Swiper -->
+<div style="width:160px; margin:0px auto">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/images/proDetail.jpg"/></div>
+            <div class="swiper-slide"><img src="/images/proDetail.jpg"/></div>
+            <div class="swiper-slide"><img src="/images/proDetail.jpg"/></div>
+            <div class="swiper-slide"><img src="/images/proDetail.jpg"/></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div> 
+ 
+    </div>
+</div>
+    <!-- Swiper JS -->
+    <script src="/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+   
+	<br>
+    <h3 class="f18 tc color-white padLR20 padB20">【流量王】4G组合套餐</h3>
+    <p class="pro_box_bg pro_box_bg1"></p>
+    <p class="pro_box_bg pro_box_bg2">商品介绍：<br/>
+    <span>中国联通4G组合套餐震撼首发。根据自身情况制定专属套餐，流量包、语音/视频通话包、彩/短信包，增值业务包，上百种套餐组合任意选择。在网越久精彩中国联通4G组合套餐震撼首发。根据自身情况制定专属套餐，流量包、语音/视频通话包、彩/短信中国联通4G组合套餐震撼首发。根据自身情况制定专属套餐，流量包、语音/视频通话包、彩/短信包，增值业务包，上百种套餐组合任意选择。在网越久精彩依然在沃。中国联通4G组合套餐震撼首发。根据自身情况制定专属套餐，流量包、语音/视频通话包、彩/短信包，增值业务包，上百种套餐组合任首发。依然在沃。</span></p>
+    <p class="pro_box_bg pro_box_bg3 "></p>
+</div>
+<p class="space-15"></p>
+</div>
+</div>
+
+ 
+</body>
+</html>

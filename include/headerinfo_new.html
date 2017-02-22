@@ -1,0 +1,176 @@
+<style type="text/css">
+	.Htop_new{
+		background: #fc5f01;
+		height:43px;
+		line-height:43px;
+		position: relative;
+	}
+	.backContaner_new img{
+		height: 23px;
+		vertical-align: middle;
+		margin-left:10px;
+		text-align: left;
+	}
+	.title_lll{
+		width:100%;
+		text-align: center;
+		font-size:16px;
+		color: #fff;
+		float: left;
+		display: table-cell;
+	}
+	.backContaner_new{
+		width:50px;
+		display: table-cell;
+		font-size: 12px;
+		vertical-align: middle;
+		float: left;
+		margin-top:-43px;
+	}
+
+	.editBtnTop_new{
+		color: #fff;
+		font-size:12px;
+		float: right;
+	}
+	.SSanjiao_new{
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		line-height: 0px;/*为了防止ie下出现题型*/
+		border-bottom: 10px solid #797979;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		right:11px;
+		top: -8px;
+	}
+	.PopContaner_new{
+		position: absolute;
+		background: #797979;
+		border-radius: 5px;
+		right:5px;
+		top: 45px;
+		width:106px;
+		height: 162px;
+		z-index: 100;
+	}
+	.PopEdit_new{
+		position: relative;
+	}
+	.listOption_new{
+		margin-left: 7.5px;
+		margin-right:7.5px;
+		font-size:12px;
+		color: #fff;
+	}
+	.listOption_new ul li{
+		height: 32px;
+		line-height:32px;
+		border-bottom: 1px solid #949494;
+		text-align: left;
+	}
+	.listOption_new ul li:last-child{
+		border-bottom: none;
+	}
+	.listOption_ON_new{
+		color: #fc5f01;
+	}
+	.editBtnTop_new{
+		float: right;
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 12px;
+		margin-right:10px;
+		margin-top:-43px;
+	}
+	.editBtnTop_new img{
+		height:11.5px;
+		vertical-align: middle;
+	}
+	.icon_lll_new{
+		width:15px;
+		height:15px;
+		margin:7px 10px 0 15px;
+	}
+	.span_on_lll_new{
+		color: #fc5f01;
+	}
+</style>
+<div class='Htop_new'>
+	<div class="title_lll">我的二维码</div>
+	<div class='backContaner_new'>
+		<img src="./images/backicon.png" />
+	</div>
+
+	<div class='editBtnTop_new'>
+
+		<img src="./images/headerWoLog.png" />
+
+	</div>
+	<div class='PopContaner_new dn'>
+		<div class='PopEdit_new'>
+			<div class='SSanjiao_new'></div>
+			<div class='listOption_new'>
+				<ul>
+					<li class='checkallN_new' onclick="window.location.href='shouye.html'">
+						<img src="./images/icon1_wo_on_lll.png" class="icon_lll_new">
+						<span class="span_on_lll_new">首页</span>
+					</li>
+					<li class='allreaded' onclick="window.location.href='qzq.html'">
+						<img src="./images/icon2_wo_lll.png" class="icon_lll_new">
+						<span class="">去赚钱</span>
+					</li>
+					<li class='allremove_new'  onclick="window.location.href=''">
+						<img src="./images/icon3_wo_lll.png" class="icon_lll_new">
+						<span class="">沃吧</span>
+					</li>
+					<li class='allremove_new' onclick="window.location.href='caiFu.html'">
+						<img src="./images/icon4_wo_lll.png" class="icon_lll_new">
+						<span class="">财富</span>
+					</li>
+					<li class='allremove_new' onclick="window.location.href='my_wo.html'">
+						<img src="./images/icon5_wo_lll.png" class="icon_lll_new">
+						<span class="">我</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	$('.listOption_new').children('ul').children('li').each(function(){
+		$(this).bind('touchstart',function(event){
+			$(this).addClass('listOption_ON_new');
+			event.stopPropagation();
+		});
+		$(this).bind('touchend',function(event){
+			$(this).removeClass('listOption_ON_new');
+			var gongN = $(this).attr('class');
+			if(gongN == 'checkallN_new'){
+				$('.flagread_new').removeClass('dn');
+			}else if(gongN == 'allreaded'){
+				$('.flagread_new').addClass('dn');
+			}else if(gongN == 'allremove_new'){
+				$('.infoCenterContaner_new').addClass('dn');
+			}
+			event.stopPropagation();
+		});
+	});
+
+	$('.editBtnTop_new').bind('click',function(){
+		if($('.PopContaner_new').hasClass('dn')){
+			$('.PopContaner_new').removeClass('dn');
+			Touchhide();
+		}else{
+			$('.PopContaner_new').addClass('dn');
+		}
+	});
+
+	function Touchhide(){
+		$('body').bind('touchstart',function(event){
+			$('.PopContaner_new').addClass('dn');
+		})
+	}
+
+</script>

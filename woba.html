@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>财富</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/two_lll.css"> -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/top.js"></script>
+    <style media="screen">
+      .contaner_lll{
+        min-width: 320px;
+        max-width: 640px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <div id="container_caifu" class="contaner_lll">
+
+      <img src="images/woba.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;" alt="" />
+
+    <div class="" style="background:#50a7d4;color:#fff;width:3.6rem;height:0.9rem;line-height:0.9rem;font-family:'微软雅黑';font-size:0.43rem;border:1px solid #fff;border-radius:0.1rem;position:fixed;left:1.4rem;bottom:1.2rem;">立即下载</div>
+
+        <!--#include virtual="/wolianm2/include/footer_lll.html"-->
+        <script>
+            window.onload = function(){  //页面加载的时候改变当前的footer的图片及样式
+                $('#footers').find('li').eq(2).find("p").addClass("orangeColor_lll");
+                $('#footers').find('li').eq(2).find("img").attr("src","images/iconFocus2.png");
+                var height1=window.screen.availHeight;
+                $(".ydmc").height(height1);
+								$(window).scrollTop(0);
+                $("body").bind("touchmove",function(e){
+          				e.preventDefault();
+          			});
+            }
+        </script>
+</body>
+</html>

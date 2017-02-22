@@ -1,0 +1,332 @@
+<!--#include virtual="/include/head.html"-->
+	<link rel="stylesheet" href="css/css.css" />
+ 
+<script>
+function closed(){
+					$('.mengceng').hide();					 
+					$(".mengceng,html,body").height("auto");
+					$('.tips').hide();
+					$('.saveSuccess').hide()
+}
+
+				function mengceng(){
+					$('.mengceng').height($('#wrapper').height()+100);
+					$('.mengceng').show();					 
+				 
+					$('.tips').show();
+				 }
+$(function(){
+ 
+	mengceng();
+})
+
+
+</script>
+<section class="mengceng"></section>
+		<!------弹框--------->
+		<div class="tips" style="position:fixed">
+			<p class="f14">小沃提示您</p>
+			<p class="f12" style="    padding-top: 0px;    margin-top: -5px;">《沃联盟会员使用协议》有变更哦～为了不影响您赚钱，需您完善个人信息，并同意《沃联盟会员使用协议》。现在就去完善吧～</p>
+			<p class="btns"><span onclick="closed()">稍后再说</span><span onclick="url('EditPersonalInfo.html')">现在去完善</span></p>
+		</div>
+
+
+<section class="headtitle" id="header">
+	<section class="Hmain">个人中心</section>
+    <section class="Hleft">
+    	<section class="return"></section>
+    </section>
+    <section class="Hright clearFix"><section class="fr shortcutHead"><section class="guideBox1 fl" onclick="zhidingPage('personal.html')"><img src="/images/portraitIndex.png" width="12" class="vm marR5"><span class="vm col_777">wlm</span></section><section class="icon_personalHead fl marR15 loginText" onclick="logouth();">退出</section></section></section>
+</section>
+<section id="clientInfo" onclick="url('/personalInfo.html')">
+	<section class="main">
+    	<dl class="client_dl">
+        	<dt>
+            	<div class="perImg_bg">
+                	<div class="perImg">
+                    	<img src="../images/portrait.png" width="56"/>
+                    </div>
+                </div>
+                <p class="f9 marT7"><em class="jin_vip"></em></p>
+            </dt>
+            <dd>
+            	<section class="perLine"></section>
+                <p class="f23">王明</p>
+                <div class="growth">
+                	<div class="percent"></div>
+                    <span class="val">1000 / 2000</span>
+                </div>
+            	<p class="f9 padT3">您还差1000成长值升级为钻石会员</p>
+                <em class="seeM_btn"><img src="../images/seeM_btn.png" width="7"/></em>
+                <p class="space-05"></p>
+                <p class="f13">我的沃点：<span class="f15">900</span> 点</p>
+                <p class="f13">可提现沃点：<span class="f15">500</span> 点</p>
+            </dd>
+        </dl>
+    </section>
+</section>
+<section id="gray_bg">
+	<section class="pad10 disBox borderBox">
+    	<section class=' flexBox marR5 backgroundF' onclick='location.href="/secPhase/myshop.html"'>
+            <dl  class='clearFix padT10 padL5'>
+                <dt class="fl"><span  class="icon_per_new dib"></span></dt>
+                <dd class="fl padL10">
+                    <h4 class="f16 padB5 ">我的店铺</h4>
+                    <p class="padB10 colora5">比你想象的更强大</p>
+                </dd>
+            </dl>
+        </section>
+    	<section class=' flexBox backgroundF' onclick='location.href="/wealth/wealth.html"'>
+            <dl  class='clearFix padT10 padL5'>
+                <dt class="fl"><span  class="icon_per_new icon_per_new1 dib"></span></dt>
+                <dd class="fl padL10">
+                    <h4 class="f16 padB5 ">我的财富</h4>
+                    <p class="padB10 colora5">赚、赚、赚不停</p>
+                </dd>
+            </dl>
+        </section>
+    </section>
+	<section class="my_menu">
+        <div class="my_list"  onClick="url('/myOrder.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg1"></span></th>
+                        <td class="ap">
+                        	<span class="textL">我的订单</span><span class="textR">80笔</span>
+                            <img src="/images/new_circle.png" width="8"  class="new_circle"/>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list" onClick="url('/wealth/wealth.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg2"></span></th>
+                        <td>
+                        	<span class="textL">我的财富</span><span class="textR">500点</span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list" onclick="url('/cash_list.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg3"></span></th>
+                        <td>
+                        	<span class="textL">提现记录</span><span class="textR">15次</span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list" onClick="url('/bankcard/mycostcardC.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg4"></span></th>
+                        <td>
+                        	<span class="textL">我的银行卡</span><span class="textR">5张</span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list" onClick="url('/safeSetting.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg11"></span></th>
+                        <td>
+                        	<span class="textL">安全设置</span><span class="textR"></span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list last" onClick="url('/myAddress.html')">
+            <div class="cont last">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg_addr"></span></th>
+                        <td>
+                        	<span class="textL">收货地址</span><span class="textR">8个</span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <p class="space-10"></p>
+    <section class="my_menu">
+        <div class="my_list" onClick="url('/poster.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg5"></span></th>
+                        <td>
+                        	<span class="textL">我的海报</span><span class="textR"></span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list"  onclick="url('/secPhase/getwoRecord.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg6"></span></th>
+                        <td>
+                        	<span class="textL">领取记录</span><span class="textR">15条</span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list"  onclick="url('/secPhase/myCollection.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg7"></span></th>
+                        <td >
+                        	<span class="textL">我的收藏</span><span class="textR">25次</span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list" onClick="url('/myFriend.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg8"></span></th>
+                        <td class="ap">
+                        	<span class="textL">我的盟友</span><span class="textR">25人</span>
+                            <img src="/images/new_circle.png" width="8"  class="new_circle"/>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg8"></span></th>
+                        <td class="ap">
+                            <span class="textL" onClick="url('/myFriendNew.html')">new1&nbsp;</span>
+                            <span class="textL" onClick="url('/myFriendNew2.html')">new2&nbsp;</span>
+                            <span class="textL" onClick="url('/myFriendNew3.html')">new3&nbsp;</span>
+                            <span class="textL" onClick="url('/myFriendNew4.html')">new4</span>
+                            <span class="textR">25人</span>
+                            <img src="/images/new_circle.png" width="8"  class="new_circle"/>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list last" onClick="url('/myTask.html')">
+            <div class="cont last">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg8 listimg_task"></span></th>
+                        <td class='ap'>
+                        	<span class="textL padR3">我的任务</span><img src="/images/new.png" width="28"  class="new ab" /><span class="textR myTask_per">2个</span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>  
+      </section>
+    <p class="space-10"></p>
+    <section class="my_menu">
+        <div class="my_list" onClick="url('/message.html')">
+            <div class="cont">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg9"></span></th>
+                        <td class="ap">
+                        	<span class="textL">消息中心</span><span class="textR">未读10条</span>
+                            <img src="/images/new_circle.png" width="8"  class="new_circle"/>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="my_list last" onClick="url('/experienceProgram.html')">
+            <div class="cont last">
+                <table class="con_table">
+                    <tr>
+                        <th><span class="listimg10"></span></th>
+                        <td>
+                        	<span class="textL">体验计划</span><span class="textR"></span>
+                        </td>
+                        <td class="right"><img src="../images/seeM_btn.png" width="7"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <p class="space-10"></p>
+    <ul class="perb_ul">
+    	<!--<li onclick="url('newComer.html')">
+        	<em class="perB1"></em>
+            <p>新手指南</p>
+        </li>-->
+        <li onclick="url('/newGuide.html')">
+        	<em class="perB_stGuide"></em>
+            <p>开店指引</p>
+        </li>
+        <!--<li>
+        	<em class="perB2"></em>
+            <p>领取广告</p>
+        </li>-->
+        <li onclick="url('/earnStep.html')">
+        	<em class="perB3"></em>
+            <p>财富手册</p>
+        </li>
+
+        <li onClick="url('/cashStep.html')">
+        	<em class="perB4"></em>
+            <p>如何提现</p>
+        </li>
+        <li onClick="url('/incomeDeclr.html')">
+        	<em class="perB5"></em>
+            <p>收益说明</p>
+        </li>
+        <li  onClick="url('/taskDeclr.html')">
+        	<em class="perB6"></em>
+            <p>任务说明</p>
+        </li>
+    </ul>
+</section>
+<section style='height:30px;line-height:30px;' class='clearFix'><a  href='/guide_wechat.html' style="color:blue;" class="fl">关于我们微信版（临时）</a><a class="col_f60 fr" href="/app/tip_app.html">app求指点(临时）</a></section>
+<!--加载中-->
+<section id="loading" class="dn">
+    <img src="/images/loading.png" width="25" class="loadingImg loadingImg_going">
+    <p class="space-05"></p>
+    <p>玩命加载中...</p>
+</section>
+
+<!--#include virtual="/include/footer_noEnd.html"-->
+<!--#include virtual="/include/woCircle.html"-->
+
+</body>
+</html>

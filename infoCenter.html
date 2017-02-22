@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>消息中心</title>
+	<script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/mxhstyle.css">
+    <script type="text/javascript" src='js/top.js'></script>
+</head>
+	<body style='background:#f2f2f2;'>
+		<div id='container_l'>
+			<!--#include virtual="/wolianm2/include/headerinfo.html"-->
+			<div class='infoCenterContaner'>
+				<ul>
+					<li>
+						<dl class='dlinfoCenter'>
+							<dt><div class='flagread'></div></dt>
+							<dd>
+								<div class='infoCenterarea'>
+									<div class='topicallTime'>
+										<p class='fl theadhead'>邀请更多朋友一起赚钱吧！</p>
+										<p class='fr time'>16-01-01</p>
+									</div>
+									<p class='adcontent'>您的通讯录好友里已有XX人注册成为沃联盟用户，请邀请更多朋友一起参与吧！</p>
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class='dlinfoCenter'>
+							<dt><div class='flagread'></div></dt>
+							<dd>
+								<div class='infoCenterarea'>
+									<div class='topicallTime'>
+
+										<p class='fl theadhead'>您的成长值排名又降低了..</p>
+										<p class='fr time'>16-01-01</p>
+									</div>
+									<p class='adcontent'>您的通讯录好友里已有XX人注册成为沃联盟用户，请邀请更多朋友一起参与吧！</p>
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class='dlinfoCenter'>
+							<dt><div class='flagread'></div></dt>
+							<dd>
+								<div class='infoCenterarea'>
+									<div class='topicallTime'>
+
+										<p class='fl theadhead'>通讯录好友“安宁帅”注册为沃联盟会员啦</p>
+										<p class='fr time'>16-01-01</p>
+									</div>
+									<p class='adcontent'>您的通讯录好友里已有XX人注册成为沃联盟用户，请邀请更多朋友一起参与吧！</p>
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class='dlinfoCenter'>
+							<dt><div class='flagread dn'></div></dt>
+							<dd>
+								<div class='infoCenterarea'>
+									<div class='topicallTime'>
+
+										<p class='fl theadhead'>记得今天做任务哦！</p>
+										<p class='fr time'>16-01-01</p>
+									</div>
+									<p class='adcontent'>您的通讯录好友里已有XX人注册成为沃联盟用户，请邀请更多朋友一起参与吧！</p>
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class='dlinfoCenter'>
+							<dt><div class='flagread dn'></div></dt>
+							<dd>
+								<div class='infoCenterarea'>
+									<div class='topicallTime'>
+
+										<p class='fl theadhead'>记得今天做任务哦！</p>
+										<p class='fr time'>16-01-01</p>
+									</div>
+									<p class='adcontent'>您的通讯录好友里已有XX人注册成为沃联盟用户，请邀请更多朋友一起参与吧！</p>
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<!--#include virtual="/wolianm2/include/footer_banquan3.html"-->
+			<script type="text/javascript">
+				window.onload = function(){
+					
+					$('.infoCenterarea').each(function(){
+						var thead = $(this).children('.topicallTime').children('.theadhead').text();
+						if(thead.length > 18){
+							var lasttext = thead.substring(0,16) + '..';
+							$(this).children('.topicallTime').children('.theadhead').text(lasttext);
+						}
+					})
+				}
+			</script>
+		</div>
+	</body>
+</html>

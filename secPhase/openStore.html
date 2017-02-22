@@ -1,0 +1,64 @@
+<!--#include virtual="/include/head.html"-->
+ <script src="/js/jquery.imgSlide2.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#newGuide').imgSlide2();
+})
+</script>
+<section class="headtitle" id="header">
+	<section class="Hmain">我的店铺</section>
+    <section class="Hleft">
+    	<section class="return"></section>
+    </section>
+    <section class="Hright">
+    	<section class="icon_listDown icon_listper">
+        <!--#include virtual="/include/hMenu_logged.html"-->	
+        </section>
+    </section>
+</section>
+
+<section id="content" data-role="content">
+	<section class="pad0_15 " >
+		<dl class="padT10 padB10 borderBd5 clearFix" style="">
+        	<dt class="fl padR20">
+            	<div class="perImg_bg">
+                	<div class="perImg">
+                    	<img src="/images/perImg.png" width="56"/>
+                    </div>
+                </div>
+            </dt>
+            <dd class="fl font14 store_portrt_tip">点击图片编辑店铺图标 </dd>
+        </dl>
+		<dl class="padT10 padB10 borderBd5 clearFix">
+        	<dt class="fl f16 padR20">店铺名称</dt>
+            <dd class="fl font14"><input type="text" placeholder='10个字以内' class=" font14  store_tip"/></dd>
+        </dl>
+		<dl class="padT10 padB10 borderBd5 clearFix">
+        	<dt class="fl f16 padR20">店铺简介</dt>
+            <dd class="fl font14"><textarea placeholder='20个字以内' class="tl font14 noBor store_tip store_tip1 " cols="30"></textarea></dd>
+        </dl>
+       <section class="sec_btn padT40">
+            <input type="button" class="btn" value="下一步" onClick="url('myStoreHome.html')">
+        </section>
+
+    </section>        
+        
+</section>
+
+<!--#include virtual="/include/footer_noEnd.html"-->
+<!--新手指引蒙层 开始-->
+<section class='maskGuide1'></section>
+<div id="newGuide" class="openst_newGuide">
+  <ul class="scrollUl2 clearFix">
+    <li><img src="/images/openstGuide1.png"  width="320" class="openstGuide1" ></li>
+    <li><img src="/images/openstGuide2.png"  width="320" class="openstGuide2"></li>
+  </ul>
+  <div class="spanWrp_scroll"><span class="spanScroll"></span><span class="spanScroll"></span><span class="spanScroll"></span><span class="spanScroll"></span><span class="spanScroll"></span></div>
+  <div class="scrollBtnL scrollBtn ab"></div>
+  <div class="scrollBtnR scrollBtn ab"></div>
+  <div class="disTurbBtn disTurbBtn_st  ab"></div>
+</div>
+
+<!--新手指引蒙层 结束-->
+</body>
+</html>

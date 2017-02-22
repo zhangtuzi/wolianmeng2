@@ -1,0 +1,24 @@
+<!--#include virtual="/include/head.html"-->
+<!--wap页面正式版-->
+<section class="headtitle" id="header">
+	<section class="Hmain">扫码</section>
+    <section class="Hleft" onclick='javascript:history.back(-1);'>
+    	<section class="return"></section>
+    </section>
+</section>
+<section class='bg_scan'>
+	<div class='imgtip'>
+		<img src="/images/loadicn1.png" width='71px' />
+	</div>
+	<p class='resonsef'>当前页面无法进行扫码操作！<br />请下载沃联盟客户端！</p>
+	<div class='undloadicon'>
+		<img src="/images/loadapp1.png" width='179px' /></br>
+		<img src="/images/loadappA.png" width='179px' />
+	</div>
+</section>
+<script>
+    	$('.bg_scan').css('min-height',$(window).height()-48);
+    $(window).resize(function(){
+    	$('.bg_scan').css('min-height',$(window).height()-48);
+    });
+</script>

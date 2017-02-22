@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+	<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>我的店铺</title>
+	<link rel="stylesheet" type="text/css" href="css/user_shop.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/banquan.css" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+	<script type="text/javascript">
+        var _self =  this ;
+        _self.width = 640;
+        _self.fontSize = 100;
+        _self.widthProportion =  function (){ var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.5?0.5:p;};
+        _self.changePage =  function (){
+        document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+        }
+        _self.changePage();
+        window.addEventListener('resize', function (){_self.changePage();}, false );
+    </script>
+</head>
+<body>
+<div class="wrap_all">
+
+	<div class="header">
+
+		<div class='Htop'>
+
+	<!--#include virtual="/wolianm2/include/header_new_gg.html"-->
+</div>
+		<div class="user_bg">
+				<img src="images/w6.png"  style="position:absolute;bottom:0;width:100%;height:100%;"alt="" />
+
+				<div class="user_mes">
+
+		        <div class="user_pic">
+
+		            <img src="images/nvhai1.png" alt="" />
+
+		        </div>
+
+		        <div class="shop_mes">
+
+		          <p>
+		            <span class="user">王海侯</span>的店铺
+		          </p>
+		          <div>
+		            <span class="li2">收藏量：</span>
+		            <span class="li2 sc_num" style="width:0.6rem;margin-left:-0.1rem;">10000</span>
+		            <span class="li2">访问量：</span>
+		            <span class="li2 fw_num" style="width:0.6rem;margin-left:-0.1rem;">28000</span>
+		            <span class="li2" style="width:0.6rem;">销量：</span>
+		            <span class="li2"><span class="numb" style="margin-left:-0.1rem;">12000</span>笔</span>
+		          </div>
+							<p class="dp_ms">号码、流量包、上网卡、手机、合约机</p>
+
+							<img src="images/youjiantou.png" style="width:0.2rem;height:0.2rem;position:absolute;bottom:0.5rem;right:0.15rem;" alt="" />
+
+		        </div>
+
+						<img src="images/dp_sc.png" class="dp_sc" style="position:absolute;top:0.1rem;right:0.5rem;width:1.2rem;height:0.4rem;" alt="" />
+
+		    </div>
+
+
+		</div>
+
+
+	</div>
+
+	<ul class="fenlei">
+
+		<li class="li1 selected1">全部</li>
+
+		<li class="li1">号码</li>
+
+		<li class="li1">手机</li>
+
+		<li class="li1">上网卡</li>
+
+		<li class="li1">流量包</li>
+
+		<li class="li1" style="clear:both;display:none;">失效广告</li>
+
+		<img src="images/jia.png" class="zk jia" style="display:block;position:absolute;top:0.15rem;right:0.1rem;width:0.25rem;height:0.25rem;" />
+	</ul>
+
+	<ul class="sxjg">
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+				<p class="xs">
+
+				  <span>销量：</span><span class="xs_num">19</span><span>笔</span>
+
+          <span class="dq">北京</span>
+
+				</p>
+				<p class="pro_tit">小米Note 联通4G版 小米Note 联通4G版小米Note 联通4G版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%套餐月费的50%套餐月费的50%</span></p>
+
+			</div>
+
+			<div class="bj_m">
+
+					<img src="images/bj_icon.png" class="bj_icon" alt="" />
+
+          <span class="bj_tit">编辑</span>
+
+			</div>
+
+		</li>
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+			<div class="pro_mes">
+
+        <p class="xs">
+
+				  <span>销量：</span><span class="xs_num">19</span><span>笔</span>
+
+          <span class="dq">北京</span>
+
+				</p>
+
+				<p class="pro_tit">苹果6 Plus 六模全兼容版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+      <div class="bj_m">
+
+					<img src="images/bj_icon.png" class="bj_icon" alt="" />
+
+          <span class="bj_tit">编辑</span>
+
+			</div>
+
+		</li>
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+        <p class="xs">
+
+          <span>销量：</span><span class="xs_num">19</span><span>笔</span>
+
+          <span class="dq">北京</span>
+
+        </p>
+
+				<p class="pro_tit">华为荣耀5X 联通4G版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+      <div class="bj_m">
+
+					<img src="images/bj_icon.png" class="bj_icon" alt="" />
+
+          <span class="bj_tit">编辑</span>
+
+			</div>
+
+		</li>
+
+		<li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+        <p class="xs">
+
+          <span>销量：</span><span class="xs_num">19</span><span>笔</span>
+
+          <span class="dq">北京</span>
+
+        </p>
+
+				<p class="pro_tit">小米4 联通4G版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+      <div class="bj_m">
+
+					<img src="images/bj_icon.png" class="bj_icon" alt="" />
+
+          <span class="bj_tit">编辑</span>
+
+			</div>
+
+		</li>
+
+    <li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+        <p class="xs">
+
+          <span>销量：</span><span class="xs_num">19</span><span>笔</span>
+
+          <span class="dq">北京</span>
+
+        </p>
+
+				<p class="pro_tit">华为荣耀7i 联通4G版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+      <div class="bj_m">
+
+					<img src="images/bj_icon.png" class="bj_icon" alt="" />
+
+          <span class="bj_tit">编辑</span>
+
+			</div>
+
+		</li>
+
+    <li class="li3">
+
+			<div class="pro_pic"><img src="images/spft.jpg" alt="" /></div>
+
+			<div class="pro_mes">
+
+        <p class="xs">
+
+				  <span>销量：</span><span class="xs_num">19</span><span>笔</span>
+
+          <span class="dq">北京</span>
+
+				</p>
+
+				<p class="pro_tit">苹果6 Plus 六模全兼容版</p>
+
+				<p class="mes2">预收益：<span class="ysy">套餐月费的50%</span></p>
+
+			</div>
+
+      <div class="bj_m">
+
+					<img src="images/bj_icon.png" class="bj_icon" alt="" />
+
+          <span class="bj_tit">编辑</span>
+
+			</div>
+
+		</li>
+
+	</ul>
+
+  <ul class="footer" style="z-index:3;">
+
+    <li class="add_gg">添加广告</li>
+
+    <li class="schb">生成海报</li>
+
+    <li class="tgdp"><a href="makeMoneyDetail.html#tuiuang_lll" style="text-decoration: none;color:#ffffff;">推广店铺</a></li>
+  </ul>
+
+
+
+
+	<div class="foot_banquan2 banquan">
+		<!--#include virtual="/wolianm2/include/banquan.html"-->
+	</div>
+
+
+
+</div>
+
+<div class="mc_bg" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.3;">
+
+</div>
+
+<ul class="confirmMain moreMain modiMain popMain" style="display:none;">
+
+	<li class="sec_btn"><input class="btn btn_more_top" value="置顶"></li>
+
+	<li class="sec_btn"><input class="btn btn_more_up"  disabled="disabled"  value="上移"></li>
+
+	<li class="sec_btn"><input class="btn btn_more_down" value="下移"></li>
+
+	<li class="sec_btn"><input class="btn btn_more_l" value="左移"></li>
+
+	<li class="sec_btn"><input class="btn btn_more_r" value="右移"></li>
+
+	<li class="sec_btn"><input class="btn btn_more_del colorr" value="删除"></li>
+
+	<li class="sec_btn"><input class="btn btn_more_cancel colorh" value="返回"></li>
+</ul>
+
+<style media="screen">
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+-webkit-appearance: none;
+}
+.button{ border-radius: 0; }
+.popMain {
+	width: 90%;
+	position: fixed;
+	top: 20%;
+	left: 5%;
+	z-index: 999;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.moreMain {
+     border-radius: 5px;
+   	padding: 0;
+ 		height: 196px;
+}
+.moreMain .sec_btn {
+    /*height: 49px;*/
+}
+.sec_btn {
+    width: 100%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.moreMain .sec_btn .btn {
+	text-align: center;
+		display: block;
+		width: 100%;
+    border: 0;
+    outline: none;
+    height:0.95rem;
+    line-height:0.95rem;
+    border-radius: 0;
+    background:#fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+			-webkit-opacity: 1;
+    background-size: cover;
+    color: #3399ff;
+    font-size:0.32rem;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+.colorh{
+	    color: #777!important;
+}
+.colorr{
+	    color: #f00!important;
+}
+</style>
+
+<script type="text/javascript">
+
+window.onload = function(){
+	$('.title_lll').text('王海侯的店铺');
+}
+
+	$(function(){
+
+		$(".li1").click(function(){
+
+			$(".li1").removeClass("selected1");
+
+			$(this).addClass("selected1");
+
+		})
+
+		$(".zk").click(function(){
+			if($(this).hasClass("jia")){
+				$(this).removeClass("jia");
+				$(this).prop("src","images/jian.png");
+				$(".li1").last().css("display","block");
+			}else{
+				$(this).addClass("jia");
+				$(this).prop("src","images/jia.png");
+				$(".li1").last().css("display","none");
+			}
+		})
+
+		$(".dp_sc").click(function(){
+			$(this).prop("src","images/dp_ysc.png");
+		})
+
+
+
+
+
+
+
+
+
+
+		;(function(){
+
+
+			padCheck();
+			function padCheck(){
+				$('.promotionS .store_index_list').each(function(i){
+					if(i%2==0){
+						$(this).addClass('padR');
+					}else{
+						$(this).removeClass('padR');
+					}
+				});
+			};
+			//我的店铺首页左滑效果
+			/*var thisIndex=0;  //当前元素的索引号
+			 var lenAll=$('.cardType_wrp').length;  //列表总数
+			$(document).click(function(){
+				$('.cardType_wrp').eq(thisIndex).animate({left:0},1000).siblings('.store_btn_big_wrp').animate({right:'-110px'},1000)
+			});
+			$(".cardType_wrp").each(function(i){
+				var $this=$(this);
+				$this.touchwipe({
+				  wipeLeft:function() {
+					  thisIndex=$(".cardType_wrp").index($this);
+					$('.cardType_wrp').not(':eq('+thisIndex+')').each(function(){
+						$(this).animate({left:0},1000).siblings('.store_btn_big_wrp').animate({right:'-110px'},1000);
+
+					})
+					$this.animate({left:'-104px'},1000).siblings('.store_btn_big_wrp').animate({right:0},1000);
+				  },
+				  wipeRight:function() {
+					$this.animate({left:'0'},1000).siblings('.store_btn_big_wrp').animate({right:'-110px'},1000);
+				  },
+				  min_move_x:10,
+				  preventDefaultEvents:false
+			   });
+			});*/
+			//var store_index_list= $('.promotionS_new').find('.store_index_list');
+			var thisIndex=0;  //当前元素的索引号
+			 var lenAll=$('.sxjg').find('.li3').length;  //列表总数
+			$('.bj_tit').click(function(){
+				// $('.modiMain').popup1({height:305,marginTop:152,maskObj:'#maskConfirm'});
+				thisIndex=$('.bj_tit').index($(this));
+				$('#maskConfirm,.moreMain,.mc_bg').show();
+			});
+			$('.moreMain .sec_btn').click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+				$('#maskConfirm,.moreMain,.mc_bg').hide();
+			})
+
+			//上移
+			$('.btn_more_up').click(function(){
+				if(thisIndex>1){
+					var store_index_list1= $('.sxjg').find('.li3');
+					var upOne=store_index_list1.eq(thisIndex-2);
+					$('.sxjg').find('.li3').eq(thisIndex).insertBefore(upOne);
+					thisIndex=thisIndex-2;
+					store_index_list1.eq(thisIndex+1).insertAfter(store_index_list1.eq(thisIndex+2));
+					padCheck();
+				}
+			});
+
+			//下移
+			$('.btn_more_down').click(function(){
+				if(thisIndex<lenAll-2){
+					var store_index_list2= $('.sxjg').find('.li3');
+					var dOne=store_index_list2.eq(thisIndex+2);
+					$('.sxjg').find('.li3').eq(thisIndex).insertAfter(dOne);
+					thisIndex+=2;
+					store_index_list2.eq(thisIndex-1).insertBefore(store_index_list2.eq(thisIndex-2));
+					padCheck();
+				}
+			});
+
+			//右移
+			$('.btn_more_r').click(function(){
+				if(thisIndex%2==0){
+					var rOne=$('.sxjg').find('.li3').eq(thisIndex+1);
+					$('.sxjg').find('.li3').eq(thisIndex).removeClass('padR').next().addClass('padR');
+					$('.sxjg').find('.li3').eq(thisIndex).insertAfter(rOne);
+					thisIndex+=1;
+				};
+			});
+
+			//左移
+			$('.btn_more_l').click(function(){
+				if(thisIndex%2==1){
+					var lOne=$('.sxjg').find('.li3').eq(thisIndex-1);
+					$('.sxjg').find('.li3').eq(thisIndex).addClass('padR').prev().removeClass('padR');
+					$('.sxjg').find('.li3').eq(thisIndex).insertBefore(lOne);
+					thisIndex-=1;
+				}
+			});
+
+
+			//置顶
+			$('.btn_more_top').click(function(){
+				if(thisIndex>1){
+					var li3=$('.sxjg').find('.li3');
+					var first;
+					var firstIndex=thisIndex%2;
+						first=li3.eq(firstIndex);
+						first.clone(true).insertAfter($('.sxjg').find('.li3').eq(thisIndex-1));
+						li3.eq(firstIndex).replaceWith(li3.eq(thisIndex));
+					padCheck();
+					thisIndex=thisIndex%2;
+				}
+			});
+
+			//置底
+			$('.btn_more_b').click(function(){
+				if(thisIndex<lenAll-1){
+					var last=$('.sxjg').find('.li3').eq(lenAll-1);
+					$('.sxjg').find('.li3').eq(thisIndex).insertAfter(last);
+					thisIndex=lenAll-1;
+					padCheck();
+
+				}
+			});
+
+			//删除
+			$('.btn_more_del').click(function(){
+				$('.sxjg').find('.li3').eq(thisIndex).remove();
+				lenAll-=1;
+				$('.sxjg').find('.li3').length=lenAll;
+				padCheck();
+			});
+
+		})();
+
+	})
+
+
+</script>
+
+</body>
+
+</html>

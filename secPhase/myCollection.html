@@ -1,0 +1,308 @@
+<!--#include virtual="/include/head_greyBg.html"-->
+
+<style>
+@media screen and (min-width:250px){
+	.kbox{ width:40%}
+	}
+@media screen and (min-width:300px){
+	.kbox{ width:50%}
+	}
+	@media screen and (min-width:350px){
+	.kbox{ width:55%}
+	}
+	@media screen and (min-width:400px){
+	.kbox{ width:65%}
+	}
+	@media screen and (min-width:450px){
+	.kbox{ width:70%}
+	}
+	@media screen and (min-width:500px){
+	.kbox{ width:76%}
+	}
+	@media screen and (min-width:550px){
+	.kbox{ width:79%}
+	}
+	@media screen and (min-width:600px){
+	.kbox{ width:84%}
+	}
+</style>
+<section class="headtitle" id="header">
+    <section class="Hmain">我的收藏</section>
+    <section class="Hleft">
+        <section class="return"></section>
+    </section>
+    <section class="Hright">
+        <section class="icon_listDown icon_listper">
+        <!--#include virtual="/include/hMenu_logged.html"-->	
+        </section>
+    </section>
+</section>
+<section id="content" data-role="content" class='greyBg'>
+    <ul class="tab backgroundF tab_money">
+        <li class="on">广告</li>
+        <li>店铺</li>
+    </ul>
+  <section class='tab_wopost_main '>
+    <section class="selctWrp_shop padB0">
+         <ul class="selctUl_shop clearFix marB10"><li class="curr selctLi_shop1 borderBox noBorR_shop leftLi">全部</li><li class="selctLi_shop1 borderBox noBorR_shop">单号卡</li><li class=" selctLi_shop1 borderBox noBorR_shop">合约机</li><li class="selctLi_shop1 borderBox noBorR_shop">上网卡</li><li class=" selctLi_shop1 borderBox rightLi">流量包</li></ul>
+         <ul class="selctUl_shop clearFix"><li class="curr selctLi_shop2 borderBox noBorR_shop leftLi">商品热销</li><li class="selctLi_shop2 borderBox noBorR_shop">预期收益</li><li class="selctLi_shop2 borderBox noBorR_shop">领取排名</li><li class=" selctLi_shop2 borderBox rightLi">上架时间</li>
+         </ul>
+    </section>
+    <style type="text/css">
+        .omitintro{
+            font-size: 13px;
+        }
+        .detilpoupBtb{
+            font-size: 12px;
+            background: #ff6600;
+            color: #fff;
+            padding: 1px 5px;
+            border-radius: 3px;
+        }
+        .poupDetailinfo{
+            position: absolute;
+            top: 0px;
+            left: 0;
+            z-index: 10;
+            background: rgba(0,0,0,0.7);
+            font-size: 14px;
+            color: #ff6600;
+            padding-top: 82px;
+            padding-left: 5px;
+        }
+        .poupDetailinfo p{
+            margin-left: 25px;
+        }
+    </style>
+    <script type="text/javascript">
+    $(function(){
+        $('.omitintro').each(function(){
+           // $(this).text(($(this).text().substring(0,4)+'...'));
+        })
+        $('.detilpoupBtb').bind('click',function(){
+            var fatherW = $(this).parents('.cardType_wrp_new').width();
+            var fatherH = $(this).parents('.cardType_wrp_new').height();
+            $('.poupDetailinfo').css('width',(fatherW+30));
+            $('.poupDetailinfo').css('height',(fatherH-72));
+            $('.poupDetailinfo').show();
+        })
+        $('.poupDetailinfo').bind('click',function(){
+            $(this).hide();
+        })
+    })
+        
+    </script>
+	<section class='cardType_main'>
+    	<section class='cardTypeH borderBd5'>2014年5月15日<span class='fr'>山东</span></section>
+        
+        <section class='cardType_wrp cardType_wrp_new ap'>
+            <div class="proIntroH_wrp disBox_T_c"> <h3 class=" col_45 proIntroH_new" style='margin-left:0;'>联通4G版餐合联通4G版餐合约机 </h3></div>
+            <dl class="borB_d5  disBox padB10">
+                <dt><img src="/images/newpro.png" width="84" height="84" alt="" /></dt>
+                <dd class="flexBox borderBox  padL15 " style="position:relative">
+                    <div class="proIntoP clearFix" style='height:auto;line-height:25px;'>
+                        <span class="proIntro_icon proIntro_wo cover fl"></span>
+                        <div class=" color-999  fl " style="width:90%; "><span class="fl" style="display:inline-block; width:4em">预收益：</span>
+                            <span class='colorange omitintro fl kbox' style="white-space: nowrap;text-overflow: ellipsis; overflow:hidden; height:25px"><b style="font-weight:normal">主卡（且为新用户）：首月套餐的50％  ；副卡：5沃点/个。</b>
+</span>
+                            <span class='detilpoupBtb fr detilpoupBtbd' style=" padding:1px 10px; position:absolute; height:23px; line-height:23px; right:0%; top:0px">详情</span>
+                        </div>
+                    </div>
+                    
+                    <p  class="proIntoP clearFix"><span class="proIntro_icon proIntro_person cover fl"></span><span class=" color-999 fl">领取量：2028人</span></p>
+                    <p class="clearFix proIntoP" style='font-size:13px;'><span class="proIntro_icon proIntro_time cover fl"></span><span class=" color-999 fl">活动时间：7月27日-7月30日</span></p>
+                </dd>
+            </dl>
+            <div class="clearFix padT10 disBox">
+                 <div class="subIcon_box subIcon_box_mon clearFix"><div class=" fl addStoreBox"><span class="addStore_icon cover marT3 vm"></span><span class="vm">添加</span></div><div class=" fl clectBox"><span class="colctNew_icon cover vm "></span><span class="vm colctTip">收藏</span></div></div>
+                <div class="flexBox borderBox padL15">
+                 <div class="btn108  fr"><input type="button" value="我要抢"  class="btn_getWopoint btn_getWp_agin btn108"/></div>
+                </div>
+            </div>
+            <div class='poupDetailinfo dn'>
+                <p>主卡（且为新用户）：首月套餐的50%</p>
+                <div class='space-20'></div>
+                <p>副卡：5沃点/个</p>
+            </div>     
+        </section>
+       <section class='cardTypeH borderBd5 '>2014年5月15日</section>
+        <section class='cardType_wrp ap cardType_wrp_new'>
+            <div class="freeze_bg"></div>
+             <section class="freeze_icon fail_icon"></section>
+            <div class="proIntroH_wrp disBox_T_c"> <h3 class=" col_45 proIntroH_new">iphone  （A1530） 联通4G版餐合联通4G版餐合约机 5s </h3></div>
+            <dl class="borB_d5  disBox padB10">
+                <dt><img src="/images/newpro.png" width="84" height="84" alt="" /></dt>
+                <dd class="flexBox borderBox  padL15 ">
+                    <div class="proIntoP clearFix"><span class="proIntro_icon proIntro_wo cover fl"></span><div class=" color-999  fl ">预收益：<em class="col_f60 f16">12</em>&nbsp;沃点</div></div>
+                    <p  class="proIntoP clearFix"><span class="proIntro_icon proIntro_person cover fl"></span><span class=" color-999 fl">领取量：2028人</span></p>
+                    <p class="clearFix proIntoP"><span class="proIntro_icon proIntro_time cover fl"></span><span class=" color-999 fl">剩余：10天</span><span class=" color-999  fr">山东</span></p>
+                </dd>
+            </dl>
+            <div class="clearFix padT10 disBox">
+                 <div class="subIcon_box subIcon_box_mon clearFix"><div class=" fl addStoreBox"><span class="addStore_icon added cover marT3 vm"></span><span class="vm">已添加</span></div><div class=" fl clectBox clectBoxed"><span class="colctNew_icon cover vm collted "></span><span class="vm colctTip">已收藏</span></div></div>
+                <div class="flexBox borderBox padL15">
+                 <div class="btn108  fr"><input type="button" value="我要收藏"  class="btn_getWopoint btn108"/></div>
+                </div>
+            </div>       
+        </section>
+        <section class='cardTypeH borderBd5 '>2014年5月15日<span class='fr'>山东</span></section>
+       <img src="../images/xsql.png" style='height:57px;position:absolute;margin-left:2%;'>
+        <section class='cardType_wrp cardType_wrp_new '>
+            <div class="proIntroH_wrp disBox_T_c"> <h3 class=" col_45 proIntroH_new" style='margin-left:13%;'>联通4G版餐合联通4G版餐合约机 </h3></div>
+            <dl class="borB_d5  disBox padB10">
+                <dt><img src="/images/newpro.png" width="84" height="84" alt="" /></dt>
+                <dd class="flexBox borderBox  padL15 ">
+                    <div class="proIntoP clearFix"><span class="proIntro_icon proIntro_wo cover fl"></span><div class=" color-999  fl ">预收益：<em class="col_f60 f16">12</em>&nbsp;沃点</div></div>
+                    <div class="proIntoP clearFix" style='margin-left:13px;'><del class=" color-999  fl ">原收益：<em>12</em>&nbsp;沃点</del></div>
+                    <p  class="proIntoP clearFix"><span class="proIntro_icon proIntro_person cover fl"></span><span class=" color-999 fl">领取量：2028人</span></p>
+                    <p class="clearFix proIntoP" style='font-size:13px;'><span class="proIntro_icon proIntro_time cover fl"></span><span class=" color-999 fl">活动时间：7月27日-7月30日</span></p>
+                </dd>
+            </dl>
+            <div class="clearFix padT10 disBox">
+                 <div class="subIcon_box subIcon_box_mon clearFix"><div class=" fl addStoreBox"><span class="addStore_icon added cover marT3 vm"></span><span class="vm">已添加</span></div><div class=" fl clectBox clectBoxed"><span class="colctNew_icon cover vm collted "></span><span class="vm colctTip">已收藏</span></div></div>
+                <div class="flexBox borderBox padL15">
+                 <div class="btn108  fr"><input type="button" value="我要抢"  class="btn_getWopoint btn_getWp_agin btn108"/></div>
+                </div>
+            </div>       
+        </section>
+        <section class='cardTypeH borderBd5 '>2014年5月15日<span class='fr'>山东</span></section>
+       <img src="../images/xsql.png" style='height:57px;position:absolute;margin-left:2%;'>
+        <section class='cardType_wrp cardType_wrp_new '>
+            <div class="proIntroH_wrp disBox_T_c"> <h3 class=" col_45 proIntroH_new" style='margin-left:13%;'>联通4G版餐合联通4G版餐合约机 </h3></div>
+            <dl class="borB_d5  disBox padB10">
+                <dt><img src="/images/newpro.png" width="84" height="84" alt="" /></dt>
+                <dd class="flexBox borderBox  padL15 ">
+                    <div class="proIntoP clearFix"><span class="proIntro_icon proIntro_wo cover fl"></span><div class=" color-999  fl ">预收益：<em class="col_f60 f16">12</em>&nbsp;沃点</div></div>
+                    <div class="proIntoP clearFix" style='margin-left:13px;'><del class=" color-999  fl ">原收益：<em>12</em>&nbsp;沃点</del></div>
+                    <p  class="proIntoP clearFix"><span class="proIntro_icon proIntro_person cover fl"></span><span class=" color-999 fl">领取量：2028人</span></p>
+                    <p class="clearFix proIntoP" style='font-size:13px;'><span class="proIntro_icon proIntro_time cover fl"></span><span class=" color-999 fl">活动时间：7月27日-7月30日</span></p>
+                </dd>
+            </dl>
+            <div class="clearFix padT10 disBox">
+                 <div class="subIcon_box subIcon_box_mon clearFix"><div class=" fl addStoreBox"><span class="addStore_icon added cover marT3 vm"></span><span class="vm">已添加</span></div><div class=" fl clectBox clectBoxed"><span class="colctNew_icon cover vm collted "></span><span class="vm colctTip">已收藏</span></div></div>
+                <div class="flexBox borderBox padL15">
+                 <div class="btn108  fr"><input type="button" value="我要抢"  class="btn_getWopoint btn_getWp_agin btn108"/></div>
+                </div>
+            </div>       
+        </section>
+        <section class='cardTypeH borderBd5 '>2014年5月15日<span class='fr'>山东</span></section>
+       <img src="../images/xsql.png" style='height:57px;position:absolute;margin-left:2%;'>
+        <section class='cardType_wrp cardType_wrp_new '>
+            <div class="proIntroH_wrp disBox_T_c"> <h3 class=" col_45 proIntroH_new" style='margin-left:13%;'>联通4G版餐合联通4G版餐合约机 </h3></div>
+            <dl class="borB_d5  disBox padB10">
+                <dt><img src="/images/newpro.png" width="84" height="84" alt="" /></dt>
+                <dd class="flexBox borderBox  padL15 ">
+                    <div class="proIntoP clearFix"><span class="proIntro_icon proIntro_wo cover fl"></span><div class=" color-999  fl ">预收益：<em class="col_f60 f16">12</em>&nbsp;沃点</div></div>
+                    <div class="proIntoP clearFix" style='margin-left:13px;'><del class=" color-999  fl ">原收益：<em>12</em>&nbsp;沃点</del></div>
+                    <p  class="proIntoP clearFix"><span class="proIntro_icon proIntro_person cover fl"></span><span class=" color-999 fl">领取量：2028人</span></p>
+                    <p class="clearFix proIntoP" style='font-size:13px;'><span class="proIntro_icon proIntro_time cover fl"></span><span class=" color-999 fl">活动时间：7月27日-7月30日</span></p>
+                </dd>
+            </dl>
+            <div class="clearFix padT10 disBox">
+                 <div class="subIcon_box subIcon_box_mon clearFix"><div class=" fl addStoreBox"><span class="addStore_icon added cover marT3 vm"></span><span class="vm">已添加</span></div><div class=" fl clectBox clectBoxed"><span class="colctNew_icon cover vm collted "></span><span class="vm colctTip">已收藏</span></div></div>
+                <div class="flexBox borderBox padL15">
+                 <div class="btn108  fr"><input type="button" value="我要抢"  class="btn_getWopoint btn_getWp_agin btn108"/></div>
+                </div>
+            </div>       
+        </section>
+     
+        <div class="space-10"></div>
+    </section>
+
+  </section>
+  <section class='tab_wopost_main dn backgroundF'>
+	<section class="PosterCont clearFix">
+        <section class="selctWrp_shop">
+       		 <ul class="selctUl_shop clearFix"><li class="curr selctLi_shop borderBox noBorR_shop leftLi">创建时间</li><li class="selctLi_shop borderBox noBorR_shop">广告数量</li><li class=" selctLi_shop borderBox rightLi">商品销量</li></ul>
+            <p class="shop_num tr padT10">共<span class="
+col_f60">10</span>个</p> 
+        </section>        <ul class="shop_list backgroundF">
+            <li onClick="location.href='strollShop2.html'">
+                <dl class="shop_dl disBox padB10">
+                      <dt class="disBox_TL_c" ><img src="/images/shop_dl.jpg" width="66" /></dt>
+                   <dd class="box_flex_1">
+                        <h1>王海猴的旗舰店</h1>
+                       <p class="wid_per90">王海猴旗舰店王海猴旗舰店王海猴旗舰店王海猴旗舰店王海猴旗舰店</p> 
+                       <p><span class="cllctS active cllctSed vm"></span><span class="padL5 vm">收藏（8888）&nbsp;&nbsp;</span><img src="/images/icon_comment.png" width="12" class="vm"><span class="vm">用户评价（8888）</span></p>
+                       <p><img src="/images/poster_icon.png" width="12"  class="vm"  onClick="storePoster.html"> <span  class="vm"  onClick="storePoster.html">生成海报</span><img src="/images/icon_delposter.png" width="10"  class="vm marL30" ><span  class="vm">删除海报</span> </p>
+                        <em class="arrow_icon"></em>
+                   </dd> 
+                </dl> 
+            </li>
+            <li onClick="location.href='strollShop2.html'">
+                <dl class="shop_dl disBox padB10">
+                      <dt class="disBox_TL_c" ><img src="/images/shop_dl.jpg" width="66" /></dt>
+                   <dd class="box_flex_1">
+                        <h1>王海猴的旗舰店</h1>
+                       <p class="wid_per90">猴旗舰店王海猴旗舰店</p> 
+                       <p><span class="cllctS active cllctSed vm"></span><span class="padL5 vm">收藏（8888）&nbsp;&nbsp;</span><img src="/images/icon_comment.png" width="12" class="vm"><span class="vm">用户评价（8888）</span></p>
+                       <p><img src="/images/poster_icon.png" width="12"  class="vm"  onClick="storePoster.html"> <span  class="vm"  onClick="storePoster.html">生成海报</span><img src="/images/icon_delposter.png" width="10"  class="vm marL30" ><span  class="vm">删除海报</span> </p>
+                        <em class="arrow_icon"></em>
+                   </dd> 
+                </dl> 
+            </li>
+            <li onClick="location.href='strollShop2.html'">
+                <dl class="shop_dl disBox  padB10">
+                      <dt class="disBox_TL_c" ><img src="/images/shop_dl.jpg" width="66" /></dt>
+                   <dd class="box_flex_1">
+                        <h1>王海猴的旗舰店</h1>
+                       <p class="wid_per90">王海猴旗舰店王海猴旗舰店王海猴旗舰店王海猴旗舰店</p> 
+                       <p><span class="cllctS active cllctSed vm"></span><span class="padL5 vm">收藏（8888）&nbsp;&nbsp;</span><img src="/images/icon_comment.png" width="12" class="vm"><span class="vm">用户评价（8888）</span></p>
+                       <p><img src="/images/poster_icon.png" width="12"  class="vm"  onClick="storePoster.html"> <span  class="vm"  onClick="storePoster.html">生成海报</span><img src="/images/icon_delposter.png" width="10"  class="vm marL30" ><span  class="vm">删除海报</span> </p>
+                        <em class="arrow_icon"></em>
+                   </dd> 
+                </dl> 
+            </li>
+            <li onClick="location.href='strollShop2.html'">
+                <dl class="shop_dl disBox last padB10">
+                      <dt class="disBox_TL_c" ><img src="/images/shop_dl.jpg" width="66" /></dt>
+                   <dd class="box_flex_1">
+                        <h1>王海猴的旗舰店</h1>
+                       <p class="wid_per90">猴旗舰店王海猴旗舰店</p> 
+                       <p><span class="cllctS active cllctSed vm"></span><span class="padL5 vm">收藏（8888）&nbsp;&nbsp;</span><img src="/images/icon_comment.png" width="12" class="vm"><span class="vm">用户评价（8888）</span></p>
+                       <p><img src="/images/poster_icon.png" width="12"  class="vm"  onClick="storePoster.html"> <span  class="vm"  onClick="storePoster.html">生成海报</span><img src="/images/icon_delposter.png" width="10"  class="vm marL30" ><span  class="vm">删除海报</span> </p>
+                        <em class="arrow_icon"></em>
+                   </dd> 
+                </dl> 
+            </li>
+        </ul>
+        <p class="space-20"></p>
+        <p class="shop_line"></p>
+        <p class="space-25"></p>
+       <!-- <section class="pad0_33">
+        	<section class="sec_btn"><input type="button" class="btn" value="我也要开店" onClick="url('openStore.html')"></section>
+        </section>-->
+        
+    </section> 
+  </section>
+  <section class='dragMore ab'>
+         <img src="/images/loading.png" width="25" class="loadingImg" />
+          <h3>玩命加载中...</h3>
+  </section>
+</section>
+<!--回到顶部-->
+<section id="backToTop"></section>
+<!--footer id="footer" class="footer" data-role="footer">Copyright © 1999-2014 中国联通 版权所有</footer>
+</section>
+</section-->
+<!--#include virtual="/include/footer_noEnd.html"-->
+<!--#include virtual="/include/woCircle.html"-->
+
+<script>
+$(function(){
+
+$(".kbox").each(function(){
+var kboxw=$('.kbox').width();
+var kboxbw=$('.kbox b').width();
+
+    if(kboxw>kboxbw){
+        $(".detilpoupBtbd").hide();
+    }else{
+ $(".detilpoupBtbd").show();
+	}
+
+}) 	
+	}) 
+</script>
+</body>
+</html>

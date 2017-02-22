@@ -1,0 +1,445 @@
+<!--#include virtual="/include/head_greyBg.html"-->
+<script src="/js/jquery.imgSlide2.js"></script>
+
+
+<!--wap页面正式版-->
+<section class="headtitle" id="header">
+	<section class="Hmain disBox_TL_c"><div class="Hmain_cont">王海猴的店铺</div></section>
+    <section class="Hleft">
+    	<section class="return"></section>
+    </section>
+    <section class="Hright clearFix"><section class="fr shortcutHead"><section class="guideBox1 fl" onclick="zhidingPage('personal.html')"><img src="../images/portrtIndex.png" width="12" class="vm"><span class="vm col_777">wlm</span></section><section class="icon_personalHead fl marR15 loginText" onclick="logouth();">退出</section></section></section>
+</section>
+
+<section id="content" data-role="content" class='greyBg'>
+	<section class="shop_banner2">
+        <div class="banner_head ap"><img src="/images/person_bg.jpg" class=" banner_head_bg"></div>
+        <section class="promPerInfor clearFix">
+        	<div class="perImg_bg fl marR10">
+                <div class="perImg"><img src="/images/wo_img.jpg" width="56"></div>
+           </div>
+           <div class="fl padT30">
+               <h3 class="clearFix" ><img src="/images/collect2_icon.png" width="10" class="vm fl"><span class="vm fl">&nbsp;收藏（10）</span></h3>
+               <h2 class="f14">王海猴的店铺</h2>
+           </div>
+        </section>
+         <section class="dh_bar2">
+                  <span class="padB10">王海猴的店铺王海猴的店铺王海猴的店铺王海猴的店铺王海猴的店铺</span>
+                  <!--<em class="shop1_bg_icon"></em>-->
+         </section>
+         <div class='promStore_li ab' style="right:10px;bottom:30px;" onClick="url('promotionShop.html')">
+            <a href="javascript:;" class="color-blue">
+              <em class="sel3"></em>推广店铺(微信版 临时)</a>
+        </div>
+   </section>
+    
+    <section class="shop_list2">
+        <section class="prom_select clearFix">
+            <ul>
+                <li  onClick="location.href='addAds.html'"><a href="javascript:;"><em class="sel1"></em>添加广告</a></li>
+                <li onClick="location.href='storePoster.html'" class="tc"><a href="javascript:;"><em class="sel2"></em>生成海报</a></li>
+                <li class='promStore_li_common tr' onClick="url('promotShop1.html')" ><a href="javascript:;"><em class="sel3"></em>推广店铺</a></li>
+            </ul>
+        </section>
+     </section>
+    
+	<section class='selectFactor promLeft'>
+    	<section class="clearFix borderBd5 selectList1 selectList">
+            <section class=" clearFix listCont" ><div><span class="active_factor">全部</span></div><div><span class="">单号卡</span></div><div><span>合约机</span></div><div><span>上网卡</span></div><div><span>流量包</span></div><div class="divDif_last"><span>已失效广告</span></div></section>
+            <section class="iconWrp"><span class="iconMore iconSpan"></span></section>
+        </section>
+    </section>
+    <section class='deleteall' style='display:none;'>
+      <div style='position:relative;'>
+          <p class='radiobg'>
+              <span class='choicebg' style='display:none;'></span>
+          </p>
+          <p class='radiotext'>全选</p>
+          <a href="javascript:void(0);" class='btndelteall'>删除</a>
+      </div>
+    </section>
+	<section class="promotionS promotionS_new clearFix" id='Listdelete'>
+      <section class='store_index_list'>
+          <img src="../images/xsql.png" style='height:47px;position:absolute;margin-left:0px;z-index:1;margin-left:10px;'>
+          <div class="store_index_licont ap">
+                <section class='cardType_wrp clearFix' id='cardType_wrp'>
+                    <section class='cardInfo'>
+                        <section class='cardInfoMain'><img src="/images/pro1_index.jpg" width="100"/></section>
+                        <section class='commentBox clearFix'>
+                            <span class="fl">47人已评价</span><span class="fr">内蒙古</span>
+                        </section>
+                        <div class=" stIndex_pro_wrp disBox_T_c">
+                           <h3 class="oh stIndex_proH">4G全国套餐一购四禧号送话费啦一全国套餐一购四禧号送话费啦一111</h3>
+                        </div>
+                        <div class='yucost col_f60'>
+                          <ul>
+                              <li style='width:70%' id="ysytext"><p class='ab newyuf'>预收益：<br><span>主卡（且为新用户）：首月套餐的50％  ；副卡：5沃点/个</span></p></li> 
+                              <li style='width:70%' id="ysybut">
+                              <div class='checkcostBtn' id="">查看预收益</div></li> 
+                              <li style='width:30%;text-align:center;'>
+                                  <span class="fr colorBlue f14 modiProBtn ab" style='bottom:0px;right:0px;'>编辑</span>
+                              </li>
+                          </ul>
+                        </div>
+                    </section>
+                </section>
+                <!--<section class="freeze_bg"></section>
+                <section class="freeze_icon invalid_icon"></section>-->
+          </div>
+        </section>
+        <style type="text/css">
+          .checkcostBtn{
+            width: 75px;
+            height: 23px;
+            line-height: 23px;
+            background: #ff6600;
+            font-size:12px;
+            color: #fff;
+            text-align: center;
+            border-radius: 3px;
+            margin-top: 10px;
+          }
+          .showPoupdetail{
+            position: absolute;
+            top: 0px;
+            left: 0;
+            z-index: 10;
+            background: rgba(0,0,0,0.7);
+            font-size: 14px;
+            color: #ff6600;
+            padding-top: 62px;
+            padding-left: 5px;
+          }
+        </style>
+        <script type="text/javascript">
+            $(function(){
+                $('.checkcostBtn').bind('click',function(){
+                  //alert('33');
+                     var fatherH = $(this).parents('.store_index_licont').height();
+                     $('.showPoupdetail').css('height',(fatherH-62));
+                     $('.showPoupdetail').show();
+                });
+                $('.showPoupdetail').bind('click',function(){
+                    $(this).hide();
+                })
+            })
+        </script>
+      <section class='store_index_list'>
+          <div class="store_index_licont ap">
+                <section class='cardType_wrp clearFix' id='cardType_wrp'>
+                    <section class='cardInfo'>
+                        <section class='cardInfoMain'><img src="/images/pro1_index.jpg" width="100"/></section>
+                        <section class='commentBox clearFix'>
+                            <span class="fl">47人已评价</span><span class="fr">内蒙古</span>
+                        </section>
+                        <div class=" stIndex_pro_wrp disBox_T_c">
+                           <h3 class="oh stIndex_proH">4G全国套餐一购四禧号送话费啦一全国套餐一购四禧号送话费啦一222</h3>
+                        </div>
+                        <div class='yucost col_f60'>
+                          <ul>
+                              <li style='width:70%'><div class='checkcostBtn'>查看预收益</div></li>
+                              <li style='width:30%;text-align:center;'>
+                                  <span class="fr colorBlue f14 modiProBtn ab" style='bottom:0px;right:0px;'>编辑</span>
+                              </li>
+                          </ul>
+                        </div>
+                    </section>
+                </section>
+                <div class='showPoupdetail dn'>
+                    <p>主卡（且为新用户）：首月套餐的50%</p>
+                    <div class='space-20'></div>
+                    <div class='space-20'></div>
+                    <div class='space-10'></div>
+                    <p>副卡：5沃点/个</p>
+                </div>
+            </div>
+        </section>
+      <section class='store_index_list'>
+          <div class="store_index_licont ap">
+                <section class='cardType_wrp clearFix' id='cardType_wrp'>
+                    <section class='cardInfo'>
+                        <section class='cardInfoMain'><img src="/images/pro1_index.jpg" width="100"/></section>
+                        <section class='commentBox clearFix'>
+                            <span class="fl">47人已评价</span><span class="fr">内蒙古</span>
+                        </section>
+                        <div class=" stIndex_pro_wrp disBox_T_c">
+                           <h3 class="oh stIndex_proH">4G全国套餐一购四禧号送话费啦一全国套餐一购四禧号送话费啦一333</h3>
+                        </div>
+                        <div class='yucost col_f60'>
+                          <ul>
+                              <li style='width:70%'><p class='ab newyuf'>预收益：<br><span>套餐月费的50%</span></p></li>
+                              <li style='width:30%;text-align:center;'>
+                                  <span class="fr colorBlue f14 modiProBtn ab" style='bottom:0px;right:0px;'>编辑</span>
+                              </li>
+                          </ul>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+      <section class='store_index_list'>
+          <div class="store_index_licont ap">
+                <section class='cardType_wrp clearFix' id='cardType_wrp'>
+                    <section class='cardInfo'>
+                        <section class='cardInfoMain'><img src="/images/pro1_index.jpg" width="100"/></section>
+                        <section class='commentBox clearFix'>
+                            <span class="fl">47人已评价</span><span class="fr">内蒙古</span>
+                        </section>
+                        <div class=" stIndex_pro_wrp disBox_T_c">
+                           <h3 class="oh stIndex_proH">4G全国套餐一购四禧号送话费啦一全国套餐一购四禧号送话费啦一444</h3>
+                        </div>
+                        <div class='yucost col_f60'>
+                          <ul>
+                              <li style='width:70%'><p class='ab newyuf'>预收益：<br><span>套餐月费的50%</span></p></li>
+                              <li style='width:30%;text-align:center;'>
+                                  <span class="fr colorBlue f14 modiProBtn ab" style='bottom:0px;right:0px;'>编辑</span>
+                              </li>
+                          </ul>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+      <section class='store_index_list'>
+          <div class="store_index_licont ap">
+                <section class='cardType_wrp clearFix' id='cardType_wrp'>
+                    <section class='cardInfo'>
+                        <section class='cardInfoMain'><img src="/images/pro1_index.jpg" width="100"/></section>
+                        <section class='commentBox clearFix'>
+                            <span class="fl">47人已评价</span><span class="fr">内蒙古</span>
+                        </section>
+                        <div class=" stIndex_pro_wrp disBox_T_c">
+                           <h3 class="oh stIndex_proH">4G全国套餐一购四禧号送话费啦一全国套餐一购四禧号送话费啦一555</h3>
+                        </div>
+                        <div class='yucost col_f60'>
+                          <ul>
+                              <li style='width:70%'><p class='ab newyuf'>预收益：<br><span>套餐月费的50%</span></p></li>
+                              <li style='width:30%;text-align:center;'>
+                                  <span class="fr colorBlue f14 modiProBtn ab" style='bottom:0px;right:0px;'>编辑</span>
+                              </li>
+                          </ul>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+      <section class='store_index_list'>
+          <div class="store_index_licont ap">
+                <section class='cardType_wrp clearFix' id='cardType_wrp'>
+                    <section class='cardInfo'>
+                        <section class='cardInfoMain'><img src="/images/pro1_index.jpg" width="100"/></section>
+                        <section class='commentBox clearFix'>
+                            <span class="fl">47人已评价</span><span class="fr">内蒙古</span>
+                        </section>
+                        <div class=" stIndex_pro_wrp disBox_T_c">
+                           <h3 class="oh stIndex_proH">4G全国套餐一购四禧号送话费啦一全国套餐一购四禧号送话费啦一666</h3>
+                        </div>
+                        <div class='yucost col_f60'>
+                          <ul>
+                              <li style='width:70%'><p class='ab newyuf'>预收益：<br><span>套餐月费的50%</span></p></li>
+                              <li style='width:30%;text-align:center;'>
+                                  <span class="fr colorBlue f14 modiProBtn ab" style='bottom:0px;right:0px;'>编辑</span>
+                              </li>
+                          </ul>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+    	<div class='noAD' style='display:none;'>
+          <img src="/images/womei_sad.png" width='75px' height='97px' />
+          <p style='color:#ccc;margin-top:10px;font-size:14px;'>没有找到广告哦~</p>
+      </div>
+  </section>
+</section>
+<div class="space-10"></div>
+<section class=" btn_money_box btn_fixed_box pad0_15 borderBox">
+          <section class="sec_btn sec_btn_fixed" style='height:48px;'>
+              <img src="../images/woyaoshop.png" width='140px' onclick="url('openStore.html')">
+          </section>
+</section>
+<section class='dragMore ab'>
+	<img src="/images/loading.png" width="25" class="loadingImg" />
+    <h3>玩命加载中...</h3>
+</section>
+<div class="space-10"></div>
+<!--回到顶部-->
+<section id="backToTop"></section>
+
+
+
+<!--#include virtual="/include/footer_noEnd.html"-->
+<!--#include virtual="/include/distrChg.html"-->
+<!--#include virtual="/include/woCircle.html"-->
+
+<!--更多弹出层 开始-->
+<section id='maskConfirm'> </section>
+<section class='confirmMain moreMain modiMain'>
+	<!--<a class="btn"></a>-->
+   <section class="sec_btn">
+      <input type="button" class="btn btn_more_top" value="置顶" />
+  </section>
+   <section class="sec_btn">
+      <input type="button" class="btn btn_more_up" value="上移" />
+  </section>
+   <section class="sec_btn">
+      <input type="button" class="btn btn_more_down" value="下移" />
+  </section>
+   <section class="sec_btn">
+      <input type="button" class="btn btn_more_l" value="左移" />
+  </section>
+   <section class="sec_btn">
+      <input type="button" class="btn btn_more_r" value="右移" />
+  </section>
+   <!--<section class="sec_btn">
+      <input type="button" class="btn btn_more_b" value="置底" />
+  </section>-->
+   <section class="sec_btn">
+      <input type="button" class="btn btn_more_del" value="删除" />
+  </section>
+   <section class="sec_btn">
+      <input type="button" class="btn btn_more_cancel last " value="返回" />
+  </section>
+</section>
+<!--更多弹出层 结束-->
+
+<!--推广店铺第一步-->
+<!--<section class="maskPop"></section>
+<section class='confirmMain' id="promotionPop1">
+	<p class="space-20"></p>
+	<div class="marB20 tc"><img src="/images/womei.jpg" width="81"></div>
+    <p class="promPoptext marB20">点击"继续"按钮，系统将为您生成可推广的店铺静态页，是否继续？</p>
+    <section class="sec_btn marB15">
+        <input type="button" class="btn" value="继 续">
+    </section>
+    <section class="sec_btn btn_addCard">
+        <input type="button" class="btn" value="取 消">
+    </section>
+</section>-->
+<!--新手指引蒙层 开始-->
+<section class='maskGuide1'></section>
+<div id="newGuide" class="mystoreGuide">
+  <ul class="scrollUl2 clearFix">
+    <li><img src="/images/storeGuide1.png"  width="320" class="mystGuide1" ></li>
+    <li><img src="/images/storeGuide2.png"  width="320" class="mystGuide2"></li>
+    <li><img src="/images/storeGuide3.png" width="320" class="mystGuide3"></li>
+  </ul> 
+  <div class="spanWrp_scroll"><span class="spanScroll"></span><span class="spanScroll"></span><span class="spanScroll"></span><span class="spanScroll"></span><span class="spanScroll"></span></div>
+  <div class="scrollBtnL scrollBtn ab"></div>
+  <div class="scrollBtnR scrollBtn ab"></div>
+  <div class="disTurbBtn disTurbBtn_myst  ab" ></div>
+</div>
+
+<!--新手指引蒙层 结束-->
+<script type="text/javascript">
+$(function(){
+  
+	$('#newGuide').imgSlide2();
+
+  $('.divDif_last').click(function(){
+      $('.deleteall').show();
+  });
+  $('.divDif_last').siblings('div').click(function(){
+      $('.deleteall').hide();
+  })
+  
+  $('.store_index_list').click(function(){
+    //alert('ll');
+      $(this).find('.deleteallchoiceimg').toggle();
+      
+   });
+
+
+$('.btndelteall').click(function(){
+          
+          
+          var ppp = $('#Listdelete').find('.store_index_list');
+          for(var j = 0;j < ppp.length;j++){
+                  var flagremove  = ppp.eq(j).find('.deleteallchoiceimg').css('display');
+                  if(flagremove == 'block'){
+                    ppp.eq(j).remove();
+                  }
+          }
+          var recore = $('#Listdelete').children('.store_index_list');
+          if(recore.length == 0){
+
+            $('.noAD').css('display','block');
+          }else{
+            $('.noAD').css('display','none');
+          }
+          $('.layermyshop').remove();
+          $('.deleteallradioimg').remove();
+          $('.deleteallchoiceimg').remove();
+          $('.choicebg').hide();
+
+  });
+$('.btn_more_del').click(function(){
+    var recore = $('#Listdelete').children('.store_index_list');
+          if(recore.length == 0){
+
+            $('.noAD').css('display','block');
+          }else{
+            $('.noAD').css('display','none');
+          }
+})
+
+  $('.radiobg').click(function(){
+      $('.choicebg').toggle();
+      var choodeleteall = $('.choicebg').css('display');
+      if(choodeleteall == 'block'){
+
+          var subListdelete = $('#Listdelete').children('.store_index_list ');
+          console.log('tt=='+subListdelete.length);
+          for(var i = 0; i < subListdelete.length; i++){
+              var createlayer = $('<div></div>');
+              var createradio = $('<div></div>');
+              var createV = $('<div></div>');
+              createradio.addClass('deleteallradioimg');
+              createV.addClass('deleteallchoiceimg');
+              createlayer.addClass('layermyshop');
+              //console.log('333t>>>>>>>'+subListdelete.eq(i).children('.subListdelete').html());
+              createradio.append(createV);
+              subListdelete.eq(i).children('.store_index_licont ').append(createlayer);
+              subListdelete.eq(i).children('.store_index_licont ').append(createradio);
+          }
+      }
+      else {
+        $('.layermyshop').remove();
+        $('.deleteallradioimg').remove();
+        $('.deleteallchoiceimg').remove();
+      }
+
+      
+  });
+});
+
+
+
+
+
+	
+	</script>
+    
+    <script>
+    $(function(){
+ $("#ysybut").hide();
+ 
+$("#ysytext").each(function(){
+var kboxw=$('#ysytext').width();
+var kboxbw=$('#ysytext p').width();
+
+    if(kboxw<kboxbw){
+        $("#ysybut").show();
+		 $("#ysytext").hide();
+    }else{
+		$("#ysybut").hide();
+		 $("#ysytext").show();
+	}
+
+}) 
+	}) 
+	
+    </script>
+ 
+</body>
+</html>

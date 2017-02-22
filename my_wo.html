@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+	<meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>我的沃联盟</title>
+	<link rel="stylesheet" type="text/css" href="css/my_wo.css" />
+	<link rel="stylesheet" type="text/css" href="css/banquan.css" />
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/zepto.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+        var _self =  this ;
+        _self.width = 640;
+        _self.fontSize = 100;
+        _self.widthProportion =  function (){ var p = (document.body&&document.body.clientWidth||document.getElementsByTagName("html")[0].offsetWidth)/_self.width;return p>1?1:p<0.5?0.5:p;};
+        _self.changePage =  function (){
+        document.getElementsByTagName("html")[0].setAttribute("style","font-size:"+_self.widthProportion()*_self.fontSize+"px !important");
+        }
+        _self.changePage();
+        window.addEventListener('resize', function (){_self.changePage();}, false );
+    </script>
+
+
+</head>
+<body>
+	<img class="ydmc" src="images/my_womengceng1.png" style="position: fixed;width: 6.4rem;left: 0px;top: 0px;z-index:999;"/>
+<div class="wrap_all">
+
+	<div class="header">
+
+		<div class="sz">
+
+        <img src="images/cilun.png" alt="" />
+
+		</div>
+
+    <div class="user_tit">
+      我的沃联盟
+    </div>
+
+		<div class="mes">
+
+			<img src="images/qipao2.png" class="lty" style="display:block;" alt="" />
+
+			<div class="ltxs qp1" style="display:none;">4</div>
+			<div class="ltxss qp" style="display:block;">9+</div>
+
+		</div>
+
+    <div class="user_mes">
+
+        <div class="user_pic">
+
+            <img src="images/nvhai1.png" alt="" />
+
+        </div>
+
+        <div class="user_mess">
+
+          <p>
+            <span class="user">会飞的猪</span><span class="dj">金牌会员</span>
+          </p>
+          <p>
+            <div class="djt">
+              <div class="djjd"></div>
+            </div>
+          </p>
+          <p>
+            <span>成长值:</span>
+            <span class="czz">1000</span>
+          </p>
+          <p>
+            <span>您还差</span>
+            <span class="q_czz" style="margin-left:-4px;margin-right:0;">1000</span>
+            <span style="margin-left:-3px;margin-right:0;">成长值升级到</span>
+            <span class="new_dj" style="margin-left:-3px;margin-right:0;">钻石会员</span>
+          </p>
+
+					</div>
+					<div class="erweimas">
+
+	          <div class="erweima">
+
+	              <img src="images/weishezhi.png" alt="" />
+
+	          </div>
+
+	          <div class="go">
+
+	              <img src="images/youjiantou.png" alt="" />
+
+	          </div>
+
+	        </div>
+
+
+
+
+    </div>
+
+	</div>
+
+	<div class="fenlei1">
+
+		<p>
+
+			<span class="fl tit1">我的财富</span>
+
+			<a href="caiFu.html" class="fr ck">查看详情>></a>
+
+		</p>
+
+		<ul>
+
+			<li class="fl li1">
+
+					<div class="wd_ye">1000.55</div>
+
+					<div>沃点余额</div>
+
+			</li>
+
+			<li class="fl li1">
+
+					<div class="wd_yg">1000.55</div>
+
+					<div>当前预估沃点</div>
+
+			</li>
+
+			<li class="fl li1">
+
+					<div class="wd_js">1000.55</div>
+
+					<div>累计结算沃点</div>
+
+			</li>
+
+		</ul>
+
+	</div>
+
+	<div class="fenlei1">
+
+		<p>
+
+			<span class="fl tit1">我的订单</span>
+
+			<a href="user_orders.html" class="fr ck">查看详情>></a>
+
+		</p>
+
+		<ul>
+
+			<li class="fl li2">
+
+					<div class="order_icon1"><img src="images/q1.png" alt="" /></div>
+
+					<div>待结算订单</div>
+
+					<div class="yj_num ad">9+</div>
+
+			</li>
+
+			<li class="fl li2">
+
+					<div class="order_icon1"><img src="images/q2.png" alt="" /></div>
+
+					<div>已结算订单</div>
+
+					<div class="yj_num">3</div>
+
+			</li>
+
+			<li class="fl li2">
+
+					<div class="order_icon1"><img src="images/q3.png" alt="" /></div>
+
+					<div>无效订单</div>
+
+			</li>
+
+			<li class="fl li2">
+
+					<div class="order_icon1"><img src="images/q4.png" alt="" /></div>
+
+					<div>预约订单</div>
+
+			</li>
+
+		</ul>
+
+	</div>
+
+	<div class="fenlei2">
+
+		<div id="main1">
+			<div class="box1 ani">
+				<ul>
+
+					<li class="fl li4 border1">
+						<div class="order_icon"><a href="http://www.baidu.com"><img src="images/e1.png" alt="" /></a></div>
+
+						<div><a href="http://www.baidu.com">我的银行卡</a></div>
+					</li>
+
+					<li class="fl li4 border1">
+						<div class="order_icon"><a href="###"><img src="images/e2.png" alt="" /></a></div>
+
+						<div><a href="###">我的店铺</a></div>
+					</li>
+					<li class="fl li4 border1">
+						<div class="order_icon"><a href="###"><img src="images/e3.png" alt="" /></a></div>
+
+						<div><a href="###">我的海报</a></div>
+					</li>
+					<li class="fl li4 border2">
+						<div class="order_icon"><a href="###"><img src="images/e4.png" alt="" /></a></div>
+
+						<div><a href="###">我的任务</a></div>
+					</li>
+					<li class="fl li4 border1">
+						<div class="order_icon"><a href="yuezhuanchujilu.html#a"><img src="images/e5.png" alt="" /></a></div>
+
+						<div><a href="yuezhuanchujilu.html#a"style="color:#333;text-decoration:none;">提现记录</a></div>
+					</li>
+					<li class="fl li4 border1">
+						<div class="order_icon"><a href="###"><img src="images/e6.png" alt="" /></a></div>
+
+						<div><a href="###">收货地址</a></div>
+					</li>
+					<li class="fl li4 border1">
+						<div class="order_icon"><a href="wodeshoucang.html"><img src="images/e7.png" alt="" /></a></div>
+
+						<div><a href="wodeshoucang.html"style="color:#333;text-decoration:none;">我的收藏</a></div>
+					</li>
+					<li class="fl li4 border2">
+						<div class="order_icon"><a href="###"><img src="images/e8.png" alt="" /></a></div>
+
+						<div><a href="###">领取记录</a></div>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="fl li4 border1">
+						<div class="order_icon"><a href="###"><img src="images/e9.png" alt="" /></a></div>
+
+						<div><a href="###">帮助中心</a></div>
+					</li>
+					<li class="fl li4 border1">
+						<div class="order_icon"><a href="###"><img src="images/e10.png" alt="" /></a></div>
+
+						<div><a href="###">新版吐槽</a></div>
+					</li>
+					<li class="fl li4 border1">
+						<div class="order_icon"><a href="###"><img src="images/e11.png" alt="" /></a></div>
+
+						<div><a href="###">求好评</a></div>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+		<div class="footer">
+			<ul>
+				<li class="li3 active"></li>
+				<li class="li3"></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="fenlei2" style="height:3.9rem;margin-bottom:0.3rem;">
+
+		<div class="fl tit2">为你推荐</div>
+
+		<div id="main2">
+
+			<div class="box2">
+				<ul>
+					<li class="fl li5 border3">
+						<div class="tj_pic"><img src="images/shoujitu1.jpg" alt="" /></div>
+
+						<p class="tit3">小米Note</p>
+
+						<p>赚<span class="z_wd">200</span>沃点</p>
+
+					</li>
+					<li class="fl li5 border3">
+						<div class="tj_pic"><img src="images/shoujitu2.jpg" alt="" /></div>
+
+						<p class="tit3">华为荣耀5X</p>
+
+						<p>赚<span class="z_wd">200</span>沃点</p>
+
+					</li>
+					<li class="fl li5 border4">
+						<div class="tj_pic"><img src="images/shoujitu.jpg" alt="" /></div>
+
+						<p class="tit3">iphone 6s</p>
+
+						<p>赚<span class="z_wd">200</span>沃点</p>
+
+					</li>
+
+				</ul>
+
+				<ul>
+					<li class="fl li5 border3">
+						<div class="tj_pic"><img src="images/shoujitu.jpg" alt="" /></div>
+
+						<p class="tit3">iphone 6s</p>
+
+						<p>赚<span class="z_wd">200</span>沃点</p>
+					</li>
+					<li class="fl li5 border3">
+						<div class="tj_pic"><img src="images/shoujitu.jpg" alt="" /></div>
+
+						<p class="tit3">iphone 6s</p>
+
+						<p>赚<span class="z_wd">200</span>沃点</p>
+					</li>
+					<li class="fl li5 border4">
+						<div class="tj_pic"><img src="images/shoujitu.png" alt="" /></div>
+
+						<p class="tit3">iphone 6s</p>
+
+						<p>赚<span class="z_wd">200</span>沃点</p>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+		<div class="footer2">
+			<ul>
+				<li class="li3 active"></li>
+				<li class="li3"></li>
+			</ul>
+		</div>
+
+	</div>
+
+ <!--#include virtual="/wolianm2/include/footer_lll.html"-->
+
+ <div class="foot_banquan2 banquan">
+	 <!--#include virtual="/wolianm2/include/banquan.html"-->
+ </div>
+
+
+</div>
+
+<script>
+            window.onload = function(){  //页面加载的时候改变当前的footer的图片及样式
+                $('#footers').find('li').eq(4).find("p").addClass("orangeColor_lll");
+                $('#footers').find('li').eq(4).find("img").attr("src","images/iconFocus4.png");
+								$(window).scrollTop(0);
+								$("body").bind("touchmove",function(e){
+									e.preventDefault();
+								});
+            }
+        </script>
+
+<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+
+<script type="text/javascript">
+
+
+	$(function(){
+
+		// var flag1 = 0;
+		// var flag2 = 0;
+		// var tmpWidth = 50;
+		// //添加滑动事件
+		// $('#main1').on('swipeLeft', function(){
+		// 	if(flag1<1){//控制到第二个界面就不再往左滑动
+		// 		flag1++;
+		// 		var offset =( flag1) * tmpWidth;
+		// 		var offset1 =( flag1) * tmpWidth*2;
+		// 	  // $('.box1').css('transform', 'translateX(-'+offset+'%)');
+		// 		$(".box1").animate({"margin-left":'-'+offset1+'%'},1000);
+		// 		$('.footer li').removeClass('active');
+		// 		$('.footer li').eq(flag1).addClass('active');
+		// 	}
+		// })
+		//
+		// $('#main1').on('swipeRight', function(){
+		// 	if(flag1>0){//控制到了第一个界面就不再往右滑动
+		// 		flag1--;
+		// 		var offset = flag1 * tmpWidth;
+		// 		var offset1 =( flag1) * tmpWidth*2;
+		// 		// $(".box1").css('transform', 'translateX(-'+offset+'%)');
+		// 		$(".box1").animate({"margin-left":'-'+offset1+'%'},1000);
+		// 		$('.footer li').removeClass('active').eq(flag1).addClass('active');
+		// 	}
+		// })
+		// $('#main2').on('swipeLeft', function(){
+		// 	if(flag2<1){//控制到第二个界面就不再往左滑动
+		// 		flag2++;
+		// 		var offset =( flag2) * tmpWidth;
+		// 		$('.box2').css('transform', 'translate(-'+offset+'%, 0)');
+		// 		$('.footer2 li').removeClass('active');
+		// 		$('.footer2 li').eq(flag2).addClass('active');
+		// 	}
+		// })
+		//
+		// $('#main2').on('swipeRight', function(){
+		// 	if(flag2>0){//控制到了第一个界面就不再往右滑动
+		// 		flag2--;
+		// 		var offset = flag2 * tmpWidth;
+		// 		$(".box2").css('transform', 'translate(-'+offset+'%, 0)');
+		// 		$('.footer2 li').removeClass('active').eq(flag2).addClass('active');
+		// 	}
+		// })
+
+		$(".erweimas").click(function(){
+			window.location.href="secPhase/new_renzheng/PersonalInfo.html";
+		})
+
+		$(".ydmc").click(function(){
+			$(this).hide();
+			$("body").unbind("touchmove");
+		})
+
+
+
+
+// 侧滑
+
+
+						// $(".main_visual").hover(function() {
+            //     $("#btn_prev,#btn_next").fadeIn()
+            // }, function() {
+            //     $("#btn_prev,#btn_next").fadeOut()
+            // });
+            // $dragBln = false;
+            $("#main1").touchSlider({
+                flexible: true,
+                speed: 200,
+                // btn_prev: $("#btn_prev"),
+                // btn_next: $("#btn_next"),
+                paging: $(".box1"),
+                counter: function(e) {
+                    $(".box1").removeClass("on").eq(e.current - 1).addClass("on");
+                }
+            });
+            // $(".box1").bind("mousedown", function() {
+            //     $dragBln = false;
+            // });
+            // $(".box1").bind("dragstart", function() {
+            //     $dragBln = true;
+            // });
+            // $(".box1 a").click(function() {
+            //     if ($dragBln) {
+            //         return false;
+            //     }
+            // });
+            // timer = setInterval(function() {
+            //     $("#btn_next").click();
+            // }, 2000);
+            // $(".main_visual").hover(function() {
+            //     clearInterval(timer);
+            // }, function() {
+            //     timer = setInterval(function() {
+            //         $("#btn_next").click();
+            //     }, 2000);
+            // });
+            // $(".box1").bind("touchstart", function() {
+            //     clearInterval(timer);
+            // }).bind("touchend", function() {
+            //     timer = setInterval(function() {
+            //         $("#btn_next").click();
+            //     }, 2000);
+            // });
+
+
+						$(".li4").click(function(){
+								var src=$(this).children().find("a").attr("href");
+								window.location.href=""+src+"";
+						})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	})
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="css/css.css" />	
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js" ></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+	</head>
+ 		<script>
+ 			function saveSuccess1(){
+ 					$('.tips.xieyi').hide();
+					//$('.saveSuccess').show();
+ 				$('.tips.jixu').show();
+ 			}
+ 			
+ 		</script>
+	<body>
+		<section class="mengceng"></section>
+		
+		
+		<!------弹框--------->
+		<div class="tips jixu" style="position:fixed">
+			<p class="f14">提交成功！</p>
+			<p class="f12">是否继续完善安全信息？</p>
+			<p class="btns"><span onclick="closed()">稍后再说</span><span onclick="window.location.href='partOne1.html'">现在去完善</span></p>
+		</div>
+		
+		<!------弹框--------->
+		<div class="tips xieyi">
+			<p class="f14 xieyi-title">沃联盟会员使用协议</p>			
+			<p align="left" class="xieyi-content" style="font-size: 12px;">甲方：<span>中国联合网络通信有限公司</span><br>
+			乙方：<span>王明</span><br>
+			乙方身份证号：<span>173839876543287653</span><br>
+			鉴于：<br>
+			甲方是依照中华人民共和国法律设立有合法经营国家授权的电
+			信业务的公司，乙方已经是沃联盟的成员。<br>
+			甲、乙双方（以下简称“双方”）同意依照中国法律法规之相
+			关规定及电信行业管理规定，就乙方通过甲方进行用户注册、
+			信息变更、广告领取、邀请好友、发起提现、业务查询等甲方
+			提供的服务的相关事宜，达成以下协议条款。<br>
+			第一章 基本定义<br>
+			除非本协议条款中有单独定义，或甲乙双方有其他书面解释，
+			本协议对所有相关用语的定义如下：<br>
+			1.1用户：是指由乙方发展并入网甲方经营的通信业务的消费者。<br>
+			1.2注册：指乙方访问甲方时，按要求填写相关信息并确认同意
+			履行本协议的过程。<br>
+			1.3会员信息：指乙方注册信息以及乙方使用甲方会员服务时提
+			交的、被甲方所知悉的账号信息、账户信息以及其他交易信息。<br>
+			1.4沃点：指乙方在沃联盟平台获取的奖励单位。沃点包括预期
+			沃点和可提现沃点。<br>
+			1.5预期沃点：指根据乙方所推广的商品广告被用户购买并成功
+			下单后计算而来的可能获取的沃点。预期沃点不可发起提现。
+			1.6可提现沃点：指乙方可以发起提现申请的沃点。<br>
+			1.7预期沃点计算规则：指甲方制定的，当甲方获取到乙方发展
+			的订单后，可以为乙方计算预期沃点所遵循的规则。</p>
+			<p class="btns"><span onclick="closed()">取 消</span><span onclick="saveSuccess1()">确认，并提交</span></p>
+		</div>
+		<Div class="saveSuccess">
+			<img src="img/saveSuccess.png">
+		</Div>
+		<section class="eidtmain">
+			 <header class="personalinfo">个人资料
+			  <span class="save">保存</span>
+			 </header>
+			 
+			 <section class="eidtList">
+			 	<ul>
+			 		<li>
+			 			<span class="eidtListLeft">头像</span>
+			 			<span class="eidtListRight"><img src="img/portrait.png"></span>
+			 		</li>
+			 		<li>
+			 			<span class="eidtListLeft">昵称</span>
+			 			<span class="eidtListRight"><input placeholder="10个字以内，不能以数字或下划线开头" class="nickname"></span>
+			 		</li>
+			 		<li>
+			 			<span class="eidtListLeft">真实姓名</span>
+			 			<span class="eidtListRight">张三三</span>
+			 		</li>
+			 		<li>
+			 			<span class="eidtListLeft">身份证号</span>
+			 			<span class="eidtListRight"><input placeholder="请输入身份证号" class="number" ></span>
+			 		</li>
+			 		<li>
+			 			<span class="eidtListLeft">省份地市</span>
+			 			<span class="eidtListRight">北京 北京市</span>
+			 		</li>
+			 		
+			 		<li>
+			 			 
+			 			<span class="eidtListRight" style="color: blue; width: 100%;"><input type="checkbox" checked="checked">同意《沃联盟会员使用协议》</span>
+			 		</li>
+			 		
+			 	</ul>
+			 </section>
+		</section>
+	</body>
+</html>

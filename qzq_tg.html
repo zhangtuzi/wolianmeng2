@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>去赚钱推广页</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/two_lll.css">
+    <script type="text/javascript" src='js/top.js'></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <style media="screen">
+      .buy_btn{
+        position: fixed;
+        bottom:0;
+        width:100%;
+        height:0.9rem;
+        line-height:0.9rem;
+        font-size: 0.4rem;
+        border:1px solid red;
+        background:#fc5f01;
+        color:#fff;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+
+    <div id="contaner_detail_lll" class="contaner_lll">
+        <!--#include virtual="/wolianm2/include/headerinfo4.html"-->
+        <div class="img_con_lll">
+            <div class="blocks_lll block1_lll">
+                <a href="#"></a>
+            </div>
+            <div class="blocks_lll block2_lll">
+                <a href="#"></a>
+            </div>
+            <div class="blocks_lll block3_lll">
+                <a href="#"></a>
+            </div>
+            <img src="images/detail_lll.png" class="detail_lll" style="height:12rem;">
+        </div>
+        <div class="buy_btn">立即购买</div>
+    </div>
+    <div class="mengceng_share_lll">
+        <img src="images/mengceng_lll.png" class="share_img_lll">
+    </div>
+<script>
+    window.onload=function(){
+        $(".title_lll").html("46元套餐A/B/C");
+    };
+    $("#tuiuang_lll").bind("click",function(){
+        $(".mengceng_share_lll").fadeIn(100,function(){
+            $("body").bind("touchstart",function(){
+                $(".mengceng_share_lll").fadeOut();
+            })
+        });
+
+    });
+    $(".foo2_lll").bind("click",function(){
+        $(this).toggleClass("on");
+        if($(this).hasClass("on")){
+            $(".foobg3_lll").attr("src","images/collect_focus_lll.png");
+            $(".collect_p_lll").addClass("orangeColor");
+        }
+        else{
+            $(".foobg3_lll").attr("src","images/collect_lll.png");
+            $(".collect_p_lll").removeClass("orangeColor");
+        }
+
+    })
+
+
+
+
+</script>
+</body>
+</html>

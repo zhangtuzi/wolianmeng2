@@ -1,0 +1,174 @@
+	*{ margin: 0;padding: 0;}
+	  s,i,em,del{font-style: normal;}
+	.f12{font-size: 12px;}
+	.f14{font-size: 14px;}
+	.col-red{ color: #fd0000;}
+ 	.colff6600{color: #ff6600;}
+	body{background: #fff; font-family: "微软雅黑";}
+	a{color: #fff; text-decoration: none;}
+	button a{color :white;display: block;}
+	p{overflow: hidden;}
+	.space-10{display: block;height: 10px;}
+	.space-20{display: block;height: 20px;}
+	.space-30{display: block;height: 30px;}
+	.clear{clear:both}
+	ul li{list-style: none;}
+		.main{
+			width: 100%;
+			min-width: 320px;
+			overflow: hidden;
+			    padding-top: 30px;
+		}.eidtmain{
+			width: 100%;
+			min-width: 320px;
+			overflow: hidden;
+		}
+		section.settingList ul li{
+
+			border-bottom: 1px solid #ccc;
+			background: url(../img/href.png) no-repeat right center;
+			padding: 10px;
+		}
+		section.settingList   li span.title-left{float: left;font-weight: bold; color: black;}
+		section.settingList   li span.title-left i{color:red; font-size: 12px;}
+		section.settingList   li span.title-right{color:#888888;float: right; margin-right: 30px;}
+		section.settingList   li p{ line-height: 24px;}
+		section.settingList   li p.description{color:#888888 ; margin-left: 10px;line-height:normal; width: 90%;}
+		.partOne-content,.partTwo-content{ padding: 10px;}
+		.partTwo-content p{font-size: 14px;color: #ababab;}
+		.tel{ margin-top: 20px;}
+		.yzm{margin: 20px auto;}
+		.tel input{
+			    height: 45px;
+			        width: 96%;
+			    border: 1px solid #cacaca;
+			    color: #b0b0b0;
+			    font-size: 14px;
+			    padding-left: 10px;
+			    outline: none;border-radius: 5px;
+		}
+		.yzm input{
+			border-radius: 5px;
+			 border: 1px solid #cacaca;
+			    color: #b0b0b0;
+			    font-size: 14px;
+			     height: 45px;
+			    width: 50%; padding-left: 10px;float: left; margin-bottom: 20px;line-height: 32px;}
+		.yzm button{float: right; width: 42%;color: #FFFFFF;    height: 45px; font-size: 14px; background: #ff6600;border-radius: 5px; border: none;}
+
+.TheNext button{color: #FFFFFF;height: 45px; margin-top: 20px;font-size:14px;background: #ff6600;border-radius: 5px; border: none;width: 100%;}
+.partOneOver{ text-align: center; margin: 20px auto;}.partOneOver p{ color: #000000; margin-top: 20px;}
+.mengceng {
+    background: #000;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    display: none;
+}
+
+.cityfk{
+	position: absolute;
+	top:15rem;
+	left:15%;
+	width:70%;
+	padding:10px;
+	text-align: center;
+	line-height: 2rem;
+	color:#bbb;
+	font-size: 12px;
+	z-index: 100;
+	background: #fff;
+	opacity: 0.9;
+	border-radius: 5px;
+	display: none;
+}
+
+.ts{
+	font-size:14px;
+	color:#000;
+	font-weight: bold;
+}
+.qd{
+	font-size:14px;
+	color:#fc5f01;
+	padding-top:10px;
+}
+/****************弹框*************/
+
+	.tips{
+		display: none;
+		width: 70%;
+   		height: 150px;
+	    margin: 0px auto;
+	    text-align: center;
+	    position: fixed;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -35%;
+	    margin-top: -75px;
+	    background: #ffffff;
+	    z-index: 9999999;
+	    border-radius: 5px;
+	    opacity: 0.9;
+				}
+	 .saveSuccess{
+		display: none;
+		width: 200px;
+	    height: 200px;
+	    margin: 0px auto;
+	    text-align: center;
+	    position: fixed;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -100px;
+	    margin-top: -100px;
+	    z-index: 9999999;
+	    border-radius: 5px;
+	    opacity: 0.9;
+	    }.saveSuccess img{ width: 100%;}
+		 .btns{ position: absolute; bottom: 0; width: 100%; border-top: 1px solid #c7c7c5;color: #888888;}
+		 .btns span{width: 49%;text-align: center; margin: 0px auto; display: inline-block; line-height: 40px;}
+		  .btns span:first-child{ border-right: 1px solid #c7c7c5;}
+		  .btns span:last-child{ color: #ff6600;}  .tips p{text-indent: 0; padding:0;color:black}
+		  .tips p:not(.btns){ padding: 10px;}
+.tips.xieyi{
+	width: 90%;
+	height: 450px;
+	margin-left: -45%;margin-top: -225px;overflow: hidden;
+}
+.tips p.xieyi-content{overflow-y: scroll;
+    margin-bottom: 25px;
+    height: 327px;    color: #959594;    padding: 10px 15px;}
+ .tips p.xieyi-content >span{color: black; }
+.xieyi-title{ border-bottom: 1px solid #c7c7c5; font-weight: bold; font-size: 16px;}
+.tips.xieyi .btns span{color: #fff;width: 50%;}
+ .tips.xieyi .btns span:first-child{ background: #c7c7c5; border: none; }
+ .tips.xieyi .btns span:last-child{ background: #ff6e1d;}
+/****************个人信息*************/
+header.personalinfo{background:#fc5f01;color:#fff;padding: 0.15rem 0 0.2rem 0;height:2.908rem;text-align: center;font-size:1.2rem;line-height: 3.15rem;box-sizing: content-box;background-position: 15px; position: relative;}
+header.personalinfo .save,header.personalinfo .edit{ position: absolute;right: 10px;}
+.eidtList{ padding: 10px; padding-top: 0px;}
+.eidtList li{clear:both;line-height: 50px; border-bottom: 1px solid #d5d5d8;}
+.eidtList li:first-child{    line-height: 70px;}
+.eidtList .eidtListLeft{ float: left; width: 50%;font-weight: bold;}
+.eidtList .eidtListRight{ float: right; width: 49%; text-align: right;font-size:14px;}
+.eidtList .eidtListRight>img{
+	border-radius: 50%;
+    width: 60px;
+    vertical-align: middle;
+    float: right;
+    margin: 5px;}
+
+.eidtList .eidtListRight>input.nickname{width: 100%; height: 30px; border:none;outline: none;font-size: 14px; text-align: right;}
+.eidtList .eidtListRight>input.number{width: 80%; height: 30px; border:none;outline: none;font-size: 14px;text-align: right;}
+
+.userPhoto img{vertical-align: middle; margin-right: 10px;}
+.erweima{ text-align: center; margin-top: 30px;}.erweima img{ width: 80%;}
+.save-erweima{line-height:28px;width: 80%; font-size: 14px; margin: 20px auto; color: #777;}
+
+@media only screen and (max-width:370px) {
+	.save-erweima{line-height:28px;width: 80%; font-size: 12px; margin: 20px auto;}
+}
+.k_kuandu{width:50%;}

@@ -1,0 +1,115 @@
+.message_ul{
+  margin:0 0.2rem 1rem;
+}
+.mess_time{
+  margin-top:0.1rem;
+  width:100%;
+  height:0.7rem;
+  line-height: 0.7rem;
+  font-size:0.2rem;
+  color:#a2a2a2;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.mess_content{
+  padding:0.2rem 0.1rem 0;
+  background:#fff;
+  letter-spacing:1px;
+}
+.mess_cont_tit{
+  font-size: 0.24rem;
+  color:#333333;
+}
+.mess_cont_xq{
+  font-size: 0.22rem;
+  color:#878787;
+  line-height:0.3rem;
+  margin-top:0.2rem;
+  word-break: break-all;
+}
+
+.danhang_shenglue{
+  height: 0.4rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.lianghang_shenglue{
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+}
+
+/*以下为活动类列表页面样式*/
+.mess_pic{
+  width:100%;
+  height:auto;
+  margin:0.2rem auto;
+}
+.mess_ckxq{
+  height:0.6rem;
+  font-size: 0.2rem;
+  color:#a2a2a2;
+  line-height: 0.6rem;
+  border-top:1px solid #ecebeb;
+  margin-top:0.2rem;
+}
+.mess_ckxq_img{
+  width:0.15rem;
+  height:0.15rem;
+  margin-top:0.22rem;
+}
+.ui-loader{
+  display: none;
+}
+
+/*消息详情页面*/
+
+.xq_warp_All_xxzx2{
+  position: relative;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+  font-family: "微软雅黑";
+}
+
+.xq_message_ul{
+  margin:0.2rem 0.2rem 1rem;
+}
+.xq_mess_cont_tit{
+  margin:0.1rem auto;
+  font-size: 0.24rem;
+  color:#333333;
+  padding-left:0.1rem;
+}
+.xq_mess_us{
+  margin:0.3rem auto;
+  font-size:0.18rem;
+  color:#878787;
+  line-height: 0.22rem;
+  height:0.35rem;
+  padding-left:0.1rem;
+  border-bottom:1px solid #ededed;
+}
+.xq_mess_xq_time{
+  font-size:0.18rem;
+  color:#a2a2a2;
+  letter-spacing:1px;
+}
+.xq_mess_pic{
+  width:100%;
+  height:auto;
+  margin:0.2rem auto;
+}
+.xq_mess_wz{
+  font-size: 0.22rem;
+  color:#a2a2a2;
+  letter-spacing:1px;
+  padding-left:0.1rem;
+}
+.t_s_style{
+  color:#406cec;
+  text-decoration: underline;
+}

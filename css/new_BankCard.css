@@ -1,0 +1,89 @@
+.znr_div{
+  width:100%;
+  text-align: center;
+}
+
+/*没有银行卡页面样式*/
+.hs_hr{
+  width:100%;
+  height:1px;
+  background:#d5d5d5;
+  margin-top:2rem;
+}
+.yhk_icon_div{
+  width:1.85rem;
+  margin:-0.9rem auto;
+  background:#fff;
+
+}
+.yhk_icon_div img{
+  width:100%;
+}
+.yhk_txt{
+  font-size:0.26rem;
+  color:#666;
+  margin-top:0.08rem;
+}
+.marT12{
+  margin-top:1.2rem;
+}
+.marB_04{
+  margin-bottom:0.4rem;
+}
+.zfb_cft_icon2{
+  width:1rem;
+  margin:0.5rem auto 0;
+}
+
+/*有银行卡页面样式*/
+.zffs_ul{
+  width:100%;
+  height:0.82rem;
+  border-bottom:1px solid #ccc;
+}
+.zffs_ul li{
+  float:left;
+  width:33.33%;
+  text-align: center;
+}
+.zffs_ul li div{
+  width:1.5rem;
+  margin:0 auto;
+  font-size:0.23rem;
+  color:#333;
+  text-align: center;
+  line-height: 0.8rem;
+}
+.zffs_select{
+  border-bottom: 3px solid #fc5f01;
+}
+.hs_div1{
+  width:100%;
+  height:0.25rem;
+  background: #f2f2f2;
+}
+.count_ul{
+  width:100%;
+}
+.count_ul li{
+  height:0.6rem;
+  padding:0.3rem;
+  border-bottom:1px solid #ccc;
+}
+.count_img{
+  float:left;
+  width:0.6rem;
+  height:0.6rem;
+  margin-right:0.3rem;
+}
+.count_mes_div{
+  float:left;
+  line-height: 0.3rem;
+  font-size:0.22rem;
+  color: #a2a2a2;
+}
+/*填写支付信息页面*/
+.txxx_header{
+  width:100%;
+  height:0.8rem;
+}

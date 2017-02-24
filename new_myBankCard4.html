@@ -18,38 +18,27 @@
 			margin: 0 auto;
 			min-width: 320px;
 			max-width: 640px;
-			background: #fff;
-			overflow: auto;
+			overflow:auto;
 		}
 		</style>
 	</head>
 
-	<body style="background:#fff;">
+	<body style="background: #f2f2f2;">
 		<div class="wrap_all">
-    		<!--#include virtual="/wolianm2/include/headerinfo13.html"-->
-				<div class="znr_div">
-					<div class="hs_hr"></div>
-					<div class="yhk_icon_div">
-						<img src="images/new_images0222/yhk_icon.png" class="yhk_icon" alt="">
-					</div>
-					<p class="yhk_txt marT12">目前还没添加银行卡</p>
-					<p class="yhk_txt marB_04">（银行卡只支持储蓄卡）</p>
+    		<!--#include virtual="/wolianm2/include/headerinfo11.html"-->
 
-					<div class="">
-						<img src="images/new_images0222/zhifubao_icon2.png" class="zfb_cft_icon2"  alt="">
-					</div>
-					<div class="">
-						<img src="images/new_images0222/caifutong_icon2.png" class="zfb_cft_icon2"  alt="">
-					</div>
-
+				<div class="result_div">
+					<img src="images/success_icon.png" class="result_pic" alt="">
+					<p>您的<span class="zffs_xz">财付通</span>账号已添加成功！</p>
 				</div>
 
-
+				<div class="result_btn" onclick="window.location.href='new_myBankCard2.html';">完成</div>
 		</div>
 		<script type="text/javascript">
 		  window.onload = function(){
-		    $('.title_lll').text('我的银行卡');
+		    $('.title_lll').text('填写财付通信息');
 		  }
+
 			$(function(){
 				var win_height=$(window).height();
 				$('.wrap_all').height(win_height);

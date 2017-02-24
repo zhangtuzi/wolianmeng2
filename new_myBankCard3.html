@@ -18,32 +18,80 @@
 			margin: 0 auto;
 			min-width: 320px;
 			max-width: 640px;
-			background: #fff;
+			overflow: auto;
 		}
 		</style>
 	</head>
 
-	<body style="background:#fff;">
+	<body style="background: #f2f2f2;">
 		<div class="wrap_all">
     		<!--#include virtual="/wolianm2/include/headerinfo11.html"-->
 
 				<div class="txxx_header">
 					<img src="images/new_images0222/caifutong_icon.png" class="zffs_icon" alt="">
+					<span class="zffs_qd zffs_xz">财付通</span>
 				</div>
 				<div class="hs_div1"></div>
-
+				<ul class="txxx_ul">
+					<li>
+						<span><span class="zffs_xz">财付通</span>账号</span>
+						<input type="text" name="zffs_count" class="txxx_input zffs_count" value="会飞的猪">
+					</li>
+					<li>
+						<span>姓名</span>
+						<input type="text" name="person_name" class="txxx_input person_name" value="张琳琳">
+					</li>
+					<li>
+						<span>手机号</span>
+						<input type="text" name="zffs_name" class="txxx_input phone_num" placeholder="财付通账号绑定的手机号">
+					</li>
+				</ul>
+				<div class="tip_div">
+					<img src="images/tip_icon.png" alt="">
+					<p>请确保您的<span class="zffs_xz">财付通</span>账号准确无误，否则会导致提现失败！</p>
+				</div>
+				<div class="next_btn">下一步</div>
 		</div>
+		<!-- 填充空间div -->
+		<div class="space0" style="width:100%;"></div>
 		<script type="text/javascript">
 		  window.onload = function(){
 		    $('.title_lll').text('填写财付通信息');
 		  }
 
+
+
 			$(function(){
+				var win_height=$(window).height();
+				$('.wrap_all').height(win_height);
 				// 支付方式切换
 				$('.zffs_ul li').click(function(){
 					$('.zffs_ul li div').removeClass('zffs_select');
 					$(this).children().addClass('zffs_select');
 				})
+
+				$('.txxx_input').keyup(function(){
+					var input_num=0;
+					$('.txxx_input').each(function(){
+
+						if($(this).val()==""){
+							$('.next_btn').removeClass('btn_active');
+							input_num--;
+						}else{
+							input_num++;
+						}
+					})
+					if(input_num==$('.txxx_input').length){
+						$('.next_btn').addClass('btn_active');
+					}
+				})
+
+				$('.next_btn').click(function(){
+					if($(this).hasClass('btn_active')){
+						window.location.href='new_myBankCard4.html';
+					}
+				})
+
 			})
 
 

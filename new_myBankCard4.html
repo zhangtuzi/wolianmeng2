@@ -7,7 +7,7 @@
 		<meta http-equiv="Pragma" content="no-cache" />
 		<meta http-equiv="Cache-Control" content="no-cache">
 		<meta http-equiv="Expires" content="0">
-		<title>我的银行卡</title>
+		<title>添加结果</title>
 		<link rel="stylesheet" type="text/css" href="css/new_BankCard.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
@@ -32,16 +32,29 @@
 					<p>您的<span class="zffs_xz">财付通</span>账号已添加成功！</p>
 				</div>
 
+				<div class="result_div false_div dn">
+					<img src="images/new_tx_fail.png" class="result_pic" alt="">
+					<p>您的<span class="zffs_xz">财付通</span>账号已添加失败！</p>
+				</div>
 				<div class="result_btn" onclick="window.location.href='new_myBankCard2.html';">完成</div>
+				<ul class="result_select" style="font-size:0.3rem;position:absolute;bottom:1.2rem;
+				left:0.3rem;line-height0.5rem;">
+					<li>成功结果</li>
+					<li>失败结果</li>
+				</ul>
 		</div>
 		<script type="text/javascript">
 		  window.onload = function(){
-		    $('.title_lll').text('填写财付通信息');
+		    $('.title_lll').text('添加结果');
 		  }
 
 			$(function(){
 				var win_height=$(window).height();
 				$('.wrap_all').height(win_height);
+
+				$('.result_select li').click(function(){
+					$('.result_div').addClass('dn').eq($(this).index()).removeClass('dn');
+				})
 			})
 
 

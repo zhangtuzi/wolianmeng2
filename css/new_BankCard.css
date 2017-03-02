@@ -11,7 +11,7 @@
   width:5rem;
   margin:0 auto;
   height:1px;
-  background:#d5d5d5;
+  background:#f2f2f2;
   margin-top:2rem;
 }
 .zffs_select_ul{
@@ -29,7 +29,7 @@
   margin:0.5rem auto 0;
 }
 .yhk_txt{
-  font-size:0.26rem;
+  font-size:0.22rem;
   color:#666;
   margin-top:0.08rem;
 }
@@ -135,6 +135,7 @@
   text-align: right;
   width:3.5rem;
   outline:none;
+  font-size:0.24rem;
 }
 .tip_div{
   height:0.4rem;

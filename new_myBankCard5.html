@@ -43,12 +43,14 @@
 				<ul class="zffs_select_ul">
 					<li>
 						<ul class="count_ul">
-							<li>
+							<li class="jb_li">
 								<img src="images/ms_bank_icon.jpg" class="count_img" alt="银行图标">
 								<div class="count_mes_div">
 									<p class="yh_name">民生银行</p>
 									<p class="count_name">尾号5432储蓄卡</p>
-									<img src="images/go_lll.png" class="ckxq_icon" alt="查看详情">
+									<p class="cardJiebang_p bzctx_color">该银行卡不支持提现</p>
+									<img src="images/choosed.png" class="choosed_icon" alt="默认选中银行卡">
+									<a href="###" class="qjb_a fr">去解绑</a>
 								</div>
 
 							</li>
@@ -57,10 +59,7 @@
 								<div class="count_mes_div">
 									<p class="yh_name">民生银行</p>
 									<p class="count_name">尾号5432储蓄卡</p>
-									<img src="images/go_lll.png" class="ckxq_icon" alt="查看详情">
-									<span class="fr zbzctx">暂不支持提现</span>
 								</div>
-
 							</li>
 						</ul>
 					</li>
@@ -116,6 +115,13 @@
 					$('.zffs_ul li div').removeClass('zffs_select');
 					$(this).children().addClass('zffs_select');
 					$('.zffs_select_ul>li').addClass('dn').eq($(this).index()).removeClass('dn');
+					// if($(this).index()=='0'){
+					// 	$('.title_lll').text('我的银行卡');
+					// }else if($(this).index()=='1'){
+					// 	$('.title_lll').text('我的支付宝');
+					// }else{
+					// 	$('.title_lll').text('我的财付通');
+					// }
 				})
 			})
 

@@ -7,7 +7,7 @@
 		<meta http-equiv="Pragma" content="no-cache" />
 		<meta http-equiv="Cache-Control" content="no-cache">
 		<meta http-equiv="Expires" content="0">
-		<title>我的银行卡</title>
+		<title>我的收款账号</title>
 		<link rel="stylesheet" type="text/css" href="css/new_BankCard.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
@@ -67,7 +67,7 @@
 		</div>
 		<script type="text/javascript">
 		  window.onload = function(){
-		    $('.title_lll').text('我的银行卡');
+		    $('.title_lll').text('我的收款账号');
 		  }
 
 			$(function(){
@@ -78,13 +78,6 @@
 					$('.zffs_ul li div').removeClass('zffs_select');
 					$(this).children().addClass('zffs_select');
 					$('.zffs_select_ul>li').addClass('dn').eq($(this).index()).removeClass('dn');
-					if($(this).index()=='0'){
-						$('.title_lll').text('我的银行卡');
-					}else if($(this).index()=='1'){
-						$('.title_lll').text('我的支付宝');
-					}else{
-						$('.title_lll').text('我的财付通');
-					}
 				})
 			})
 

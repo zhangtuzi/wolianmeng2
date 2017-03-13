@@ -43,14 +43,18 @@
 				<ul class="zffs_select_ul">
 					<li>
 						<ul class="count_ul">
-							<li class="jb_li">
+							<li>
 								<img src="images/ms_bank_icon.jpg" class="count_img" alt="银行图标">
 								<div class="count_mes_div">
 									<p class="yh_name">民生银行</p>
 									<p class="count_name">尾号5432储蓄卡</p>
-									<p class="cardJiebang_p bzctx_color">该银行卡不支持提现</p>
+
 									<img src="images/choosed.png" class="choosed_icon" alt="默认选中银行卡">
-									<a href="###" class="qjb_a fr">去解绑</a>
+
+									<p class="no_reserve">
+										<span class="cardJiebang_p bzctx_color">该银行卡不支持提现</span>
+										<a href="###" class="qjb_a fr">去解绑</a>
+									</p>
 								</div>
 
 							</li>
@@ -101,6 +105,21 @@
 					</li>
 				</ul>
 
+
+				<!-- 弹层  2017-03-07 -->
+				<div class="tip_mc" style="width: 100%;position: fixed;top: 0;left: 0;height: 500px;
+					z-index: 990;opacity: 0.5;background: #000;display: block;"></div>
+				<div class="tip_tc" style="position:fixed;text-align: left;left:0.9rem;font-size: 0.23rem;
+				width:4.6rem;z-index:999;background: #fff;border-radius: 5px; display: block;">
+				  <p class="hb_tit" style="line-height: 0.5rem;margin-top: 0.3rem;font-size: 0.3rem;
+					padding:0 0.2rem;text-align:center;">小沃提示您</p>
+				  <p class="tip_txt" style="padding: 0.1rem 0.2rem!important;text-align:center;">根据您选择的海报版面，需要选择4个商品。您还差3个商品，请继续勾选商品～</p>
+				  <div class="cz_btn" style="width: 4rem;margin: 0.2rem auto;background: #fc5f01;
+					border-radius: 3px;text-align: center;height: 0.4rem;line-height: 0.4rem;color: #fff;">我知道了</div>
+				</div>
+
+
+
 		</div>
 		<script type="text/javascript">
 		  window.onload = function(){
@@ -110,6 +129,15 @@
 			$(function(){
 				var win_height=$(window).height();
 				$('.wrap_all').height(win_height);
+
+				//弹层  2017-03-07
+				$('.tip_mc').height(win_height);
+				var tip_height=$('.tip_tc').height();
+				$('.tip_tc').css('top',(win_height-tip_height)/2);
+				$('.cz_btn').click(function(){
+					$('.tip_mc,.tip_tc').css('display','none');
+				})
+
 				// 支付方式切换
 				$('.zffs_ul li').click(function(){
 					$('.zffs_ul li div').removeClass('zffs_select');

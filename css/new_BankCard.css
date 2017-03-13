@@ -72,7 +72,6 @@
 }
 .count_ul li{
   text-align: left;
-  height:0.6rem;
   padding:0.3rem 0.4rem;
   border-bottom:1px solid #f2f2f2;
 }
@@ -84,14 +83,13 @@
 }
 
 .count_mes_div{
-  float:left;
+  margin-left:0.9rem;
   width:4.7rem;
   line-height: 0.3rem;
   font-size:0.22rem;
   color: #a5a5a5;
 }
 .count_mes_div p{
-  float:left;
   width:3rem;
   display: inline-block;
 }
@@ -109,29 +107,31 @@
 .zbzctx{
   font-size:0.2rem;
   color:red;
-  margin:-0.15rem 0.12rem;
+  margin:-0.13rem 0.12rem;
 }
-.jb_li{
-  height:0.9rem!important;
-}
+
 .choosed_icon{
   width: 0.2rem;
   float: right;
-  margin-top: -0.45rem;
+  margin-top: -0.2rem;
   margin-right:0.15rem;
 }
 .bzctx_color{
   color:#ff6600!important;
 }
+
+.no_reserve{
+  width:100%!important;
+}
 .cardJiebang_p{
   margin-top:0.1rem;
 }
+
 .qjb_a{
   clear:both;
   color:blue;
   font-size:0.2rem;
   text-decoration:underline;
-  margin-top:-0.32rem;
 }
 
 
@@ -230,4 +230,136 @@
   font-size:0.3rem;
   background: #fc5f01;
   border-radius:5px;
+}
+/*银行卡列表页新添加账号姓名单行超出隐藏 2017-03-03*/
+
+.count_zh,.count_name{
+  width:4rem!important;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.yh_count_name{
+  width:2.7rem!important;
+}
+
+/*银行卡详情页*/
+.jiebang_del_btn{
+  width:5rem;
+  height:0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  background: #fca122;
+  color:#fff;
+  font-size:0.3rem;
+  margin:1rem auto;
+  border-radius:5px;
+}
+
+
+
+/*输入密码验证*/
+
+.tx_mc{
+  width:100%;
+  height:700px;
+  background: #000;
+  opacity: 0.7;
+  position: absolute;
+  top:0;
+  left:0;
+  display: none;
+}
+.srmm_div{
+  width: 100%;
+  height:5rem;
+  background:#f9f9f9;
+  position: absolute;
+  top:2rem;
+  display: none;
+}
+.close1{
+  position: absolute;
+  width: 0.5rem;
+  top: 0.1rem;
+  left: 0.1rem;
+}
+.srmm_tit{
+  width: 100%;
+  text-align: center;
+  font-size:0.3rem;
+  color:#333;
+  line-height: 0.8rem;
+}
+.srmm_tx_je{
+  font-size: 0.2rem;
+  color:#333;
+  text-align: center;
+}
+.mm {
+    width:6.15rem;
+    height: 1rem;
+    z-index: 9;
+    margin:0 auto;
+    margin-top: 0.2rem;
+}
+.password{
+    background: #fff;
+    width: 1rem;
+    height: 1rem;
+    line-height: 0.5rem;
+    text-align: center;
+    background: #fff;
+    z-index: 10;
+    border:1px solid #dbdbdb;
+    border-right:none;
+}
+
+.password_d {
+    width: 0.18rem;
+    height: 0.18rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #000;
+}
+#mm_input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100rem;
+    left: 0;
+    opacity: 0;
+    z-index: 90;
+}
+.wjmm{
+  float:right;
+  font-size: 0.2rem;
+  color:#3aa1ec;
+  margin:0.2rem 0.2rem;
+}
+
+.srmm_yz{
+  width: 100%;
+  background: #f9f9f9;
+  height:4rem;
+  text-align: center;
+  position: fixed;
+  top:2.8rem;
+  left:0;
+  z-index: 21;
+  border-top:1px solid #ccc;
+  display: none;
+}
+.srmm_yzz_icon,.mmyz_success_icon,.mmyz_fail_icon{
+  width: 1rem;
+  margin-top:1rem;
+  display: none;
+}
+.jy_ts{
+  font-size: 0.2rem;
+  color:#fc5f01;
+  text-align: center;
+  line-height: 0.5rem;
+  margin-top:0.2rem;
+  display: none;
 }

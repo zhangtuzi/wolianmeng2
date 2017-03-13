@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width,minimum-scale=1,maximum-scale=1.0,user-scalable=0" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+    <title>我的银行卡</title>
+    <link rel="stylesheet" type="text/css" href="css/new_BankCard.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+		<script type="text/javascript" src="js/top.js" ></script>
+		<style media="screen">
+		.wrap_all{
+			position: relative;
+			margin: 0 auto;
+			min-width: 320px;
+			max-width: 640px;
+			overflow: auto;
+		}
+		</style>
+  </head>
+  <body style="background:#f2f2f2;">
+    <div class="wrap_all">
+    		<!--#include virtual="/wolianm2/include/headerinfo11.html"-->
+				<ul class="zffs_select_ul" style="background: #fff;">
+					<li>
+						<ul class="count_ul">
+							<li class="jb_li">
+								<img src="images/ms_bank_icon.jpg" class="count_img" alt="银行图标">
+								<div class="count_mes_div">
+									<p class="yh_name">民生银行</p>
+									<p class="count_name yh_count_name">尾号5432储蓄卡</p>
+                  <p class="cardJiebang_p bzctx_color">该银行卡不支持提现</p>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+        <div class="jiebang_del_btn">删除</div>
+
+        <!-- 提现蒙层 -->
+        <div class="tx_mc"></div>
+          <!-- 输入提现密码 -->
+        <div class="srmm_div">
+
+          <p class="srmm_tit">输入密码</p>
+            <img src="images/new_close1.png" class="close1" style="height:auto;z-index:20;" alt="" />
+          <p class="srmm_tx_je">提现金额<span class="tx_num_qr">10.00</span>元</p>
+
+          <div class="mm" style="position:relative;">
+              <div class="fl password"></div>
+              <div class="fl password"></div>
+              <div class="fl password"></div>
+              <div class="fl password"></div>
+              <div class="fl password"></div>
+              <div class="fl password" style="border-right:1px solid #dbdbdb;"></div>
+                <input type="text"  pattern="[0-9]*" value="" id="mm_input" Maxlength="6">
+          </div>
+            <p class="wjmm">忘记密码？</p>
+        </div>
+
+        <div class="srmm_yz">
+            <img src="images/new_mm_yzz.gif" class="srmm_yzz_icon" alt="" />
+            <img src="images/mmyz_success_icon1.gif" class="mmyz_success_icon" alt="" />
+            <img src="images/new_fail_icon.png" class="mmyz_fail_icon" alt="" />
+            <p class="jy_ts zzjy">正在校验</p>
+            <p class="jy_ts jycg">校验成功</p>
+        </div>
+      <div class="new_myBC_jb_su" style="width:4rem;height:1.1rem;padding:0.5rem 0;background:rgba(0,0,0,0.6);color:#fff;position:absolute;
+      left:1.2rem;text-align:center;font-size:0.2rem;border-radius:5px;display:none;">
+          <img src="images/success_zhl1.png" alt="">
+          <p style="margin-top:0.2rem;">删除成功！</p>
+      </div>
+		</div>
+
+    <script type="text/javascript">
+    window.onload = function(){
+      $('.title_lll').text('我的银行卡');
+    }
+    $(function(){
+      var win_height=$(window).height();
+      $('.wrap_all').height(win_height);
+
+
+      var tc_height1=$('.new_myBC_jb_su').height();
+      $('.new_myBC_jb_su').css('top',(win_height-tc_height1)/2);
+
+      //
+      $('.jiebang_del_btn').click(function(){
+        $(".tx_mc").height(win_height);
+					var srmm_top=$(".srmm_div").css("top");
+					srmm_top=srmm_top.substring(0,srmm_top.length-2);
+					srmm_top=parseFloat(srmm_top);
+					$(".srmm_div").height(win_height-srmm_top);
+					$(".tx_mc,.srmm_div").show();
+					$("#mm_input").focus();
+					$("body").bind("touchmove",function(e){
+				    e.preventDefault();
+				  });
+
+      })
+
+
+
+      // 密码输入弹层
+			$(".close1").click(function(){
+				$(".tx_mc,.srmm_div,.srmm_yz").hide();
+				$("#mm_input").val("").blur();
+				$(".password").html("");
+				$("body").unbind("touchmove");
+			})
+
+			$("#mm_input").focus(function(){
+					$(window).bind("keydown",function(e){
+						var keyCod=e.keyCode;
+						if(keyCod>47&&keyCod<58||keyCod==8){
+							return true;
+						}else{
+							return false;
+						}
+					})
+			}).blur(function(){
+				$(window).unbind("keydown");
+			})
+			$("#mm_input").on("input",function(){
+        var this_val=$(this).val();
+				var t_v_lg=this_val.length;
+				if(t_v_lg>6){
+					this_val=this_val.slice(0,6);
+					$(this).val(this_val);
+				}
+        mmxx(t_v_lg);
+        if(t_v_lg>5){
+					$(window).unbind("touchend");
+					$("#mm_input").blur();
+					var mmyz_top=$(".srmm_yz").css("top");
+					mmyz_top=mmyz_top.substring(0,mmyz_top.length-2);
+					mmyz_top=parseFloat(mmyz_top);
+					$(".srmm_yz").height(win_height-mmyz_top);
+          $(".srmm_yz,.srmm_yzz_icon,.zzjy").show();
+					setTimeout(function(){
+						$(".mmyz_success_icon,.jycg").show();
+						$(".srmm_yzz_icon,.zzjy").hide();
+						setTimeout(function(){
+							$(".tx_mc,.srmm_div,.srmm_yz").hide();
+							$(".mmyz_success_icon,.jycg").hide();
+							$(".password").html("");
+							$("#mm_input").val("");
+
+						},1000)
+					},3000)
+
+        }
+      })
+
+
+      function mmxx(lg){
+        $(".password").html("");
+        for(var i=0;i<lg;i++){
+          $(".password").eq(i).html("<span class='password_d'></span>");
+        }
+      }
+
+      $(window).on("touchend",function(e){
+					var sr_dis=$(".srmm_div").css("display");
+					if(sr_dis=="block"){
+						if(!$(e.target).hasClass("close1")){
+							$("#mm_input").focus();
+							return false;
+						}
+
+					}
+				})
+
+
+
+
+
+
+
+
+
+
+    })
+
+    </script>
+  </body>
+</html>
